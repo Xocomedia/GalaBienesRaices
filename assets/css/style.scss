@@ -3,14 +3,35 @@
 
 @import "{{ site.theme }}";
 
+/* Paleta oficial de Gala Bienes Raíces */
 :root {
-  --header-bg-color: #6B1724;
-  --header-bg-color-secondary: #8B2635;
-  --link-color: #8B2635;
-  --btn-bg-color: #8B2635;
+  --header-bg-color: #BC2424;          /* Rojo oficial Gala */
+  --header-bg-color-secondary: #8C1B1B;/* Rojo profundo ad-hoc para degradado */
+  --section-headings-color: #BC2424;   /* Títulos H1-H4 en Rojo Gala */
+  --body-text-color: #1E1E1E;          /* Gris oscuro oficial para lectura */
+  --link-color: #BC2424;               /* Enlaces en Rojo Gala */
 }
 
+/* 1. Encabezado con degradado de marca */
 .page-header {
-  background-color: #6B1724 !important;
-  background-image: linear-gradient(120deg, #6B1724, #8B2635) !important;
+  background-color: #BC2424 !important;
+  background-image: linear-gradient(120deg, #BC2424, #8C1B1B) !important;
+}
+
+/* 2. Títulos con el Rojo oficial de la marca */
+.main-content h1, 
+.main-content h2, 
+.main-content h3, 
+.main-content h4 {
+  color: #BC2424 !important;
+}
+
+/* 3. Cuerpo de texto con el Gris Oscuro oficial (#1E1E1E) */
+.main-content {
+  color: #1E1E1E !important;
+}
+
+/* 4. Enlaces del contenido */
+.main-content a {
+  color: #BC2424 !important;
 }
