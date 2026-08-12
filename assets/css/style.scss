@@ -5,17 +5,17 @@
 
 /* Paleta oficial de Gala Bienes Raíces */
 :root {
-  --header-bg-color: #BC2424;          /* Rojo oficial Gala */
-  --header-bg-color-secondary: #8C1B1B;/* Rojo profundo ad-hoc para degradado */
+  --header-bg-color: #1E1E1E;          /* Gris oscuro oficial Gala */
+  --header-bg-color-secondary: #333333;/* Carbón sutil para degradado */
   --section-headings-color: #BC2424;   /* Títulos H1-H4 en Rojo Gala */
   --body-text-color: #1E1E1E;          /* Gris oscuro oficial para lectura */
   --link-color: #BC2424;               /* Enlaces en Rojo Gala */
 }
 
-/* 1. Encabezado con degradado de marca */
+/* 1. Encabezado con degradado diagonal oscuro (hacia la esquina inferior derecha) */
 .page-header {
-  background-color: #BC2424 !important;
-  background-image: linear-gradient(120deg, #BC2424, #8C1B1B) !important;
+  background-color: #1E1E1E !important;
+  background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
 }
 
 /* 2. Títulos con el Rojo oficial de la marca */
