@@ -1,0 +1,16 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+:root {
+  --header-bg-color: #6B1724;
+  --header-bg-color-secondary: #8B2635;
+  --link-color: #8B2635;
+  --btn-bg-color: #8B2635;
+}
+
+.page-header {
+  background-color: #6B1724 !important;
+  background-image: linear-gradient(120deg, #6B1724, #8B2635) !important;
+}
