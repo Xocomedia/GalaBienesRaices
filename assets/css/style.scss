@@ -13,6 +13,18 @@
 }
 
 /* 1. Encabezado con degradado diagonal oscuro (hacia la esquina inferior derecha) */
+/* Insertar logotipo cuadrado en el encabezado */
+.page-header::before {
+  content: "";
+  display: block;
+  width: 130px;                     /* Proporción cuadrada 1:1 */
+  height: 130px;                    /* Proporción cuadrada 1:1 */
+  margin: 0 auto 1.5rem auto;       /* Centrado horizontal y margen inferior */
+  background-image: url('/assets/images/gala-bienes-raices-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
