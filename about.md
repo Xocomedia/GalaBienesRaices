@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sobre Nosotros
-permalink: /about/
+permalink: /quienes-somos/
 ---
 
 # Quiénes Somos
