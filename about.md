@@ -1,6 +1,8 @@
+---
 layout: page
 title: Sobre Nosotros
 permalink: https://www.galabienesraices.com/about
+---
 
 # Quiénes Somos
 
