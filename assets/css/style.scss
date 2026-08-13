@@ -30,29 +30,23 @@
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 0.8rem 1rem 0.8rem 1rem !important;
+  padding: 0.8rem 1rem 0.6rem 1rem !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* 2. Título / Eslogan centrado */
-.project-name {
-  margin-top: -78px !important;     /* Sube la frase un poco más hacia el logo */
-  margin-bottom: 0.8rem !important;  /* Crea separación limpia con el menú de abajo */
-  font-size: 1.35rem !important;    /* Tamaño elegante y proporcionado */
-}
-
-/* 3. Ocultar el botón original "View on GitHub" */
+/* 2. Ocultar el botón original "View on GitHub" */
 .page-header .btn {
   display: none !important;
 }
 
-/* 4. Estilos para el Menú Hamburguesa */
+/* 3. Estilos para el Menú Hamburguesa (ubicado directamente bajo el logo) */
 .burger-wrapper {
   position: relative;
-  margin-top: 0 !important;          /* Deja que el margin del título controle el espacio */
+  margin-top: -65px;                 /* Sube las 3 barras hacia la base del logo */
+  margin-bottom: 0.3rem;
   z-index: 1100;
 }
 
@@ -66,7 +60,7 @@
   justify-content: space-between;
   width: 28px;
   height: 20px;
-  margin: 0.5rem auto 5px !important;
+  margin: 0 auto !important;
   cursor: pointer;
 }
 
@@ -119,7 +113,7 @@
   transform: translateY(-9px) rotate(-45deg);
 }
 
-/* 5. Estilos para el contenido principal */
+/* 4. Estilos para el contenido principal */
 .main-content h1, 
 .main-content h2, 
 .main-content h3, 
@@ -133,4 +127,5 @@
 
 .main-content a {
   color: #BC2424 !important;
+}
 }
