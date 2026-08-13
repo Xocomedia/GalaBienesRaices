@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Gala Bienes Raíces | Donde el hogar comienza"
+title: "Donde el hogar comienza"
 ---
 
 # Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.
