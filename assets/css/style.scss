@@ -19,7 +19,9 @@
   display: block;
   width: 330px;                     /* Ancho adaptado al formato horizontal */
   height: 330px;                    /* Alto proporcional exacto */
-  margin: 0 auto -1.5rem auto;       /* izquierda es x, derecha es y */
+  margin: 0 auto !important;       /* izquierda es x, derecha es y */
+  position relative;
+  top: -30px
   background-image: url('/assets/images/gala-bienes-raices-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -50,7 +52,7 @@
 
 /* 4. Ajustar el tamaño del texto para que no ocupe tanto espacio vertical */
 .project-name {
-  margin-top: -2.0rem !important;
+  margin-top: -50px !important;
   margin-bottom: 0.1rem !important;
   font-size: 1.6rem !important;     /* Título un poco más estilizado */
 }
