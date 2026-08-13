@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Donde el hogar comienza"
+title: "Donde tu hogar comienza"
 ---
 
 # Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.
