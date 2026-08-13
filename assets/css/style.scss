@@ -17,11 +17,11 @@
 .page-header::before {
   content: "";
   display: block;
-  width: 330px;                     /* Ancho adaptado al formato horizontal */
-  height: 330px;                    /* Alto proporcional exacto */
+  width: 280px;                     /* Ancho adaptado al formato horizontal */
+  height: 2800px;                    /* Alto proporcional exacto */
   margin: 0 auto !important;       /* izquierda es x, derecha es y */
   position: relative;
-  top: -30px;
+  top: -40px;
   background-image: url('/assets/images/gala-bienes-raices-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -52,7 +52,7 @@
 
 /* 4. Ajustar el tamaño del texto para que no ocupe tanto espacio vertical */
 .project-name {
-  margin-top: -80px !important;
+  margin-top: -90px !important;
   margin-bottom: 0.1rem !important;
   font-size: 1.6rem !important;     /* Título un poco más estilizado */
 }
