@@ -30,7 +30,7 @@
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 0.8rem 1rem 0.6rem 1rem !important;
+  padding: 0.8rem 1rem 1rem 1rem !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
@@ -42,11 +42,11 @@
   display: none !important;
 }
 
-/* 3. Estilos para el Menú Hamburguesa (ubicado directamente bajo el logo) */
+/* 3. Menú Hamburguesa jalado hacia la base del logo */
 .burger-wrapper {
   position: relative;
-  margin-top: -65px;                 /* Sube las 3 barras hacia la base del logo */
-  margin-bottom: 0.3rem;
+  margin-top: -135px !important;    /* Cancela el espacio de la caja de 280px y lo sube al logo */
+  margin-bottom: 0.2rem !important;
   z-index: 1100;
 }
 
@@ -127,5 +127,4 @@
 
 .main-content a {
   color: #BC2424 !important;
-}
 }
