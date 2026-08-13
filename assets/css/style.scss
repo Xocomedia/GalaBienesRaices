@@ -18,9 +18,9 @@
   content: "";
   display: block;
   width: 350px;                     /* Ancho adaptado al formato horizontal */
-  height: 100px;                    /* Alto proporcional exacto */
+  height: 350px;                    /* Alto proporcional exacto */
   margin: 0 auto 0.2rem auto;       /* Margen inferior estrecho para compactar */
-  background-image: url('/assets/images/gala-bienes-raices-logo-1.png');
+  background-image: url('/assets/images/gala-bienes-raices-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -28,7 +28,7 @@
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 1.5rem 1rem 1rem 1rem !important; /* Reduce el espacio vertical arriba y abajo */
+  padding: 1.2rem 1rem 0.8rem 1rem !important; /* Reduce el espacio vertical arriba y abajo */
   position: sticky !important;
   top: 0;
   z-index: 1000;
@@ -51,10 +51,13 @@
 /* 4. Ajustar el tamaño del texto para que no ocupe tanto espacio vertical */
 .project-name {
   margin-top: 0 !important;
-  margin-bottom: 0.2rem !important;
-  font-size: 1.75rem !important;     /* Título un poco más estilizado */
+  margin-bottom: 0.1rem !important;
+  font-size: 1.6rem !important;     /* Título un poco más estilizado */
 }
-
+.project-tagline {
+  margin-bottom: 0.4rem !important;
+  font-size: 0.9rem !important;
+}
 /* 5. Cuerpo de texto con el Gris Oscuro oficial (#1E1E1E) */
 .main-content {
   color: #1E1E1E !important;
