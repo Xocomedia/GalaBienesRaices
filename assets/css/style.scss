@@ -37,11 +37,11 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* 2. Título "Donde el hogar comienza" */
+/* 2. Título / Eslogan centrado */
 .project-name {
-  margin-top: -60px !important;
-  margin-bottom: 0.1rem !important;
-  font-size: 1.6rem !important;
+  margin-top: -75px !important;     /* Sube la frase un poco más hacia el logo */
+  margin-bottom: 0.8rem !important;  /* Crea separación limpia con el menú de abajo */
+  font-size: 1.35rem !important;    /* Tamaño elegante y proporcionado */
 }
 
 /* 3. Ocultar el botón original "View on GitHub" */
@@ -52,7 +52,7 @@
 /* 4. Estilos para el Menú Hamburguesa */
 .burger-wrapper {
   position: relative;
-  margin-top: -20px;
+  margin-top: 0 !important;          /* Deja que el margin del título controle el espacio */
   z-index: 1100;
 }
 
