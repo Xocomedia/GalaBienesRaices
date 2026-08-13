@@ -17,8 +17,8 @@
 .page-header::before {
   content: "";
   display: block;
-  width: 250px;                     /* Proporción cuadrada 1:1 */
-  height: 250px;                    /* Proporción cuadrada 1:1 */
+  width: 400px;                     /* Proporción cuadrada 1:1 */
+  height: 400px;                    /* Proporción cuadrada 1:1 */
   margin: 0 auto 1.5rem auto;       /* Centrado horizontal y margen inferior */
   background-image: url('/assets/images/gala-bienes-raices-logo.png');
   background-size: contain;
