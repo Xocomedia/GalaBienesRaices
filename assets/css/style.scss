@@ -39,9 +39,9 @@
 
 /* 2. Título / Eslogan centrado */
 .project-name {
-  margin-top: -75px !important;     /* Sube la frase un poco más hacia el logo */
+  margin-top: -85px !important;     /* Sube la frase un poco más hacia el logo */
   margin-bottom: 0.8rem !important;  /* Crea separación limpia con el menú de abajo */
-  font-size: 1.35rem !important;    /* Tamaño elegante y proporcionado */
+  font-size: 1.40rem !important;    /* Tamaño elegante y proporcionado */
 }
 
 /* 3. Ocultar el botón original "View on GitHub" */
@@ -66,7 +66,7 @@
   justify-content: space-between;
   width: 28px;
   height: 20px;
-  margin: 0.5rem auto 0 auto;
+  margin: 0.5rem auto -10px !important;
   cursor: pointer;
 }
 
