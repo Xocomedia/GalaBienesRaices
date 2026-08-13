@@ -56,9 +56,79 @@
   margin-bottom: 0.1rem !important;
   font-size: 1.6rem !important;     /* Título un poco más estilizado */
 }
-.project-tagline {
-  margin-bottom: 0.4rem !important;
-  font-size: 0.9rem !important;
+/* --- Menú Hamburguesa en el Header --- */
+
+.burger-wrapper {
+  position: relative;
+  margin-top: -30px; /* Ajusta la distancia respecto al título "Donde el hogar comienza" */
+  z-index: 1100;
+}
+
+/* Ocultar el checkbox real */
+#burger-toggle {
+  display: none;
+}
+
+/* Icono de las 3 barras */
+.burger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.burger-icon span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff; /* Color blanco oficial para las barras */
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Desplegable con los enlaces */
+.burger-nav {
+  display: none;
+  flex-direction: column;
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  margin: 0.8rem auto 0 auto;
+  max-width: 220px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.burger-nav a {
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+
+.burger-nav a:hover {
+  color: #BC2424 !important; /* Cambia a Rojo Gala al pasar el cursor */
+}
+
+/* Mostrar menú desplegado al hacer clic en las 3 barras */
+#burger-toggle:checked ~ .burger-nav {
+  display: flex;
+}
+
+/* Animación opcional: Transforma las 3 barras en una "X" al abrir */
+#burger-toggle:checked ~ .burger-icon span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+#burger-toggle:checked ~ .burger-icon span:nth-child(2) {
+  opacity: 0;
+}
+#burger-toggle:checked ~ .burger-icon span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
 }
 /* 5. Cuerpo de texto con el Gris Oscuro oficial (#1E1E1E) */
 .main-content {
