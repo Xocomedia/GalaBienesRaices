@@ -20,7 +20,7 @@
   height: 280px;
   margin: 0 auto !important;
   position: relative;
-  top: -40px;
+  top: -30px;
   background-image: url('/assets/images/gala-bienes-raices-logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -30,22 +30,22 @@
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 0.8rem 1rem 1rem 1rem !important;
+  padding: 0.5rem 1rem 1.2rem 1rem !important; /* Más espacio abajo para envolver todo */
   position: sticky !important;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* 2. Ocultar el botón original "View on GitHub" */
+/* 2. Ocultar el botón original de GitHub */
 .page-header .btn {
   display: none !important;
 }
 
-/* 3. Menú Hamburguesa jalado hacia la base del logo */
+/* 3. Menú Hamburguesa posicionado abajo del logo */
 .burger-wrapper {
   position: relative;
-  margin-top: -135px !important;    /* Cancela el espacio de la caja de 280px y lo sube al logo */
+  margin-top: -75px !important;       /* Posición exacta justo debajo de "BIENES RAÍCES" */
   margin-bottom: 0.2rem !important;
   z-index: 1100;
 }
