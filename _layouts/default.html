@@ -9,7 +9,10 @@
 <body>
   <header class="page-header" role="banner">
     <!-- Texto principal del lema -->
-    <h1 class="project-name">Aquí comienza tu hogar</h1>
+    <!-- El lema SOLO se mostrará en la página de inicio (/) -->
+    {% if page.url == "/" or page.url == "/index.html" %}
+      <h1 class="project-name">Aquí comienza tu hogar</h1>
+    {% endif %}
     
     <!-- Menú Hamburguesa -->
     <div class="burger-wrapper">
