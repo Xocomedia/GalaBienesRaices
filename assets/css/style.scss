@@ -17,9 +17,9 @@
 .page-header::before {
   content: "";
   display: block;
-  width: 400px;                     /* Proporción cuadrada 1:1 */
-  height: 400px;                    /* Proporción cuadrada 1:1 */
-  margin: 0 auto 1.5rem auto;       /* Centrado horizontal y margen inferior */
+  width: 350px;                     /* Ancho adaptado al formato horizontal */
+  height: 100px;                    /* Alto proporcional exacto */
+  margin: 0 auto 0.2rem auto;       /* Margen inferior estrecho para compactar */
   background-image: url('/assets/images/gala-bienes-raices-logo-1.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -28,6 +28,11 @@
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
+  padding: 1.5rem 1rem 1rem 1rem !important; /* Reduce el espacio vertical arriba y abajo */
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* 2. Títulos con el Rojo oficial de la marca */
@@ -38,12 +43,24 @@
   color: #BC2424 !important;
 }
 
-/* 3. Cuerpo de texto con el Gris Oscuro oficial (#1E1E1E) */
+/* 3. Ocultar el botón "View on GitHub" */
+.page-header .btn {
+  display: none !important;
+}
+
+/* 4. Ajustar el tamaño del texto para que no ocupe tanto espacio vertical */
+.project-name {
+  margin-top: 0 !important;
+  margin-bottom: 0.2rem !important;
+  font-size: 1.75rem !important;     /* Título un poco más estilizado */
+}
+
+/* 5. Cuerpo de texto con el Gris Oscuro oficial (#1E1E1E) */
 .main-content {
   color: #1E1E1E !important;
 }
 
-/* 4. Enlaces del contenido */
+/* 6. Enlaces del contenido */
 .main-content a {
   color: #BC2424 !important;
 }
