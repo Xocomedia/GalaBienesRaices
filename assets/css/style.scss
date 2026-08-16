@@ -142,14 +142,14 @@ body {
   color: #1E1E1E !important;
 }
 
-/* --- Hero de Pantalla Completa (Mayor altura y texto ajustado) --- */
+/* --- Hero de Pantalla Completa y Botones Verticales --- */
 .hero-container {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: 0 !important;
-  height: 580px;                         /* Aumentado de 500px a 580px */
+  height: 580px;
   border-radius: 0 !important;
   overflow: hidden;
   display: flex;
@@ -187,23 +187,86 @@ body {
   z-index: 3;
   text-align: center;
   padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-content h2 {
   color: #ffffff !important;
-  font-size: 2.1rem !important;          /* Reducido de 2.5rem a 2.1rem */
+  font-size: 2.3rem !important;          /* Aumento ligero de 2.1rem a 2.3rem */
   font-weight: 700;
-  margin: 0 !important;
+  margin: 0 0 1.4rem 0 !important;       /* Margen inferior para separar y elevar el texto */
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   letter-spacing: -0.5px;
+}
+
+/* Contenedor vertical de botones */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;                /* Apila los botones uno sobre el otro */
+  gap: 0.75rem;                          /* Espacio de aire exacto entre ambos botones */
+  width: 100%;
+  max-width: 240px;                      /* Ancho uniforme para que coincidan visualmente */
+}
+
+/* Estilo base de los botones */
+.hero-btn {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: all 0.25s ease;
+  box-sizing: border-box;
+}
+
+/* Botón 1: Primario en Rojo Gala */
+.hero-btn-primary {
+  background-color: #BC2424;
+  color: #ffffff !important;
+  border: 1px solid #BC2424;
+}
+
+.hero-btn-primary:hover {
+  background-color: #9e1c1c;
+  border-color: #9e1c1c;
+  transform: translateY(-2px);
+}
+
+/* Botón 2: Secundario translúcido con borde sutil */
+.hero-btn-secondary {
+  background-color: rgba(30, 30, 30, 0.55);
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.hero-btn-secondary:hover {
+  background-color: #ffffff;
+  color: #1E1E1E !important;
+  border-color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Ajustes proporcionales para móviles */
 @media (max-width: 768px) {
   .hero-container {
-    height: 380px;                       /* Aumentado de 320px a 380px */
+    height: 420px;                       /* Espacio suficiente para albergar texto y 2 botones */
   }
   .hero-content h2 {
-    font-size: 1.4rem !important;        /* Reducido de 1.6rem a 1.4rem */
+    font-size: 1.5rem !important;
+    margin-bottom: 1.1rem !important;
+  }
+  .hero-buttons {
+    max-width: 210px;
+  }
+  .hero-btn {
+    padding: 0.55rem 0.8rem;
+    font-size: 0.88rem;
   }
 }
