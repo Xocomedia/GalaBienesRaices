@@ -142,20 +142,20 @@ body {
   color: #1E1E1E !important;
 }
 
-/* --- Hero de Pantalla Completa (Extremo a Extremo) --- */
+/* --- Hero de Pantalla Completa (Ligeramente más alto) --- */
 .hero-container {
   position: relative;
-  width: 100vw;                          /* Ocupa el 100% del ancho del navegador */
-  margin-left: calc(-50vw + 50%);       /* Rompe los márgenes laterales del tema */
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  margin-top: 0 !important;              /* Conexión directa con el header negro */
-  height: 420px;                         /* Altura vertical ampliada */
-  border-radius: 0 !important;           /* Bordes rectos de extremo a extremo */
+  margin-top: 0 !important;
+  height: 500px;                         /* Aumentado de 420px a 500px */
+  border-radius: 0 !important;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;                   /* Garantiza el espacio de aire con "Detrás..." */
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
@@ -201,7 +201,7 @@ body {
 /* Ajuste proporcional para celulares */
 @media (max-width: 768px) {
   .hero-container {
-    height: 280px;
+    height: 320px;                     
   }
   .hero-content h2 {
     font-size: 1.6rem !important;
