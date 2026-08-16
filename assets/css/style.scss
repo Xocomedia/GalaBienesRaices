@@ -142,20 +142,20 @@ body {
   color: #1E1E1E !important;
 }
 
-/* --- Hero de Pantalla Completa (Ligeramente más alto) --- */
+/* --- Hero de Pantalla Completa (Mayor altura y texto ajustado) --- */
 .hero-container {
   position: relative;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
   margin-top: 0 !important;
-  height: 500px;                         /* Aumentado de 420px a 500px */
+  height: 580px;                         /* Aumentado de 500px a 580px */
   border-radius: 0 !important;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 3rem;                   /* Garantiza el espacio de aire con "Detrás..." */
+  margin-bottom: 3rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
@@ -191,19 +191,19 @@ body {
 
 .hero-content h2 {
   color: #ffffff !important;
-  font-size: 2.5rem !important;
+  font-size: 2.1rem !important;          /* Reducido de 2.5rem a 2.1rem */
   font-weight: 700;
   margin: 0 !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   letter-spacing: -0.5px;
 }
 
-/* Ajuste proporcional para celulares */
+/* Ajustes proporcionales para móviles */
 @media (max-width: 768px) {
   .hero-container {
-    height: 320px;                     
+    height: 380px;                       /* Aumentado de 320px a 380px */
   }
   .hero-content h2 {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;        /* Reducido de 1.6rem a 1.4rem */
   }
 }
