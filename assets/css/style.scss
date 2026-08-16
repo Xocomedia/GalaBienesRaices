@@ -202,71 +202,69 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Contenedor vertical de botones */
+/* --- Contenedor vertical de botones --- */
 .hero-buttons {
   display: flex;
-  flex-direction: column;                /* Apila los botones uno sobre el otro */
-  gap: 0.75rem;                          /* Espacio de aire exacto entre ambos botones */
+  flex-direction: column;
+  gap: 1.2rem;                          /* Mayor separación vertical entre ambos */
   width: 100%;
-  max-width: 240px;                      /* Ancho uniforme para que coincidan visualmente */
+  max-width: 200px;                      /* Más compacto en lo horizontal (reducido de 240px) */
 }
 
-/* Estilo base de los botones */
+/* --- Estilo base de los botones y forzado de texto blanco --- */
+.hero-buttons a.hero-btn,
 .hero-btn {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 0.65rem 1rem;
+  padding: 0.85rem 1rem;                /* Más alto en lo vertical (aumentado de 0.65rem) */
   font-size: 0.95rem;
   font-weight: 600;
+  color: #ffffff !important;            /* Fuerza tipografía blanca en ambos botones */
   text-decoration: none !important;
   border-radius: 4px;
   transition: all 0.25s ease;
   box-sizing: border-box;
 }
 
-/* Botón 1: Primario en Rojo Gala */
+/* --- Botón 1: Primario en Rojo Gala --- */
 .hero-btn-primary {
-  background-color: #BC2424;
+  background-color: #BC2424 !important;
   color: #ffffff !important;
   border: 1px solid #BC2424;
 }
 
 .hero-btn-primary:hover {
-  background-color: #9e1c1c;
+  background-color: #9e1c1c !important;
   border-color: #9e1c1c;
+  color: #ffffff !important;
   transform: translateY(-2px);
 }
 
-/* Botón 2: Secundario translúcido con borde sutil */
+/* --- Botón 2: Secundario translúcido con borde blanco --- */
 .hero-btn-secondary {
-  background-color: rgba(30, 30, 30, 0.55);
+  background-color: rgba(30, 30, 30, 0.55) !important;
   color: #ffffff !important;
   border: 1px solid rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(4px);
 }
 
 .hero-btn-secondary:hover {
-  background-color: #ffffff;
-  color: #1E1E1E !important;
+  background-color: #ffffff !important;
+  color: #1E1E1E !important;            /* Cambia a gris oscuro únicamente al pasar el cursor */
   border-color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* Ajustes proporcionales para móviles */
+/* --- Adaptación para celulares --- */
 @media (max-width: 768px) {
-  .hero-container {
-    height: 420px;                       /* Espacio suficiente para albergar texto y 2 botones */
-  }
-  .hero-content h2 {
-    font-size: 1.5rem !important;
-    margin-bottom: 1.1rem !important;
-  }
   .hero-buttons {
-    max-width: 210px;
+    max-width: 180px;                    /* Proporción más compacta en pantalla pequeña */
+    gap: 1rem;
   }
+  .hero-buttons a.hero-btn,
   .hero-btn {
-    padding: 0.55rem 0.8rem;
+    padding: 0.75rem 0.8rem;
     font-size: 0.88rem;
   }
 }
