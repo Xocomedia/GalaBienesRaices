@@ -3,6 +3,16 @@ layout: default
 title: "Donde tu hogar comienza"
 ---
 
+<div class="hero-container">
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="/assets/videos/cdmx-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Aquí comienza tu hogar</h2>
+  </div>
+</div>
+
 # Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.
 
 Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.
