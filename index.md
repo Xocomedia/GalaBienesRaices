@@ -10,14 +10,16 @@ title: "Donde tu hogar comienza"
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <h2>Aquí comienza tu hogar</h2>
+    <div class="hero-buttons">
+      <a href="/contacto/" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
+      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
+    </div>
   </div>
 </div>
 
 # Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.
 
 Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.
-
-[Hablar con un asesor](/contacto/) &nbsp;|&nbsp; [¿Quiénes Somos?](/quienes-somos/)
 
 ---
 
