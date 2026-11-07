@@ -8,7 +8,7 @@ permalink: /hola/
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hola | Gala Bienes Raíces</title>
 
-  <!-- Importación de la suite completa de Josefin Sans desde Google Fonts -->
+  <!-- Importación de Josefin Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
@@ -27,47 +27,54 @@ permalink: /hola/
       display: flex;
       justify-content: center;
       align-items: center;
-      /* Sustituye la ruta por el nombre/ubicación exacta de tu imagen dentro de assets */
       background: url('/assets/images/fondo-cdmx.jpg') no-repeat center center fixed;
       background-size: cover;
-      padding: 20px;
+      padding: 30px 20px;
     }
 
+    /* Tarjeta principal con mayor escala en escritorio */
     .card-container {
-      background: rgba(100, 15, 20, 0.75);
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      border-radius: 40px;
-      padding: 40px 30px;
+      background: rgba(100, 15, 20, 0.78);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 48px;
+      padding: 55px 45px;
       width: 100%;
-      max-width: 440px;
+      max-width: 580px; /* Incrementado para cubrir más espacio en compu */
       text-align: center;
       color: #ffffff;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 22px;
     }
 
+    /* Título escalado */
     .card-title {
-      font-size: 1.6rem;
+      font-size: 2.2rem;
       font-weight: 600;
       margin-bottom: 5px;
       color: #ffffff;
+      line-height: 1.2;
     }
 
+    /* Botones más amplios y legibles */
     .btn-link {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 100%;
-      padding: 14px 20px;
-      border-radius: 25px;
+      min-height: 58px;
+      padding: 16px 24px;
+      border-radius: 30px;
       text-decoration: none;
       color: #ffffff;
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: 1.25rem;
       transition: transform 0.2s ease, opacity 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+      text-align: center;
     }
 
     .btn-link:hover {
@@ -89,26 +96,27 @@ permalink: /hola/
 
     .btn-contacto {
       background-color: #7f1d1d;
-      line-height: 1.3;
+      line-height: 1.25;
     }
 
+    /* Enlace de dominio */
     .site-domain {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 255, 255, 0.92);
       color: #222222;
-      padding: 8px 24px;
-      border-radius: 20px;
+      padding: 10px 32px;
+      border-radius: 24px;
       text-decoration: none;
       font-weight: 600;
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       margin-top: 5px;
     }
 
-    /* Redes sociales con íconos SVG */
+    /* Iconos de redes sociales */
     .social-links {
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      gap: 24px;
       margin-top: 5px;
     }
 
@@ -125,33 +133,56 @@ permalink: /hola/
     }
 
     .social-icon svg {
-      width: 26px;
-      height: 26px;
+      width: 32px;
+      height: 32px;
       fill: currentColor;
     }
 
+    /* Logo institucional */
     .logo-container {
-      margin-top: 10px;
+      margin-top: 5px;
     }
 
     .logo-container img {
-      max-width: 130px;
+      max-width: 160px;
       height: auto;
     }
 
-    @media (max-width: 480px) {
+    /* Adaptación responsive ajustada para mantener proporciones en celulares */
+    @media (max-width: 520px) {
+      body {
+        padding: 15px 12px;
+      }
+
       .card-container {
-        padding: 30px 20px;
-        border-radius: 30px;
+        padding: 35px 22px;
+        border-radius: 36px;
+        gap: 16px;
       }
 
       .card-title {
-        font-size: 1.4rem;
+        font-size: 1.7rem;
       }
 
       .btn-link {
+        font-size: 1.05rem;
+        min-height: 50px;
+        padding: 12px 18px;
+        border-radius: 24px;
+      }
+
+      .site-domain {
         font-size: 0.95rem;
-        padding: 12px 16px;
+        padding: 8px 24px;
+      }
+
+      .social-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .logo-container img {
+        max-width: 130px;
       }
     }
   </style>
@@ -181,7 +212,6 @@ permalink: /hola/
       galabienesraices.com
     </a>
 
-    <!-- Iconos de Instagram y Facebook en formato SVG -->
     <div class="social-links">
       <a href="https://instagram.com/TU_USUARIO" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram">
         <svg viewBox="0 0 24 24">
@@ -196,14 +226,10 @@ permalink: /hola/
       </a>
     </div>
 
-    <!-- Si prefieres texto o logo vectorial abajo -->
     <div class="logo-container">
       <img src="/assets/images/logo-gala.png" alt="Gala Bienes Raíces">
     </div>
   </main>
-
-</body>
-</html>
 
 </body>
 </html>
