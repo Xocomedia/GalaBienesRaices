@@ -20,19 +20,19 @@ permalink: /hola/
       padding: 0;
     }
 
- body {
-  font-family: 'Josefin Sans', sans-serif;
-  font-optical-sizing: auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Ruta con espacios codificados como %20 */
- background: url('/assets/images/Gala bienes raíces reforma.jpg') no-repeat center center fixed;
-  background-size: cover;
-  padding: 30px 20px;
-}
-    /* Tarjeta principal con mayor escala en escritorio */
+    body {
+      font-family: 'Josefin Sans', sans-serif;
+      font-optical-sizing: auto;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('/assets/images/Gala bienes raíces reforma.jpg') no-repeat center center fixed;
+      background-size: cover;
+      padding: 30px 20px;
+    }
+
+    /* Tarjeta principal */
     .card-container {
       background: rgba(100, 15, 20, 0.78);
       backdrop-filter: blur(6px);
@@ -40,7 +40,7 @@ permalink: /hola/
       border-radius: 48px;
       padding: 55px 45px;
       width: 100%;
-      max-width: 580px; /* Incrementado para cubrir más espacio en compu */
+      max-width: 580px;
       text-align: center;
       color: #ffffff;
       box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
@@ -50,7 +50,7 @@ permalink: /hola/
       gap: 22px;
     }
 
-    /* Título escalado */
+    /* Título principal */
     .card-title {
       font-size: 2.2rem;
       font-weight: 600;
@@ -59,7 +59,7 @@ permalink: /hola/
       line-height: 1.2;
     }
 
-    /* Botones más amplios y legibles */
+    /* Botones base */
     .btn-link {
       display: flex;
       align-items: center;
@@ -72,34 +72,29 @@ permalink: /hola/
       color: #ffffff;
       font-weight: 600;
       font-size: 1.25rem;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease, background-color 0.2s ease;
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
       text-align: center;
     }
 
     .btn-link:hover {
       transform: translateY(-2px);
-      opacity: 0.95;
+      opacity: 0.92;
     }
 
-    .btn-whatsapp {
-      background-color: #2e7d32;
+    /* Botones configurados en negro semi-transparente derivado de #1e1e1e */
+    .btn-dark {
+      background-color: rgba(30, 30, 30, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
-    .btn-comercial {
-      background-color: #4a3b7d;
-    }
-
-    .btn-habitacional {
-      background-color: #b87322;
-    }
-
+    /* Botón de contacto se mantiene en rojo original */
     .btn-contacto {
       background-color: #7f1d1d;
       line-height: 1.25;
     }
 
-    /* Enlace de dominio */
+    /* Enlace a sitio web */
     .site-domain {
       background: rgba(255, 255, 255, 0.92);
       color: #222222;
@@ -138,17 +133,20 @@ permalink: /hola/
       fill: currentColor;
     }
 
-    /* Logo institucional */
+    /* Logo de la empresa reemplazando texto */
     .logo-container {
       margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .logo-container img {
-      max-width: 160px;
+      max-width: 170px;
       height: auto;
+      display: block;
     }
 
-    /* Adaptación responsive ajustada para mantener proporciones en celulares */
     @media (max-width: 520px) {
       body {
         padding: 15px 12px;
@@ -182,7 +180,7 @@ permalink: /hola/
       }
 
       .logo-container img {
-        max-width: 130px;
+        max-width: 140px;
       }
     }
   </style>
@@ -192,15 +190,15 @@ permalink: /hola/
   <main class="card-container">
     <h1 class="card-title">Aquí comienza tu hogar</h1>
 
-    <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-link btn-whatsapp" target="_blank" rel="noopener">
+    <a href="https://wa.me/TU_NUMERO_AQUI" class="btn-link btn-dark" target="_blank" rel="noopener">
       Escríbenos: WhatsApp
     </a>
 
-    <a href="/catalogo-comercial" class="btn-link btn-comercial">
+    <a href="/catalogo-comercial" class="btn-link btn-dark">
       Catálogo comercial
     </a>
 
-    <a href="/catalogo-habitacional" class="btn-link btn-habitacional">
+    <a href="/catalogo-habitacional" class="btn-link btn-dark">
       Catálogo habitacional
     </a>
 
@@ -226,8 +224,9 @@ permalink: /hola/
       </a>
     </div>
 
+    <!-- Reemplazo del texto final por la imagen del logo -->
     <div class="logo-container">
-      <img src="/assets/images/logo-gala.png" alt="Gala Bienes Raíces">
+      <img src="/assets/images/gala-bienes-raices-logo.png" alt="Gala Bienes Raíces">
     </div>
   </main>
 
