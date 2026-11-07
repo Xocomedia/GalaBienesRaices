@@ -1,7 +1,35 @@
 ---
 layout: default
-title: "Donde tu hogar comienza"
+title: "Aquí comienza tu hogar"
 ---
+
+<!-- Importación de Josefin Sans con todos los pesos -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+  /* Tipografía general para el cuerpo del texto */
+  body, p, li, blockquote {
+    font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Tipografía para títulos en general */
+  h1, h2, h3, h4, h5, h6, .hero-btn, .btn-agendar {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  /* Extra Bold (800) específico para el título principal y los 2 botones hero */
+  .hero-content h2, 
+  .hero-buttons .hero-btn {
+    font-weight: 800 !important;
+  }
+
+  /* Botón secundario inferior de agendar */
+  .btn-agendar {
+    font-weight: 600;
+  }
+</style>
 
 <div class="hero-container">
   <video autoplay loop muted playsinline class="hero-video">
@@ -11,7 +39,8 @@ title: "Donde tu hogar comienza"
   <div class="hero-content">
     <h2>Aquí comienza tu hogar</h2>
     <div class="hero-buttons">
-      <a href="/contacto/" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
+      <!-- Directo al WhatsApp configurado -->
+      <a href="https://wa.me/525515761740?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
       <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
     </div>
   </div>
@@ -46,13 +75,13 @@ Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles 
 
 ## Servicios
 
-* **Venta de Inmuebles**  
+- **Venta de Inmuebles**  
   Auditoría legal previa, comercialización estratégica y acompañamiento integral hasta la firma de escrituras ante notario.
 
-* **Renta de Inmuebles**  
+- **Renta de Inmuebles**  
   Selección ética de arrendatarios mediante empatía activa, investigación exhaustiva y contratos blindados jurídicamente.
 
-* **Consultoría Jurídico-Inmobiliaria**  
+- **Consultoría Jurídico-Inmobiliaria**  
   Dictaminación de antecedentes, resolución de gravámenes y certezas para propietarios e inversionistas.
 
 ---
@@ -61,4 +90,5 @@ Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles 
 
 Cuéntanos tus planes y encontremos tu espacio ideal.
 
-[Agendar una llamada](/contacto/) &nbsp;
+<!-- Botón de agendar conectado al Formulario de Google -->
+<a href="https://forms.gle/49E3mrGk5g7Dg4C9A" target="_blank" rel="noopener" class="hero-btn hero-btn-primary btn-agendar">Agendar una llamada</a>
