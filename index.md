@@ -9,10 +9,10 @@ title: "Aquí comienza tu hogar"
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  /* Tipografía general y tamaño de letra a 12pt para el cuerpo */
+  /* Tipografía general y tamaño de letra a 14pt para el cuerpo */
   body, p, li, blockquote {
     font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 12pt !important;
+    font-size: 14pt !important;
   }
 
   /* Tipografía para títulos y botones */
@@ -22,7 +22,7 @@ title: "Aquí comienza tu hogar"
 
   /* Tamaño de fuente a 12pt para los botones */
   .hero-btn, .btn-agendar {
-    font-size: 12pt !important;
+    font-size: 13pt !important;
   }
 
   /* Extra Bold (800) específico para el título principal y botones hero */
@@ -38,18 +38,24 @@ title: "Aquí comienza tu hogar"
     border-color: #ffffff !important;
   }
 
-  /* Botón de agendar: texto blanco permanente y cambio de rojo en hover */
+  /* Botón de agendar: idéntico a "Hablar con un asesor" (caja roja sólida, texto blanco siempre) */
   .btn-agendar {
-    font-weight: 600;
+    font-weight: 800 !important;
     color: #ffffff !important;
     background-color: #7f1d1d !important;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.2s ease;
+    border: 1px solid #7f1d1d !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
   }
 
-  .btn-agendar:hover {
+  .btn-agendar:hover, 
+  .btn-agendar:focus, 
+  .btn-agendar:active {
     background-color: #581313 !important;
+    border-color: #581313 !important;
     color: #ffffff !important;
   }
 </style>
@@ -116,7 +122,7 @@ Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles 
 
 ## Abramos las puertas a tu próximo hogar
 
-Cuéntanos tus plans y encontremos tu espacio ideal.
+Cuéntanos tus planes y encontremos tu espacio ideal.
 
-<!-- Botón de agendar conectado al Formulario de Google -->
+<!-- Botón de agendar con clases primarias combinadas -->
 <a href="https://forms.gle/49E3mrGk5g7Dg4C9A" target="_blank" rel="noopener" class="hero-btn hero-btn-primary btn-agendar">Agendar una llamada</a>
