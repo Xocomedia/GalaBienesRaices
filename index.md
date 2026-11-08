@@ -9,10 +9,10 @@ title: "Aquí comienza tu hogar"
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  /* Tipografía general y tamaño de letra a 12pt para el cuerpo */
+  /* Tipografía general y tamaño de letra a 14pt para el cuerpo */
   body, p, li, blockquote {
     font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 12pt !important;
+    font-size: 14pt !important;
   }
 
   /* Tipografía para títulos y botones */
@@ -20,9 +20,9 @@ title: "Aquí comienza tu hogar"
     font-family: 'Josefin Sans', sans-serif !important;
   }
 
-  /* Tamaño de fuente a 12pt para los botones */
+  /* Tamaño de fuente a 13pt para los botones */
   .hero-btn, .btn-agendar {
-    font-size: 12pt !important;
+    font-size: 13pt !important;
   }
 
   /* Extra Bold (800) específico para el título principal y botones hero */
