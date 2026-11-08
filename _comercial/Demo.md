@@ -13,7 +13,10 @@ foto_principal: "/assets/images/propiedades/local-napoles-1.jpg"
 galeria:
   - "/assets/images/propiedades/local-napoles-1.jpg"
   - "/assets/images/propiedades/local-napoles-2.jpg"
+  - "/assets/images/propiedades/local-napoles-3.jpg"
 date: 2026-11-01
 ---
 
-Descripción detallada de la propiedad, condiciones legales, requisitos de arrendamiento, etc.
+Excelente local comercial ubicado en la planta baja de un edificio corporativo sobre Av. Insurgentes Sur. Cuenta con flujo peatonal de alta densidad, dictamen de seguridad estructural vigente y amplia fachada con cristales templados. 
+
+Ideal para boutiques, servicios financieros o despachos de atención al cliente.
