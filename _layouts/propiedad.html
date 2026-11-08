@@ -7,190 +7,155 @@ layout: default
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  .prop-detail-container {
-    max-width: 1100px;
-    margin: 40px auto;
+  .prop-page-wrapper {
+    max-width: 1200px;
+    margin: 30px auto 60px auto;
     padding: 0 20px;
     font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
+    color: #1f2937;
+  }
+
+  /* --- GALERÍA 70% CENTRADA --- */
+  .gallery-container-70 {
+    width: 70%;
+    margin: 0 auto 35px auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 8px;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 
-  /* --- GALERÍA ESTILO Paint (Carrusel 3D) --- */
-  .gallery-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .main-photo-wrap {
     width: 100%;
+    height: 100%;
+    background: #f3f4f6;
   }
 
-  .carousel-stage {
-    position: relative;
+  .main-photo-wrap img {
     width: 100%;
-    height: 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    perspective: 1000px;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .side-photos-wrap {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    height: 100%;
+  }
+
+  .side-photo-item {
+    width: 100%;
+    height: 100%;
+    background: #f3f4f6;
     overflow: hidden;
   }
 
-  .carousel-slide {
-    position: absolute;
-    width: 75%;
-    height: 85%;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    opacity: 0;
-    transform: scale(0.6);
-    pointer-events: none;
-    z-index: 0;
+  .side-photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
   }
 
-  /* Posición Central (Al frente) */
-  .carousel-slide.active {
-    opacity: 1;
-    transform: translateX(0) scale(1);
-    z-index: 3;
+  .side-photo-item img:hover {
+    transform: scale(1.05);
   }
 
-  /* Posición Izquierda (Previa) */
-  .carousel-slide.prev {
-    opacity: 0.75;
-    transform: translateX(-40%) scale(0.82);
-    z-index: 2;
-  }
-
-  /* Posición Derecha (Siguiente) */
-  .carousel-slide.next {
-    opacity: 0.75;
-    transform: translateX(40%) scale(0.82);
-    z-index: 2;
-  }
-
-  /* --- CONTROLES INFERIORES DE 3 BOTONES --- */
-  .controls-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
-    margin-top: 20px;
-  }
-
-  .nav-btn {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    border: 1.5px solid #7f1d1d;
-    background: #ffffff;
-    color: #7f1d1d;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease;
-  }
-
-  .nav-btn:hover:not(:disabled) {
-    background: #7f1d1d;
-    color: #ffffff;
-  }
-
-  .nav-btn:disabled {
-    border-color: #d1d5db;
-    color: #9ca3af;
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-
-  .counter-badge {
-    min-width: 54px;
-    height: 42px;
-    border-radius: 21px;
-    background: #7f1d1d;
-    color: #ffffff;
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 700;
-    font-size: 0.95rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0 14px;
-    box-shadow: 0 4px 10px rgba(127, 29, 29, 0.25);
-  }
-
-  /* --- COLUMNA DE INFORMACIÓN DERECHA --- */
-  .info-section {
+  /* --- BLOQUE DE INFORMACIÓN INFERIOR CENTRADO (70%) --- */
+  .info-container-70 {
+    width: 70%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 20px;
   }
 
-  .info-title {
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 800;
-    color: #7f1d1d;
-    font-size: 2.1rem;
-    line-height: 1.2;
+  .header-block {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 20px;
   }
 
-  .info-price {
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: #111827;
-  }
-
-  .info-location {
-    font-size: 1rem;
-    color: #4b5563;
-    font-weight: 600;
-  }
-
-  .info-state-tag {
+  .state-tag {
     display: inline-block;
     background: #f3f4f6;
     color: #7f1d1d;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     font-weight: 700;
     padding: 4px 12px;
-    border-radius: 16px;
+    border-radius: 14px;
     text-transform: uppercase;
-    width: fit-content;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
   }
 
-  .specs-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .prop-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 800;
+    font-size: 2.2rem;
+    color: #111827;
+    line-height: 1.25;
+    margin-bottom: 6px;
+  }
+
+  .prop-location {
+    font-size: 1.05rem;
+    color: #4b5563;
+    margin-bottom: 12px;
+  }
+
+  .prop-price {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #7f1d1d;
+  }
+
+  /* BARRA DE CARACTERÍSTICAS HORIZONTAL */
+  .features-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
     background: #f9fafb;
-    padding: 16px;
-    border-radius: 8px;
     border: 1px solid #e5e7eb;
-    margin: 8px 0;
-  }
-
-  .spec-item {
-    font-size: 0.92rem;
+    border-radius: 10px;
+    padding: 16px 24px;
+    font-size: 0.95rem;
     color: #374151;
   }
 
-  .info-description {
-    font-size: 12pt;
-    line-height: 1.6;
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+  }
+
+  /* DESCRIPCIÓN DETALLADA (12pt) */
+  .description-block {
+    font-size: 12pt !important;
+    line-height: 1.7;
     color: #374151;
+    padding-top: 10px;
+  }
+
+  .description-block p {
+    font-size: 12pt !important;
+    margin-bottom: 14px;
+  }
+
+  /* BOTÓN CONTACTAR AGENTE */
+  .action-block {
+    margin-top: 25px;
     border-top: 1px solid #e5e7eb;
-    padding-top: 16px;
+    padding-top: 25px;
   }
 
-  /* BOTÓN CONTACTAR A UN AGENTE */
   .btn-contact-agent {
     font-family: 'Josefin Sans', sans-serif !important;
     font-weight: 800 !important;
@@ -199,128 +164,6 @@ layout: default
     background-color: #7f1d1d !important;
     border: 1px solid #7f1d1d !important;
     text-decoration: none !important;
-    display: flex !important;
+    display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important;
-    padding: 14px 28px !important;
-    border-radius: 30px !important;
-    margin-top: 10px;
-    box-shadow: 0 6px 16px rgba(127, 29, 29, 0.3);
-    transition: background-color 0.2s ease, transform 0.2s ease !important;
-  }
-
-  .btn-contact-agent:hover {
-    background-color: #581313 !important;
-    border-color: #581313 !important;
-    transform: translateY(-2px);
-  }
-
-  @media (max-width: 768px) {
-    .prop-detail-container {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-    .carousel-stage {
-      height: 260px;
-    }
-  }
-</style>
-
-<div class="prop-detail-container">
-  
-  <!-- GALERÍA TIPO CARRUSEL 3D -->
-  <div class="gallery-section">
-    <div class="carousel-stage" id="carouselStage">
-      {% if page.galeria %}
-        {% for img in page.galeria %}
-          <div class="carousel-slide" style="background-image: url('{{ img }}');"></div>
-        {% endfor %}
-      {% else %}
-        <div class="carousel-slide" style="background-image: url('{{ page.foto_principal }}');"></div>
-      {% endif %}
-    </div>
-
-    <!-- TRES BOTONES DE CONTROL -->
-    <div class="controls-bar">
-      <button class="nav-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
-      <div class="counter-badge" id="counterBadge">1 / 1</div>
-      <button class="nav-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
-    </div>
-  </div>
-
-  <!-- COLUMNA DE DETALLES Y DESCRIPCIÓN -->
-  <div class="info-section">
-    <span class="info-state-tag">📍 {{ page.estado }}</span>
-    <h1 class="info-title">{{ page.titulo }}</h1>
-    <div class="info-price">{{ page.precio }}</div>
-    <div class="info-location">{{ page.ubicacion }}</div>
-
-    <div class="specs-grid">
-      {% if page.superficie %}<div class="spec-item">📐 <strong>Superficie:</strong> {{ page.superficie }}</div>{% endif %}
-      {% if page.recamaras %}<div class="spec-item">🛏️ <strong>Recámaras:</strong> {{ page.recamaras }}</div>{% endif %}
-      {% if page.banos %}<div class="spec-item">🚽 <strong>Baños:</strong> {{ page.banos }}</div>{% endif %}
-      {% if page.estacionamientos %}<div class="spec-item">🚗 <strong>Estacionamientos:</strong> {{ page.estacionamientos }}</div>{% endif %}
-      {% if page.tipo %}<div class="spec-item">🏷️ <strong>Tipo:</strong> {{ page.tipo }}</div>{% endif %}
-    </div>
-
-    <div class="info-description">
-      {{ content }}
-    </div>
-
-    <!-- BOTÓN CONTACTAR A UN AGENTE -->
-    <a href="https://wa.me/525515761740?text=Hola,%20me%20interesa%20informaci%C3%B3n%20sobre:%20{{ page.titulo | url_encode }}" target="_blank" rel="noopener" class="btn-contact-agent">
-      Contactar a un agente
-    </a>
-  </div>
-
-</div>
-
-<!-- SCRIPT LÓGICO PARA EL CARRUSEL 3D -->
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const counterBadge = document.getElementById('counterBadge');
-    
-    let currentIndex = 0;
-    const total = slides.length;
-
-    function updateCarousel() {
-      slides.forEach((slide, idx) => {
-        slide.classList.remove('active', 'prev', 'next');
-        
-        if (idx === currentIndex) {
-          slide.classList.add('active');
-        } else if (idx === currentIndex - 1) {
-          slide.classList.add('prev');
-        } else if (idx === currentIndex + 1) {
-          slide.classList.add('next');
-        }
-      });
-
-      // Actualizar contador central
-      counterBadge.textContent = `${currentIndex + 1} / ${total}`;
-
-      // Deshabilitar botones en primera o última foto
-      prevBtn.disabled = (currentIndex === 0);
-      nextBtn.disabled = (currentIndex === total - 1);
-    }
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        currentIndex--;
-        updateCarousel();
-      }
-    });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex < total - 1) {
-        currentIndex++;
-        updateCarousel();
-      }
-    });
-
-    updateCarousel();
-  });
-</script>
+    justify-
