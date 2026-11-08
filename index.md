@@ -9,10 +9,10 @@ title: "Aquí comienza tu hogar"
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  /* Tipografía general y tamaño de letra a 14pt para el cuerpo */
+  /* Tipografía general y tamaño de letra a 12pt para el cuerpo */
   body, p, li, blockquote {
     font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 14pt !important;
+    font-size: 12pt !important;
   }
 
   /* Tipografía para títulos y botones */
@@ -22,7 +22,7 @@ title: "Aquí comienza tu hogar"
 
   /* Tamaño de fuente a 12pt para los botones */
   .hero-btn, .btn-agendar {
-    font-size: 13pt !important;
+    font-size: 12pt !important;
   }
 
   /* Extra Bold (800) específico para el título principal y botones hero */
@@ -48,6 +48,8 @@ title: "Aquí comienza tu hogar"
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    padding: 12px 24px !important;
+    border-radius: 4px !important;
     transition: background-color 0.2s ease, border-color 0.2s ease !important;
   }
 
@@ -124,5 +126,5 @@ Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles 
 
 Cuéntanos tus planes y encontremos tu espacio ideal.
 
-<!-- Botón de agendar con clases primarias combinadas -->
-<a href="https://forms.gle/49E3mrGk5g7Dg4C9A" target="_blank" rel="noopener" class="hero-btn hero-btn-primary btn-agendar">Agendar una llamada</a>
+<!-- Botón de agendar con estilo directo en línea para forzar el texto blanco permanente -->
+<a href="https://forms.gle/49E3mrGk5g7Dg4C9A" target="_blank" rel="noopener" class="hero-btn hero-btn-primary btn-agendar" style="color: #ffffff !important;">Agendar una llamada</a>
