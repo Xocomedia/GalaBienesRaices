@@ -2,3 +2,7 @@ theme: jekyll-theme-cayman
 title: Gala Bienes Raíces
 description: ¡Sitio en construcción! Espera pronto a Gala Bienes Raíces.
 url: "https://www.galabienesraices.com"
+collections:
+  comercial:
+    output: true
+    permalink: /catalogo-comercial/:path/
