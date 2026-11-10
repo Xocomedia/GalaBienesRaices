@@ -395,6 +395,9 @@ permalink: /hola/
     </div>
   </main>
 
+  <!-- IFRAME INVISIBLE DONDE GOOGLE FORMS RECIBE LOS DATOS -->
+  <iframe name="gbr_silent_target" id="gbr_silent_target" style="display:none;"></iframe>
+
   <!-- VENTANA MODAL DEL FORMULARIO -->
   <div class="modal-overlay" id="formModal">
     <div class="modal-card">
@@ -402,10 +405,13 @@ permalink: /hola/
       <h2 class="modal-title">Deja tus datos y te contactaremos :)</h2>
 
       <form 
+        action="https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse"
+        method="POST"
+        target="gbr_silent_target"
         id="gbrContactForm"
         class="gbr-form"
       >
-        <!-- Campos Ocultos (Invisibles para el cliente) -->
+        <!-- Campos Ocultos -->
         <input type="hidden" name="entry.1823384504" value="General">
         <input type="hidden" name="entry.582773264" value="Sitio-Arana-Hola">
 
@@ -433,21 +439,21 @@ permalink: /hola/
         <button type="submit" class="btn-gbr" id="submitBtn">Solicitar Informes</button>
       </form>
 
-      <!-- Div de confirmación -->
+      <!-- Mensaje de confirmación visual -->
       <div class="success-message" id="successMsg">
         ¡Gracias por contactarnos! Nos comunicaremos contigo muy pronto.
       </div>
     </div>
   </div>
 
-  <!-- SCRIPT PARA ENVÍO Y CONTROL DE UI -->
   <script>
     const openBtn = document.getElementById('openFormBtn');
     const closeBtn = document.getElementById('closeFormBtn');
     const modal = document.getElementById('formModal');
     const form = document.getElementById('gbrContactForm');
     const successMsg = document.getElementById('successMsg');
-    const submitBtn = document.getElementById('submitBtn');
+    const iframe = document.getElementById('gbr_silent_target');
+    let isSubmitting = false;
 
     openBtn.addEventListener('click', () => {
       modal.classList.add('active');
@@ -463,25 +469,14 @@ permalink: /hola/
       }
     });
 
-    // Envío asíncrono hacia Google Forms
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Enviando...';
+    // Marca cuando el usuario presiona el botón de envío
+    form.addEventListener('submit', () => {
+      isSubmitting = true;
+    });
 
-      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse';
-      const formData = new FormData(form);
-      const searchParams = new URLSearchParams(formData);
-
-      fetch(googleFormUrl, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded'
-        },
-        body: searchParams.toString()
-      }).then(() => {
+    // Detecta la recepción de la respuesta dentro del iframe oculto
+    iframe.addEventListener('load', () => {
+      if (isSubmitting) {
         form.style.display = 'none';
         successMsg.style.display = 'block';
 
@@ -490,15 +485,9 @@ permalink: /hola/
           form.reset();
           form.style.display = 'flex';
           successMsg.style.display = 'none';
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Solicitar Informes';
+          isSubmitting = false;
         }, 2500);
-      }).catch((err) => {
-        console.error('Error al enviar:', err);
-        alert('Ocurrió un inconveniente al enviar la información. Por favor, intenta de nuevo.');
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Solicitar Informes';
-      });
+      }
     });
   </script>
 
