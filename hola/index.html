@@ -286,6 +286,20 @@ permalink: /hola/
       background-color: #f3f4f6;
     }
 
+    /* Mensaje de confirmación interno */
+    .success-message {
+      display: none;
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid #22c55e;
+      color: #ffffff;
+      padding: 16px;
+      border-radius: 16px;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
     @media (max-width: 520px) {
       body {
         padding: 15px 12px;
@@ -382,6 +396,9 @@ permalink: /hola/
     </div>
   </main>
 
+  <!-- IFRAME OCULTO (Procesa la respuesta en segundo plano) -->
+  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
   <!-- VENTANA MODAL DEL FORMULARIO -->
   <div class="modal-overlay" id="formModal">
     <div class="modal-card">
@@ -391,7 +408,8 @@ permalink: /hola/
       <form 
         action="https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse" 
         method="POST" 
-        target="_blank" 
+        target="hidden_iframe" 
+        id="gbrContactForm"
         class="gbr-form"
       >
         <!-- Campos Ocultos (Invisibles para el cliente) -->
@@ -419,16 +437,25 @@ permalink: /hola/
           <textarea id="duda" name="entry.936899222" rows="3" placeholder="Escribe tu mensaje..."></textarea>
         </div>
 
-        <button type="submit" class="btn-gbr">Solicitar Informes</button>
+        <button type="submit" class="btn-gbr" id="submitBtn">Solicitar Informes</button>
       </form>
+
+      <!-- Div de confirmación -->
+      <div class="success-message" id="successMsg">
+        ¡Gracias por contactarnos! Nos comunicaremos contigo muy pronto.
+      </div>
     </div>
   </div>
 
-  <!-- SCRIPT PARA CONTROLAR APERTURA Y CIERRE -->
+  <!-- SCRIPT PARA INTERCEPTAR Y MOSTRAR CONFIRMACIÓN LOCAL -->
   <script>
     const openBtn = document.getElementById('openFormBtn');
     const closeBtn = document.getElementById('closeFormBtn');
     const modal = document.getElementById('formModal');
+    const form = document.getElementById('gbrContactForm');
+    const iframe = document.getElementById('hidden_iframe');
+    const successMsg = document.getElementById('successMsg');
+    let formSubmitted = false;
 
     openBtn.addEventListener('click', () => {
       modal.classList.add('active');
@@ -441,6 +468,27 @@ permalink: /hola/
     modal.addEventListener('click', (e) => {
       if (e.target === modal) {
         modal.classList.remove('active');
+      }
+    });
+
+    // Detectar cuando el formulario se envía
+    form.addEventListener('submit', () => {
+      formSubmitted = true;
+    });
+
+    // Al cargar el iframe tras el envío, mostramos mensaje local y cerramos modal
+    iframe.addEventListener('load', () => {
+      if (formSubmitted) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        setTimeout(() => {
+          modal.classList.remove('active');
+          // Resetear el formulario para un uso posterior
+          form.reset();
+          form.style.display = 'flex';
+          successMsg.style.display = 'none';
+          formSubmitted = false;
+        }, 2500);
       }
     });
   </script>
