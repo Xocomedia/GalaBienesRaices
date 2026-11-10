@@ -6,37 +6,136 @@
   <title>{{ page.title | default: site.title }}</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   
-  <!-- FAVICON GALA BIENES RAÍCES (Sin tilde para evitar errores en servidores web) -->
+  <!-- FAVICON GALA BIENES RAÍCES -->
   <link rel="icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
   <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
 
   <style>
-    /* Reducción de la franja negra del encabezado */
+    /* 1. RESETEAR Y ENCOGER LA CABECERA COMPLETA */
+    header.page-header,
     .page-header {
-      padding: 12px 12px !important; /* Disminuye el relleno arriba/abajo */
-      min-height: auto !important;
+      background-image: none !important;
+      background-color: #1a1a1a !important;
+      padding: 10px 15px 10px 15px !important; /* Espaciado mínimo arriba y abajo */
+      min-height: 0 !important;
+      height: auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      position: relative !important;
     }
 
-    /* Reducción del tamaño del logo en el encabezado */
-    .page-header img,
-    .project-name img,
-    .logo-container img {
-      max-height: 32px !important; /* Ajusta la altura del logo (prueba entre 55px y 70px) */
+    /* Ocultar textos automáticos que mete Jekyll en el header */
+    .project-name, .project-tagline {
+      display: none !important;
+    }
+
+    /* 2. CONTROL COMPACTO DEL LOGO */
+    .gala-header-logo {
+      max-height: 42px !important; /* Logo compacto y elegante */
       width: auto !important;
-      display: block;
-      margin: 0 auto;
+      display: block !important;
+      margin: 0 0 2px 0 !important; /* Sin márgenes gigantes */
     }
 
-    /* Ajuste de margen para el menú hamburguesa */
+    /* 3. MENÚ BURGER PEGADO AL LOGO */
     .burger-wrapper {
-      margin-top: 1px !important;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2px !important; /* Pegadito al logo */
+      padding: 0 !important;
+    }
+
+    #burger-toggle {
+      display: none;
+    }
+
+    .burger-icon {
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 24px;
+      height: 16px;
+      z-index: 100;
+      padding: 0;
+      margin: 0;
+    }
+
+    .burger-icon span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background-color: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* Animación X */
+    #burger-toggle:checked + .burger-icon span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    #burger-toggle:checked + .burger-icon span:nth-child(2) {
+      opacity: 0;
+    }
+    #burger-toggle:checked + .burger-icon span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Desplegable flotante */
+    .burger-nav {
+      position: absolute;
+      top: 25px;
+      left: 50%;
+      transform: translateX(-50%) translateY(-10px);
+      background: rgba(26, 26, 26, 0.98);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 10px 0;
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 99;
+    }
+
+    #burger-toggle:checked ~ .burger-nav {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .burger-nav a {
+      color: #ffffff !important;
+      text-decoration: none !important;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      text-align: center;
+      transition: background 0.2s ease;
+      font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .burger-nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff !important;
     }
   </style>
 </head>
 <body>
   <header class="page-header" role="banner">
     
-    <!-- Menú Hamburguesa directo debajo del logo -->
+    <!-- Logo en tamaño compacto (42px de alto) -->
+    <a href="{{ '/' | relative_url }}" style="text-decoration: none; display: block;">
+      <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
+    </a>
+
+    <!-- Menú Hamburguesa pegado inmediatamente abajo -->
     <div class="burger-wrapper">
       <input type="checkbox" id="burger-toggle">
       <label for="burger-toggle" class="burger-icon" aria-label="Menú">
@@ -45,9 +144,9 @@
         <span></span>
       </label>
       <nav class="burger-nav">
-        <a href="#nosotros">¿Quiénes Somos?</a>
-        <a href="#servicios">Servicios</a>
-        <a href="#contacto">Contacto</a>
+        <a href="/quienes-somos/">¿Quiénes Somos?</a>
+        <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
+        <a href="/catalogo-comercial/">Propiedades Comerciales</a>
       </nav>
     </div>
 
