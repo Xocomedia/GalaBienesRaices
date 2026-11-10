@@ -2,8 +2,10 @@
 layout: default
 title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 ---
-<!-- LÍNEA PARA EL FAVICON (LOGO EN LA PESTAÑA) -->
+
+<!-- Forzado de Favicon para layouts de Jekyll -->
 <link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
+<link rel="shortcut icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
   
 <!-- Importación de Josefin Sans con todos los pesos -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,7 +66,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     color: #ffffff !important;
   }
 
-  /* --- ESTILOS DEL MODAL --- */
+  /* --- ESTILOS DEL MODAL Y CORRECCIÓN DE COLORES --- */
   .modal-overlay {
     position: fixed;
     top: 0;
@@ -95,7 +97,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     padding: 32px 28px;
     width: 100%;
     max-width: 480px;
-    color: #ffffff;
+    color: #ffffff !important;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
     position: relative;
     transform: scale(0.9);
@@ -114,7 +116,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     right: 22px;
     background: none;
     border: none;
-    color: #ffffff;
+    color: #ffffff !important;
     font-size: 1.8rem;
     cursor: pointer;
     line-height: 1;
@@ -126,11 +128,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     opacity: 1;
   }
 
+  /* FORZADO BLANCO PARA EL TÍTULO DEL MODAL (Evita sobreescritura de h2 del layout) */
+  .modal-card h2.modal-title,
   .modal-title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: 18px;
-    text-align: center;
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    margin-bottom: 18px !important;
+    text-align: center !important;
     color: #ffffff !important;
   }
 
@@ -160,7 +164,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     border-radius: 14px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.12);
-    color: #ffffff;
+    color: #ffffff !important;
     font-family: inherit;
     font-size: 0.95rem;
     outline: none;
@@ -169,7 +173,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 
   .form-group input::placeholder,
   .form-group textarea::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6) !important;
   }
 
   .form-group input:focus,
@@ -184,8 +188,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     min-height: 48px;
     border-radius: 24px;
     border: none;
-    background-color: #ffffff;
-    color: #7f1d1d;
+    background-color: #ffffff !important;
+    color: #7f1d1d !important;
     font-family: inherit;
     font-weight: 700;
     font-size: 1.05rem;
@@ -196,14 +200,14 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 
   .btn-gbr:hover {
     transform: translateY(-2px);
-    background-color: #f3f4f6;
+    background-color: #f3f4f6 !important;
   }
 
   .success-message {
     display: none;
     background: rgba(34, 197, 94, 0.2);
     border: 1px solid #22c55e;
-    color: #ffffff;
+    color: #ffffff !important;
     padding: 16px;
     border-radius: 16px;
     text-align: center;
@@ -287,7 +291,7 @@ Cuéntanos tus planes y encontremos tu espacio ideal.
     <h2 class="modal-title">Deja tus datos y te contactaremos :)</h2>
 
     <form id="gbrContactForm" class="gbr-form">
-      <input type="hidden" name="propiedad" value="Home General">
+      <input type="hidden" name="propiedad" value="General">
       <input type="hidden" name="origen" value="Landing-Principal">
 
       <div class="form-group">
