@@ -131,7 +131,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     font-weight: 700;
     margin-bottom: 18px;
     text-align: center;
-    color: #ffffff;
+    color: #ffffff !important;
   }
 
   .gbr-form {
@@ -150,7 +150,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .form-group label {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #f3f4f6;
+    color: #ffffff !important;
   }
 
   .form-group input,
@@ -275,7 +275,7 @@ Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles 
 
 ## Abramos las puertas a tu próximo hogar
 
-Cuéntanos tus plans y encontremos tu espacio ideal.
+Cuéntanos tus planes y encontremos tu espacio ideal.
 
 <!-- Botón que activa la ventana modal -->
 <button type="button" class="hero-btn hero-btn-primary btn-agendar" id="openFormBtn">Agendar una llamada</button>
@@ -287,7 +287,7 @@ Cuéntanos tus plans y encontremos tu espacio ideal.
     <h2 class="modal-title">Deja tus datos y te contactaremos :)</h2>
 
     <form id="gbrContactForm" class="gbr-form">
-      <input type="hidden" name="propiedad" value="General">
+      <input type="hidden" name="propiedad" value="Home General">
       <input type="hidden" name="origen" value="Landing-Principal">
 
       <div class="form-group">
