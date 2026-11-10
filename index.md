@@ -4,8 +4,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 ---
 
 <!-- Forzado de Favicon para layouts de Jekyll -->
-<link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
-<link rel="shortcut icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
+<link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-ícono.png">
+<link rel="shortcut icon" type="image/png" href="/assets/images/gala-bienes-raíces-icono.png">
   
 <!-- Importación de Josefin Sans con todos los pesos -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
