@@ -1,8 +1,10 @@
 ---
 layout: default
-title: "Aquí comienza tu hogar"
+title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 ---
-
+<!-- LÍNEA PARA EL FAVICON (LOGO EN LA PESTAÑA) -->
+<link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-ícono.png">
+  
 <!-- Importación de Josefin Sans con todos los pesos -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
