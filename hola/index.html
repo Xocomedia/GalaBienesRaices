@@ -151,7 +151,7 @@ permalink: /hola/
       opacity: 0.95;
     }
 
-    /* --- ESTILOS DEL MODAL (FORMULARIO) --- */
+    /* --- ESTILOS DEL MODAL --- */
     .modal-overlay {
       position: fixed;
       top: 0;
@@ -365,7 +365,6 @@ permalink: /hola/
       Propiedades habitacionales
     </a>
 
-    <!-- BOTÓN QUE ABRE EL MODAL -->
     <button type="button" class="btn-link btn-contacto" id="openFormBtn">
       Deja tu contacto,<br>nosotros nos comunicamos
     </button>
@@ -384,7 +383,6 @@ permalink: /hola/
       </a>
     </div>
 
-    <!-- Marca + Dominio unificados -->
     <div class="brand-block">
       <div class="logo-container">
         <img src="/assets/images/gala-bienes-raices-logo.png" alt="Gala Bienes Raíces" onerror="this.style.display='none'">
@@ -395,51 +393,40 @@ permalink: /hola/
     </div>
   </main>
 
-  <!-- IFRAME INVISIBLE DONDE GOOGLE FORMS RECIBE LOS DATOS -->
-  <iframe name="gbr_silent_target" id="gbr_silent_target" style="display:none;"></iframe>
-
   <!-- VENTANA MODAL DEL FORMULARIO -->
   <div class="modal-overlay" id="formModal">
     <div class="modal-card">
       <button type="button" class="close-btn" id="closeFormBtn">&times;</button>
       <h2 class="modal-title">Deja tus datos y te contactaremos :)</h2>
 
-      <form 
-        action="https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse"
-        method="POST"
-        target="gbr_silent_target"
-        id="gbrContactForm"
-        class="gbr-form"
-      >
-        <!-- Campos Ocultos -->
-        <input type="hidden" name="entry.1823384504" value="General">
-        <input type="hidden" name="entry.582773264" value="Sitio-Arana-Hola">
+      <form id="gbrContactForm" class="gbr-form">
+        <!-- Campos de rastreo interno -->
+        <input type="hidden" name="propiedad" value="General">
+        <input type="hidden" name="origen" value="Sitio-Arana-Hola">
 
-        <!-- Campos Visibles -->
         <div class="form-group">
           <label for="nombre">Tu nombre:</label>
-          <input type="text" id="nombre" name="entry.153665451" placeholder="Ej. Ana Martínez" required>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Martínez" required>
         </div>
 
         <div class="form-group">
           <label for="telefono">Teléfono de contacto:</label>
-          <input type="tel" id="telefono" name="entry.463116008" placeholder="Ej. 55 1234 5678" required>
+          <input type="tel" id="telefono" name="telefono" placeholder="Ej. 55 1234 5678" required>
         </div>
 
         <div class="form-group">
           <label for="correo">Correo electrónico:</label>
-          <input type="email" id="correo" name="entry.1869389925" placeholder="ejemplo@correo.com" required>
+          <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
         </div>
 
         <div class="form-group">
           <label for="duda">¿En qué podemos ayudarte?</label>
-          <textarea id="duda" name="entry.936899222" rows="3" placeholder="Escribe tu mensaje..."></textarea>
+          <textarea id="duda" name="duda" rows="3" placeholder="Escribe tu mensaje..."></textarea>
         </div>
 
         <button type="submit" class="btn-gbr" id="submitBtn">Solicitar Informes</button>
       </form>
 
-      <!-- Mensaje de confirmación visual -->
       <div class="success-message" id="successMsg">
         ¡Gracias por contactarnos! Nos comunicaremos contigo muy pronto.
       </div>
@@ -452,31 +439,28 @@ permalink: /hola/
     const modal = document.getElementById('formModal');
     const form = document.getElementById('gbrContactForm');
     const successMsg = document.getElementById('successMsg');
-    const iframe = document.getElementById('gbr_silent_target');
-    let isSubmitting = false;
+    const submitBtn = document.getElementById('submitBtn');
 
-    openBtn.addEventListener('click', () => {
-      modal.classList.add('active');
-    });
+    // URL de tu Apps Script integrada
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzDfLWwiBHcF_tp69hLcpA7TsnVum7ni_zWZKgS8pJRjeSQh-0sn5W-5uSdaWX0Legv/exec';
 
-    closeBtn.addEventListener('click', () => {
-      modal.classList.remove('active');
-    });
+    openBtn.addEventListener('click', () => modal.classList.add('active'));
+    closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
 
-    modal.addEventListener('click', (e) => {
-      if (e.target === modal) {
-        modal.classList.remove('active');
-      }
-    });
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
 
-    // Marca cuando el usuario presiona el botón de envío
-    form.addEventListener('submit', () => {
-      isSubmitting = true;
-    });
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
 
-    // Detecta la recepción de la respuesta dentro del iframe oculto
-    iframe.addEventListener('load', () => {
-      if (isSubmitting) {
+      const formData = new FormData(form);
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(() => {
         form.style.display = 'none';
         successMsg.style.display = 'block';
 
@@ -485,9 +469,16 @@ permalink: /hola/
           form.reset();
           form.style.display = 'flex';
           successMsg.style.display = 'none';
-          isSubmitting = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Solicitar Informes';
         }, 2500);
-      }
+      })
+      .catch((err) => {
+        console.error('Error:', err);
+        alert('Ocurrió un error al enviar. Intenta de nuevo.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Solicitar Informes';
+      });
     });
   </script>
 
