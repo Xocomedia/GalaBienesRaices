@@ -440,7 +440,7 @@ permalink: /hola/
     </div>
   </div>
 
-  <!-- SCRIPT CON FETCH (ENVÍO ASÍNCRONO SIN SILENCIAR) -->
+  <!-- SCRIPT PARA ENVÍO Y CONTROL DE UI -->
   <script>
     const openBtn = document.getElementById('openFormBtn');
     const closeBtn = document.getElementById('closeFormBtn');
@@ -463,7 +463,7 @@ permalink: /hola/
       }
     });
 
-    // Envío por FETCH con modo no-cors para Google Forms
+    // Envío asíncrono hacia Google Forms
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       
@@ -472,11 +472,15 @@ permalink: /hola/
 
       const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse';
       const formData = new FormData(form);
+      const searchParams = new URLSearchParams(formData);
 
       fetch(googleFormUrl, {
         method: 'POST',
         mode: 'no-cors',
-        body: formData
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: searchParams.toString()
       }).then(() => {
         form.style.display = 'none';
         successMsg.style.display = 'block';
@@ -500,6 +504,3 @@ permalink: /hola/
 
 </body>
 </html>
-      right: 22px;
-      background: none;
-      border: none;
