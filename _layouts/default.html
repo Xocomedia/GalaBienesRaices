@@ -11,145 +11,165 @@
   <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
 
   <style>
-    /* 1. OCULTAR EL LOGO Y TITULOS GIGANTES DEL TEMA CAYMAN */
-    header.page-header,
-    .page-header {
-      background: #1a1a1a !important; /* Quita el fondo/gradiente por defecto */
-      padding: 12px 15px !important;   /* Reduce la franja negra al mínimo */
+    /* 1. ANULAR COMPLETAMENTE EL ALTO Y RELLENO DEL HEADER DE CAYMAN */
+    html body header.page-header,
+    html body .page-header {
+      background-image: none !important;
+      background: #1a1a1a !important;
+      padding: 10px 0 !important;
+      margin: 0 !important;
       min-height: 0 !important;
       height: auto !important;
+      max-height: none !important;
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
-      position: relative !important;
     }
 
-    /* Esconde el título y subtítulo automático de Cayman */
-    .page-header .project-name, 
-    .page-header .project-tagline,
-    .project-name, 
-    .project-tagline {
-      display: none !important;
-    }
-
-    /* 2. UN SOLO LOGO COMPACTO Y ELEGANTE */
-    .gala-header-logo {
-      max-height: 48px !important;
-      width: auto !important;
-      display: block !important;
-      margin: 0 auto 4px auto !important;
-    }
-
-    /* 3. MENÚ BURGER PEGADO AL LOGO */
-    .burger-wrapper {
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 4px !important;
-      padding: 0 !important;
-    }
-
-    #burger-toggle {
+    /* 2. OCULTAR CUALQUIER ELEMENTO AUTOMÁTICO DE CAYMAN (TITULOS, BOTONES, SUBTITULOS) */
+    html body .page-header *,
+    html body .page-header h1,
+    html body .page-header h2,
+    html body .page-header a.btn,
+    html body .project-name,
+    html body .project-tagline {
       display: none;
     }
 
-    .burger-icon {
-      cursor: pointer;
+    /* EXCEPCIÓN: MOSTRAR SOLO NUESTRO LOGO Y NUESTRO BURGER */
+    html body .page-header .header-content-wrapper,
+    html body .page-header .header-content-wrapper * {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      width: 24px;
-      height: 16px;
-      z-index: 100;
-      padding: 0;
-      margin: 0;
+    }
+
+    /* 3. ESTRUCTURA INTERNA COMPACTA */
+    .header-content-wrapper {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+
+    .header-logo-link {
+      display: block !important;
+      text-decoration: none !important;
+      margin-bottom: 2px !important;
+    }
+
+    .gala-header-logo {
+      max-height: 45px !important; /* Fuerza el logo a 45px de alto */
+      width: auto !important;
+      display: block !important;
+    }
+
+    /* 4. MENÚ BURGER PEGADO */
+    .burger-wrapper {
+      position: relative !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      margin-top: 2px !important;
+    }
+
+    #burger-toggle {
+      display: none !important;
+    }
+
+    .burger-icon {
+      cursor: pointer !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+      width: 24px !important;
+      height: 16px !important;
+      z-index: 100 !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
 
     .burger-icon span {
-      display: block;
-      height: 2px;
-      width: 100%;
-      background-color: #ffffff;
-      border-radius: 2px;
-      transition: all 0.3s ease;
+      display: block !important;
+      height: 2px !important;
+      width: 100% !important;
+      background-color: #ffffff !important;
+      border-radius: 2px !important;
+      transition: all 0.3s ease !important;
     }
 
-    /* Animación a X al dar clic */
     #burger-toggle:checked + .burger-icon span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
+      transform: translateY(7px) rotate(45deg) !important;
     }
     #burger-toggle:checked + .burger-icon span:nth-child(2) {
-      opacity: 0;
+      opacity: 0 !important;
     }
     #burger-toggle:checked + .burger-icon span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
+      transform: translateY(-7px) rotate(-45deg) !important;
     }
 
-    /* Desplegable del menú */
     .burger-nav {
-      position: absolute;
-      top: 25px;
-      left: 50%;
-      transform: translateX(-50%) translateY(-10px);
-      background: rgba(26, 26, 26, 0.98);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 12px;
-      padding: 10px 0;
-      width: 200px;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      opacity: 0;
-      visibility: hidden;
-      transition: all 0.3s ease;
-      z-index: 99;
+      position: absolute !important;
+      top: 25px !important;
+      left: 50% !important;
+      transform: translateX(-50%) translateY(-10px) !important;
+      background: rgba(26, 26, 26, 0.98) !important;
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      border-radius: 12px !important;
+      padding: 10px 0 !important;
+      width: 200px !important;
+      display: flex !important;
+      flex-direction: column !important;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5) !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transition: all 0.3s ease !important;
+      z-index: 99 !important;
     }
 
     #burger-toggle:checked ~ .burger-nav {
-      opacity: 1;
-      visibility: visible;
-      transform: translateX(-50%) translateY(0);
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: translateX(-50%) translateY(0) !important;
     }
 
     .burger-nav a {
       color: #ffffff !important;
       text-decoration: none !important;
-      padding: 8px 16px;
-      font-size: 0.9rem;
-      text-align: center;
-      transition: background 0.2s ease;
-      font-family: 'Josefin Sans', sans-serif;
+      padding: 8px 16px !important;
+      font-size: 0.9rem !important;
+      text-align: center !important;
+      transition: background 0.2s ease !important;
+      font-family: 'Josefin Sans', sans-serif !important;
     }
 
     .burger-nav a:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.1) !important;
     }
   </style>
 </head>
 <body>
   <header class="page-header" role="banner">
     
-    <!-- UN SOLO LOGO (48px de alto) -->
-    <a href="{{ '/' | relative_url }}" style="text-decoration: none; display: block;">
-      <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
-    </a>
+    <!-- ENVOLTORIO PROTEGIDO DE ESTILOS EXTERNOS -->
+    <div class="header-content-wrapper">
+      <a href="{{ '/' | relative_url }}" class="header-logo-link">
+        <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
+      </a>
 
-    <!-- MENÚ BURGER -->
-    <div class="burger-wrapper">
-      <input type="checkbox" id="burger-toggle">
-      <label for="burger-toggle" class="burger-icon" aria-label="Menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </label>
-      <nav class="burger-nav">
-        <a href="/quienes-somos/">¿Quiénes Somos?</a>
-        <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
-        <a href="/catalogo-comercial/">Propiedades Comerciales</a>
-      </nav>
+      <div class="burger-wrapper">
+        <input type="checkbox" id="burger-toggle">
+        <label for="burger-toggle" class="burger-icon" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="burger-nav">
+          <a href="/quienes-somos/">¿Quiénes Somos?</a>
+          <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
+          <a href="/catalogo-comercial/">Propiedades Comerciales</a>
+        </nav>
+      </div>
     </div>
 
   </header>
