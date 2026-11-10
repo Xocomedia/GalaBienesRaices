@@ -11,12 +11,11 @@
   <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
 
   <style>
-    /* 1. RESETEAR Y ENCOGER LA CABECERA COMPLETA */
+    /* 1. OCULTAR EL LOGO Y TITULOS GIGANTES DEL TEMA CAYMAN */
     header.page-header,
     .page-header {
-      background-image: none !important;
-      background-color: #1a1a1a !important;
-      padding: 10px 15px 10px 15px !important; /* Espaciado mínimo arriba y abajo */
+      background: #1a1a1a !important; /* Quita el fondo/gradiente por defecto */
+      padding: 12px 15px !important;   /* Reduce la franja negra al mínimo */
       min-height: 0 !important;
       height: auto !important;
       display: flex !important;
@@ -26,17 +25,20 @@
       position: relative !important;
     }
 
-    /* Ocultar textos automáticos que mete Jekyll en el header */
-    .project-name, .project-tagline {
+    /* Esconde el título y subtítulo automático de Cayman */
+    .page-header .project-name, 
+    .page-header .project-tagline,
+    .project-name, 
+    .project-tagline {
       display: none !important;
     }
 
-    /* 2. CONTROL COMPACTO DEL LOGO */
+    /* 2. UN SOLO LOGO COMPACTO Y ELEGANTE */
     .gala-header-logo {
-      max-height: 42px !important; /* Logo compacto y elegante */
+      max-height: 48px !important;
       width: auto !important;
       display: block !important;
-      margin: 0 0 2px 0 !important; /* Sin márgenes gigantes */
+      margin: 0 auto 4px auto !important;
     }
 
     /* 3. MENÚ BURGER PEGADO AL LOGO */
@@ -45,7 +47,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 2px !important; /* Pegadito al logo */
+      margin-top: 4px !important;
       padding: 0 !important;
     }
 
@@ -74,7 +76,7 @@
       transition: all 0.3s ease;
     }
 
-    /* Animación X */
+    /* Animación a X al dar clic */
     #burger-toggle:checked + .burger-icon span:nth-child(1) {
       transform: translateY(7px) rotate(45deg);
     }
@@ -85,7 +87,7 @@
       transform: translateY(-7px) rotate(-45deg);
     }
 
-    /* Desplegable flotante */
+    /* Desplegable del menú */
     .burger-nav {
       position: absolute;
       top: 25px;
@@ -130,12 +132,12 @@
 <body>
   <header class="page-header" role="banner">
     
-    <!-- Logo en tamaño compacto (42px de alto) -->
+    <!-- UN SOLO LOGO (48px de alto) -->
     <a href="{{ '/' | relative_url }}" style="text-decoration: none; display: block;">
       <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
     </a>
 
-    <!-- Menú Hamburguesa pegado inmediatamente abajo -->
+    <!-- MENÚ BURGER -->
     <div class="burger-wrapper">
       <input type="checkbox" id="burger-toggle">
       <label for="burger-toggle" class="burger-icon" aria-label="Menú">
