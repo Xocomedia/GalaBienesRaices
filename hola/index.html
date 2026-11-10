@@ -286,7 +286,6 @@ permalink: /hola/
       background-color: #f3f4f6;
     }
 
-    /* Mensaje de confirmación interno */
     .success-message {
       display: none;
       background: rgba(34, 197, 94, 0.2);
@@ -396,19 +395,13 @@ permalink: /hola/
     </div>
   </main>
 
-  <!-- IFRAME OCULTO (Procesa la respuesta en segundo plano) -->
-  <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-
   <!-- VENTANA MODAL DEL FORMULARIO -->
   <div class="modal-overlay" id="formModal">
     <div class="modal-card">
       <button type="button" class="close-btn" id="closeFormBtn">&times;</button>
-      <h2 class="modal-title">Déjanos tus datos</h2>
+      <h2 class="modal-title">Deja tus datos y te contactaremos :)</h2>
 
       <form 
-        action="https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse" 
-        method="POST" 
-        target="hidden_iframe" 
         id="gbrContactForm"
         class="gbr-form"
       >
@@ -447,15 +440,14 @@ permalink: /hola/
     </div>
   </div>
 
-  <!-- SCRIPT PARA INTERCEPTAR Y MOSTRAR CONFIRMACIÓN LOCAL -->
+  <!-- SCRIPT CON FETCH (ENVÍO ASÍNCRONO SIN SILENCIAR) -->
   <script>
     const openBtn = document.getElementById('openFormBtn');
     const closeBtn = document.getElementById('closeFormBtn');
     const modal = document.getElementById('formModal');
     const form = document.getElementById('gbrContactForm');
-    const iframe = document.getElementById('hidden_iframe');
     const successMsg = document.getElementById('successMsg');
-    let formSubmitted = false;
+    const submitBtn = document.getElementById('submitBtn');
 
     openBtn.addEventListener('click', () => {
       modal.classList.add('active');
@@ -471,27 +463,43 @@ permalink: /hola/
       }
     });
 
-    // Detectar cuando el formulario se envía
-    form.addEventListener('submit', () => {
-      formSubmitted = true;
-    });
+    // Envío por FETCH con modo no-cors para Google Forms
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
 
-    // Al cargar el iframe tras el envío, mostramos mensaje local y cerramos modal
-    iframe.addEventListener('load', () => {
-      if (formSubmitted) {
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdvoqC2HFrKjHmcrtg12LrlA45WgY3HRhA5cfV2-ZkxTUinHw/formResponse';
+      const formData = new FormData(form);
+
+      fetch(googleFormUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(() => {
         form.style.display = 'none';
         successMsg.style.display = 'block';
+
         setTimeout(() => {
           modal.classList.remove('active');
-          // Resetear el formulario para un uso posterior
           form.reset();
           form.style.display = 'flex';
           successMsg.style.display = 'none';
-          formSubmitted = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Solicitar Informes';
         }, 2500);
-      }
+      }).catch((err) => {
+        console.error('Error al enviar:', err);
+        alert('Ocurrió un inconveniente al enviar la información. Por favor, intenta de nuevo.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Solicitar Informes';
+      });
     });
   </script>
 
 </body>
 </html>
+      right: 22px;
+      background: none;
+      border: none;
