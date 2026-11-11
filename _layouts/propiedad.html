@@ -7,163 +7,468 @@ layout: default
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  .prop-page-wrapper {
-    max-width: 1200px;
+  .prop-detail-wrapper {
+    max-width: 1100px;
     margin: 30px auto 60px auto;
     padding: 0 20px;
     font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
-    color: #1f2937;
   }
 
-  /* --- GALERÍA 70% CENTRADA --- */
-  .gallery-container-70 {
-    width: 70%;
-    margin: 0 auto 35px auto;
+  /* GALERÍA DE FOTOS ESTILO REALTOR */
+  .gallery-container {
     display: grid;
-    grid-template-columns: 2.2fr 1fr;
-    gap: 8px;
+    grid-template-columns: 2fr 1fr;
+    gap: 12px;
     height: 420px;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   }
 
-  .main-photo-wrap {
-    width: 100%;
-    height: 100%;
-    background: #f3f4f6;
-  }
-
-  .main-photo-wrap img {
+  .gallery-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
 
-  .side-photos-wrap {
+  .gallery-thumbs {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 8px;
-    height: 100%;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .side-photo-item {
-    width: 100%;
-    height: 100%;
-    background: #f3f4f6;
-    overflow: hidden;
-  }
-
-  .side-photo-item img {
+  .gallery-thumbs img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
   }
 
-  .side-photo-item img:hover {
-    transform: scale(1.05);
+  /* ESTRUCTURA DE 2 COLUMNAS (INFO IZQ + FORMULARIO DER) */
+  .prop-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 40px;
+    align-items: start;
   }
 
-  /* --- BLOQUE DE INFORMACIÓN INFERIOR CENTRADO (70%) --- */
-  .info-container-70 {
-    width: 70%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .header-block {
+  /* SECCIÓN PRINCIPAL DE INFORMACIÓN */
+  .prop-header {
     border-bottom: 1px solid #e5e7eb;
     padding-bottom: 20px;
-  }
-
-  .state-tag {
-    display: inline-block;
-    background: #f3f4f6;
-    color: #7f1d1d;
-    font-size: 0.82rem;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 14px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
-  }
-
-  .prop-title {
-    font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 800;
-    font-size: 2.2rem;
-    color: #111827;
-    line-height: 1.25;
-    margin-bottom: 6px;
-  }
-
-  .prop-location {
-    font-size: 1.05rem;
-    color: #4b5563;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
   }
 
   .prop-price {
     font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 800;
-    color: #7f1d1d;
+    color: #111827;
+    line-height: 1.1;
   }
 
-  /* BARRA DE CARACTERÍSTICAS HORIZONTAL */
-  .features-bar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    background: #f9fafb;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    padding: 16px 24px;
-    font-size: 0.95rem;
-    color: #374151;
-  }
-
-  .feature-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
+  .prop-title-location {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-top: 6px;
     font-weight: 600;
   }
 
-  /* DESCRIPCIÓN DETALLADA (12pt) */
-  .description-block {
-    font-size: 12pt !important;
+  .prop-tag-status {
+    display: inline-block;
+    background: rgba(188, 36, 36, 0.1);
+    color: #BC2424;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+
+  /* BANDERILLAS RÁPIDAS DE ESPECIFICACIONES */
+  .quick-specs-bar {
+    display: flex;
+    gap: 24px;
+    background: #f9fafb;
+    border: 1px solid #f3f4f6;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+  }
+
+  .spec-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .spec-value {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+  }
+
+  .spec-label {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+
+  /* DETALLES Y DESCRIPCIÓN */
+  .prop-section-title {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #BC2424 !important;
+    margin: 30px 0 15px 0 !important;
+    border-bottom: 2px solid rgba(188, 36, 36, 0.2);
+    padding-bottom: 6px;
+  }
+
+  .prop-description {
     line-height: 1.7;
     color: #374151;
-    padding-top: 10px;
+    font-size: 1rem !important;
   }
 
-  .description-block p {
-    font-size: 12pt !important;
-    margin-bottom: 14px;
+  .tech-specs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-top: 15px;
   }
 
-  /* BOTÓN CONTACTAR AGENTE */
-  .action-block {
-    margin-top: 25px;
-    border-top: 1px solid #e5e7eb;
-    padding-top: 25px;
+  .tech-spec-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 12px 16px;
+    border-radius: 8px;
   }
 
-  .btn-contact-agent {
+  .tech-spec-box strong {
+    color: #111827;
+    display: block;
+    font-size: 0.88rem;
+  }
+
+  .tech-spec-box span {
+    color: #6b7280;
+    font-size: 0.95rem;
+  }
+
+  /* FORMULARIO LATERAL FIJO (STICKY SIDEBAR) */
+  .sidebar-card {
+    position: sticky;
+    top: 90px;
+    background: rgba(90, 12, 16, 0.96);
+    border-radius: 24px;
+    padding: 28px 24px;
+    color: #ffffff;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+  }
+
+  .sidebar-card h3 {
     font-family: 'Josefin Sans', sans-serif !important;
-    font-weight: 800 !important;
-    font-size: 12pt !important;
     color: #ffffff !important;
-    background-color: #7f1d1d !important;
-    border: 1px solid #7f1d1d !important;
+    font-weight: 700 !important;
+    font-size: 1.35rem !important;
+    margin-top: 0 !important;
+    margin-bottom: 8px !important;
+    text-align: center;
+  }
+
+  .sidebar-card p {
+    font-size: 0.88rem !important;
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    margin-bottom: 18px;
+  }
+
+  .sidebar-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .sidebar-form input,
+  .sidebar-form textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.12);
+    color: #ffffff !important;
+    font-size: 0.9rem;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  .sidebar-form input::placeholder,
+  .sidebar-form textarea::placeholder {
+    color: rgba(255,255,255,0.6) !important;
+  }
+
+  .btn-sidebar-submit {
+    margin-top: 6px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: #ffffff !important;
+    color: #7f1d1d !important;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .btn-sidebar-submit:hover {
+    transform: translateY(-2px);
+    background-color: #f3f4f6 !important;
+  }
+
+  /* SECCIÓN RECOMENDADAS AL AZAR (3 MAX) */
+  .recommended-section {
+    margin-top: 70px;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 40px;
+  }
+
+  .recommended-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .rec-card-link {
     text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-
+    color: inherit !important;
+  }
+
+  .rec-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .rec-card-link:hover .rec-card {
+    transform: translateY(-4px);
+  }
+
+  .rec-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+  }
+
+  .rec-card-body {
+    padding: 12px 14px;
+  }
+
+  .rec-price {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: #111827;
+  }
+
+  .rec-title {
+    font-size: 0.85rem;
+    color: #4b5563;
+    margin-top: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* RESPONSIVE MÓVIL */
+  @media (max-width: 860px) {
+    .gallery-container {
+      grid-template-columns: 1fr;
+      height: 260px;
+    }
+    .gallery-thumbs {
+      display: none;
+    }
+    .prop-layout-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .recommended-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<div class="prop-detail-wrapper">
+
+  <!-- GALERÍA DE FOTOS DE LA PROPIEDAD -->
+  <div class="gallery-container">
+    <div class="gallery-main">
+      <img src="{{ page.foto_principal }}" alt="{{ page.titulo }}">
+    </div>
+    <div class="gallery-thumbs">
+      {% if page.foto_2 %}<img src="{{ page.foto_2 }}" alt="Foto 2">{% else %}<img src="{{ page.foto_principal }}" alt="{{ page.titulo }}">{% endif %}
+      {% if page.foto_3 %}<img src="{{ page.foto_3 }}" alt="Foto 3">{% else %}<img src="{{ page.foto_principal }}" alt="{{ page.titulo }}">{% endif %}
+    </div>
+  </div>
+
+  <div class="prop-layout-grid">
+    
+    <!-- COLUMNA IZQUIERDA: DETALLES DE LA PROPIEDAD -->
+    <div class="prop-main-info">
+      
+      <div class="prop-header">
+        <span class="prop-tag-status">{{ page.tipo }} · {{ page.estado }}</span>
+        <div class="prop-price">{{ page.precio }}</div>
+        <div class="prop-title-location">📍 {{ page.titulo }} — {{ page.ubicacion }}</div>
+      </div>
+
+      <!-- FRANZAS DE DATO RÁPIDO (REALTOR STYLE) -->
+      <div class="quick-specs-bar">
+        {% if page.superficie %}
+        <div class="spec-item">
+          <span class="spec-value">{{ page.superficie }}</span>
+          <span class="spec-label">Superficie</span>
+        </div>
+        {% endif %}
+
+        {% if page.recamaras > 0 %}
+        <div class="spec-item">
+          <span class="spec-value">{{ page.recamaras }}</span>
+          <span class="spec-label">Recámaras</span>
+        </div>
+        {% endif %}
+
+        {% if page.banos > 0 %}
+        <div class="spec-item">
+          <span class="spec-value">{{ page.banos }}</span>
+          <span class="spec-label">Baños</span>
+        </div>
+        {% endif %}
+
+        {% if page.estacionamientos > 0 %}
+        <div class="spec-item">
+          <span class="spec-value">{{ page.estacionamientos }}</span>
+          <span class="spec-label">Estacionamientos</span>
+        </div>
+        {% endif %}
+      </div>
+
+      <!-- DESCRIPCIÓN GENERAL -->
+      <h2 class="prop-section-title">Descripción</h2>
+      <div class="prop-description">
+        {{ content }}
+      </div>
+
+      <!-- FICHA TÉCNICA DETALLADA -->
+      <h2 class="prop-section-title">Detalles de la propiedad</h2>
+      <div class="tech-specs-grid">
+        <div class="tech-spec-box">
+          <strong>Tipo de Inmueble</strong>
+          <span>{{ page.tipo }}</span>
+        </div>
+        <div class="tech-spec-box">
+          <strong>Estado</strong>
+          <span>{{ page.estado }}</span>
+        </div>
+        {% if page.mantenimiento %}
+        <div class="tech-spec-box">
+          <strong>Mantenimiento</strong>
+          <span>{{ page.mantenimiento }}</span>
+        </div>
+        {% endif %}
+        {% if page.piso %}
+        <div class="tech-spec-box">
+          <strong>Ubicación / Piso</strong>
+          <span>Piso {{ page.piso }}</span>
+        </div>
+        {% endif %}
+      </div>
+
+    </div>
+
+    <!-- COLUMNA DERECHA: FORMULARIO DIRECTO -->
+    <aside class="prop-sidebar">
+      <div class="sidebar-card">
+        <h3>¿Te interesa esta propiedad?</h3>
+        <p>Déjanos tus datos y un asesor Gala se comunicará contigo.</p>
+
+        <form id="propPageForm" class="sidebar-form">
+          <input type="hidden" name="propiedad" value="{{ page.titulo }}">
+          <input type="hidden" name="origen" value="Ficha-Propiedad">
+
+          <input type="text" name="nombre" placeholder="Tu nombre" required>
+          <input type="tel" name="telefono" placeholder="Teléfono de contacto" required>
+          <input type="email" name="correo" placeholder="Correo electrónico" required>
+          <textarea name="duda" rows="3" placeholder="¿Cuándo te gustaría agendar tu visita?"></textarea>
+
+          <button type="submit" class="btn-sidebar-submit" id="sidebarSubmitBtn">Solicitar Informes</button>
+        </form>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- SECCIÓN DE PROPIEDADES RECOMENDADAS AL AZAR (MAX 3) -->
+  <div class="recommended-section">
+    <h2 class="prop-section-title">Otras propiedades que te pueden interesar</h2>
+    
+    <div class="recommended-grid">
+      {% assign recomendadas = site.comercial | sample: 3 %}
+      {% for rec in recomendadas %}
+        <a href="{{ rec.url | relative_url }}" class="rec-card-link">
+          <article class="rec-card">
+            <img src="{{ rec.foto_principal }}" alt="{{ rec.titulo }}">
+            <div class="rec-card-body">
+              <div class="rec-price">{{ rec.precio }}</div>
+              <div class="rec-title">{{ rec.titulo }}</div>
+            </div>
+          </article>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<script>
+  // Script para conectar con el Google Apps Script existente
+  const propForm = document.getElementById('propPageForm');
+  const sidebarSubmitBtn = document.getElementById('sidebarSubmitBtn');
+  const SCRIPT_URL_PROP = 'https://script.google.com/macros/s/AKfycbzDfLWwiBHcF_tp69hLcpA7TsnVum7ni_zWZKgS8pJRjeSQh-0sn5W-5uSdaWX0Legv/exec';
+
+  if (propForm) {
+    propForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sidebarSubmitBtn.disabled = true;
+      sidebarSubmitBtn.textContent = 'Enviando...';
+
+      const formData = new FormData(propForm);
+
+      fetch(SCRIPT_URL_PROP, {
+        method: 'POST',
+        body: formData
+      })
+      .then(() => {
+        alert('¡Gracias! Hemos recibido tu mensaje. Te contactaremos muy pronto.');
+        propForm.reset();
+        sidebarSubmitBtn.disabled = false;
+        sidebarSubmitBtn.textContent = 'Solicitar Informes';
+      })
+      .catch((err) => {
+        console.error('Error:', err);
+        alert('Ocurrió un error al enviar. Intenta de nuevo.');
+        sidebarSubmitBtn.disabled = false;
+        sidebarSubmitBtn.textContent = 'Solicitar Informes';
+      });
+    });
+  }
+</script>
