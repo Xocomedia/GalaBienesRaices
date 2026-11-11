@@ -10,22 +10,18 @@
   --link-color: #BC2424;
 }
 
-/* ===================================================
-   1. RESETEO DE FRANJA BLANCA Y HEADER LAYOUT
-   =================================================== */
-
+/* 1. RESET Y BASE */
 html, body {
   margin: 0 !important;
   padding: 0 !important;
   overflow-x: hidden;
 }
 
-/* Desactivar el logo gigante ::before de Cayman */
 .page-header::before {
   display: none !important;
 }
 
-/* Franja negra del header ultradelgada */
+/* 2. HEADER COMPACTO HORIZONTAL */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
@@ -38,7 +34,6 @@ html, body {
   height: auto !important;
 }
 
-/* Estructura Flex: Logo Izq, Burger Centro, Spacer Der */
 .header-container {
   display: flex !important;
   align-items: center !important;
@@ -48,7 +43,6 @@ html, body {
   margin: 0 auto;
 }
 
-/* Ocultar elementos automáticos del tema Cayman */
 .page-header .project-name,
 .page-header .project-tagline,
 .project-name,
@@ -63,20 +57,18 @@ html, body {
   flex: 1;
 }
 
-/* Logo con presencia visible a la izquierda (55px de alto) */
 .gala-header-logo {
-  max-height: 55px !important;
+  max-height: 52px !important;
   width: auto !important;
   display: block !important;
   margin: 0 !important;
 }
 
-/* Elemento equilibrador invisible */
 .header-spacer {
   flex: 1;
 }
 
-/* Burger exactamente al centro */
+/* 3. BURGER CENTRADO */
 .burger-wrapper {
   position: relative !important;
   margin: 0 !important;
@@ -152,9 +144,7 @@ html, body {
   transform: translateY(-7.5px) rotate(-45deg);
 }
 
-/* ===================================================
-   2. ELIMINACIÓN DE LA FRANJA BLANCA EN EL MAIN
-   =================================================== */
+/* 4. CONTENIDO SIN ESPACIOS BLANCOS */
 .main-content {
   color: #1E1E1E !important;
   padding: 0 !important;
@@ -173,9 +163,7 @@ html, body {
   color: #BC2424 !important;
 }
 
-/* ===================================================
-   3. HERO CON VIDEO DE FONDO Y BOTONES
-   =================================================== */
+/* 5. HERO SECTION */
 .hero-container {
   position: relative;
   width: 100vw;
@@ -294,7 +282,5 @@ html, body {
   .hero-btn {
     padding: 0.75rem 0.8rem;
     font-size: 0.88rem;
-  }
-}
   }
 }
