@@ -11,32 +11,44 @@
 }
 
 /* ===================================================
-   1. ENCABEZADO CENTRADO Y RESETS
+   1. RESETEO DE FRANJA BLANCA Y HEADER LAYOUT
    =================================================== */
+
+html, body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
 
 /* Desactivar el logo gigante ::before de Cayman */
 .page-header::before {
   display: none !important;
 }
 
-/* Franja negra del header centrada */
+/* Franja negra del header ultradelgada */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 16px 20px 14px 20px !important;
+  padding: 8px 24px !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   min-height: 0 !important;
   height: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
 }
 
-/* Ocultar elementos automáticos de Cayman */
+/* Estructura Flex: Logo Izq, Burger Centro, Spacer Der */
+.header-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ocultar elementos automáticos del tema Cayman */
 .page-header .project-name,
 .page-header .project-tagline,
 .project-name,
@@ -48,21 +60,26 @@
 .header-logo-link {
   display: block !important;
   text-decoration: none !important;
+  flex: 1;
 }
 
-/* Logo con presencia (65px de alto) */
+/* Logo con presencia visible a la izquierda (55px de alto) */
 .gala-header-logo {
-  max-height: 65px !important;
+  max-height: 55px !important;
   width: auto !important;
   display: block !important;
-  margin: 0 auto 8px auto !important;
+  margin: 0 !important;
 }
 
-/* Menú Hamburguesa centrado abajo */
+/* Elemento equilibrador invisible */
+.header-spacer {
+  flex: 1;
+}
+
+/* Burger exactamente al centro */
 .burger-wrapper {
   position: relative !important;
-  margin-top: 2px !important;
-  margin-bottom: 0 !important;
+  margin: 0 !important;
   z-index: 1100;
   display: flex !important;
   justify-content: center !important;
@@ -79,7 +96,6 @@
   justify-content: space-between;
   width: 26px;
   height: 17px;
-  margin: 0 auto !important;
   cursor: pointer;
 }
 
@@ -100,7 +116,7 @@
   border-radius: 8px;
   padding: 0.8rem 1rem;
   position: absolute !important;
-  top: 28px !important;
+  top: 32px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   width: 220px;
@@ -137,8 +153,15 @@
 }
 
 /* ===================================================
-   2. CONTENIDO PRINCIPAL Y HERO
+   2. ELIMINACIÓN DE LA FRANJA BLANCA EN EL MAIN
    =================================================== */
+.main-content {
+  color: #1E1E1E !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+
 .main-content h1, 
 .main-content h2, 
 .main-content h3, 
@@ -146,19 +169,13 @@
   color: #BC2424 !important;
 }
 
-.main-content {
-  color: #1E1E1E !important;
-  padding-top: 0 !important;
-}
-
 .main-content a {
   color: #BC2424 !important;
 }
 
-body {
-  overflow-x: hidden;
-}
-
+/* ===================================================
+   3. HERO CON VIDEO DE FONDO Y BOTONES
+   =================================================== */
 .hero-container {
   position: relative;
   width: 100vw;
@@ -277,5 +294,7 @@ body {
   .hero-btn {
     padding: 0.75rem 0.8rem;
     font-size: 0.88rem;
+  }
+}
   }
 }
