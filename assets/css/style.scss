@@ -154,7 +154,7 @@
 }
 
 /* ===================================================
-   2. ESTILOS PARA EL CONTENIDO PRINCIPAL
+   2. ESTILOS PARA EL CONTENIDO PRINCIPAL Y BOTONES
    =================================================== */
 .main-content h1, 
 .main-content h2, 
@@ -170,6 +170,19 @@
 
 .main-content a {
   color: #BC2424 !important;
+}
+
+/* REGLA GLOBAL: Evita que el color de enlaces afecte botones */
+.main-content a.hero-btn,
+.main-content a.btn-agendar,
+.main-content a.btn-regresar,
+.hero-btn,
+.hero-btn:visited,
+.btn-agendar,
+.btn-agendar:visited,
+.btn-regresar,
+.btn-regresar:visited {
+  color: #ffffff !important;
 }
 
 /* Evitar scroll horizontal */
