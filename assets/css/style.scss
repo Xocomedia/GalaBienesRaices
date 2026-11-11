@@ -1,19 +1,17 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 /* Paleta oficial de Gala Bienes Raíces */
 :root {
-  --header-bg-color: #1E1E1E;          /* Gris oscuro oficial Gala */
-  --header-bg-color-secondary: #333333;/* Carbón sutil para degradado */
-  --section-headings-color: #BC2424;   /* Títulos H1-H4 en Rojo Gala */
-  --body-text-color: #1E1E1E;          /* Lectura */
-  --link-color: #BC2424;               /* Enlaces */
+  --header-bg-color: #1E1E1E;
+  --header-bg-color-secondary: #333333;
+  --section-headings-color: #BC2424;
+  --body-text-color: #1E1E1E;
+  --link-color: #BC2424;
 }
 
 /* ===================================================
-   1. ENCABEZADO CENTRADO CON LOGO PROPORTIONAL
+   1. ENCABEZADO CENTRADO Y RESETS
    =================================================== */
 
 /* Desactivar el logo gigante ::before de Cayman */
@@ -21,11 +19,11 @@
   display: none !important;
 }
 
-/* Franja negra del header con disposición vertical centrada */
+/* Franja negra del header centrada */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 16px 20px 14px 20px !important; /* Relleno proporcionado al logo */
+  padding: 16px 20px 14px 20px !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
@@ -38,7 +36,7 @@
   justify-content: center !important;
 }
 
-/* Ocultar elementos automáticos del tema Cayman */
+/* Ocultar elementos automáticos de Cayman */
 .page-header .project-name,
 .page-header .project-tagline,
 .project-name,
@@ -60,7 +58,7 @@
   margin: 0 auto 8px auto !important;
 }
 
-/* Menú Hamburguesa centrado justo debajo */
+/* Menú Hamburguesa centrado abajo */
 .burger-wrapper {
   position: relative !important;
   margin-top: 2px !important;
@@ -139,7 +137,7 @@
 }
 
 /* ===================================================
-   2. ESTILOS PARA EL CONTENIDO PRINCIPAL
+   2. CONTENIDO PRINCIPAL Y HERO
    =================================================== */
 .main-content h1, 
 .main-content h2, 
@@ -157,14 +155,10 @@
   color: #BC2424 !important;
 }
 
-/* Evitar scroll horizontal */
 body {
   overflow-x: hidden;
 }
 
-/* ===================================================
-   3. HERO CON VIDEO DE FONDO Y BOTONES
-   =================================================== */
 .hero-container {
   position: relative;
   width: 100vw;
@@ -284,5 +278,4 @@ body {
     padding: 0.75rem 0.8rem;
     font-size: 0.88rem;
   }
-}
 }
