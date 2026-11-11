@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Hotel Villas y Suites Real Azteca"
+titulo: "Hotel Villas y Suites Tlalpan | Gala Bienes Raíces"
 precio: "$65,500,000 MXN (Venta) / $340,000 MXN (Renta)"
 ubicacion: "Santa Úrsula Coapa, Coyoacán, CDMX"
 estado: "Venta o Renta"
@@ -24,7 +24,7 @@ fotos:
   - "/assets/images/venta/hotel-real-azteca/8.jpg"
 ---
 
-Excelente oportunidad de inversión con el **Hotel "Villas y Suites Real Azteca"**, inmueble en pleno funcionamiento y operando actualmente. Ubicado estratégicamente sobre Calzada de Tlalpan, a un costado del **Estadio Azteca**, en una zona de altísima demanda turística, comercial y deportiva.
+Excelente oportunidad de inversión, inmueble en pleno funcionamiento y operando actualmente. Ubicado estratégicamente sobre Calzada de Tlalpan, cerca del **Estadio Azteca**, en una zona de altísima demanda turística, comercial y deportiva.
 
 Cuenta con excelente conectividad y acceso directo a transporte público (Metro y Metrobús frente al inmueble).
 
@@ -32,7 +32,7 @@ Cuenta con excelente conectividad y acceso directo a transporte público (Metro 
 
 ### 🔑 Especificaciones de la Propiedad
 
-* **Código de propiedad:** C1VRC1-26
+* **Hotel Tlalpan**
 * **Uso de suelo:** Comercial / Hotelero
 * **Superficie de Terreno:** 668.00 m² (668.82 m² según boleta catastral)
 * **Superficie de Construcción:** 1,876.00 m² (1,876.06 m² según boleta catastral)
