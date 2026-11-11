@@ -13,19 +13,19 @@
 }
 
 /* ===================================================
-   1. ENCABEZADO COMPACTO HORIZONTAL Y RESETS DE CAYMAN
+   1. ENCABEZADO CENTRADO CON LOGO PROPORTIONAL
    =================================================== */
 
-/* Desactivar el logo gigante inyectado por CSS ::before */
+/* Desactivar el logo gigante ::before de Cayman */
 .page-header::before {
   display: none !important;
 }
 
-/* Franja negra del header con alineación horizontal flexbox */
+/* Franja negra del header con disposición vertical centrada */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 10px 24px !important;
+  padding: 16px 20px 14px 20px !important; /* Relleno proporcionado al logo */
   position: sticky !important;
   top: 0;
   z-index: 1000;
@@ -33,38 +33,41 @@
   min-height: 0 !important;
   height: auto !important;
   display: flex !important;
-  flex-direction: row !important;
+  flex-direction: column !important;
   align-items: center !important;
-  justify-content: space-between !important;
+  justify-content: center !important;
 }
 
-/* Ocultar el título/subtítulo automático del tema Cayman */
+/* Ocultar elementos automáticos del tema Cayman */
 .page-header .project-name,
 .page-header .project-tagline,
 .project-name,
-.project-tagline {
-  display: none !important;
-}
-
-/* Tamaño del logo horizontal insertado en HTML */
-.gala-header-logo {
-  max-height: 38px !important;
-  width: auto !important;
-  display: block !important;
-  margin: 0 !important;
-}
-
-/* 2. Ocultar el botón original de GitHub */
+.project-tagline,
 .page-header .btn {
   display: none !important;
 }
 
-/* 3. Menú Hamburguesa alineado a la derecha */
+.header-logo-link {
+  display: block !important;
+  text-decoration: none !important;
+}
+
+/* Logo con presencia (65px de alto) */
+.gala-header-logo {
+  max-height: 65px !important;
+  width: auto !important;
+  display: block !important;
+  margin: 0 auto 8px auto !important;
+}
+
+/* Menú Hamburguesa centrado justo debajo */
 .burger-wrapper {
   position: relative !important;
-  margin: 0 !important;
+  margin-top: 2px !important;
+  margin-bottom: 0 !important;
   z-index: 1100;
   display: flex !important;
+  justify-content: center !important;
   align-items: center !important;
 }
 
@@ -76,9 +79,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 24px;
-  height: 16px;
-  margin: 0 !important;
+  width: 26px;
+  height: 17px;
+  margin: 0 auto !important;
   cursor: pointer;
 }
 
@@ -99,9 +102,9 @@
   border-radius: 8px;
   padding: 0.8rem 1rem;
   position: absolute !important;
-  top: 30px !important;
-  right: 0 !important;
-  left: auto !important;
+  top: 28px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
   width: 220px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
@@ -112,6 +115,7 @@
   padding: 0.4rem 0;
   font-size: 0.95rem;
   transition: color 0.2s;
+  text-align: center;
 }
 
 .burger-nav a:hover {
@@ -123,7 +127,7 @@
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(1) {
-  transform: translateY(7px) rotate(45deg);
+  transform: translateY(7.5px) rotate(45deg);
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(2) {
@@ -131,11 +135,11 @@
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7.5px) rotate(-45deg);
 }
 
 /* ===================================================
-   4. ESTILOS PARA EL CONTENIDO PRINCIPAL
+   2. ESTILOS PARA EL CONTENIDO PRINCIPAL
    =================================================== */
 .main-content h1, 
 .main-content h2, 
@@ -159,7 +163,7 @@ body {
 }
 
 /* ===================================================
-   5. HERO CON VIDEO DE FONDO Y BOTONES
+   3. HERO CON VIDEO DE FONDO Y BOTONES
    =================================================== */
 .hero-container {
   position: relative;
@@ -280,4 +284,5 @@ body {
     padding: 0.75rem 0.8rem;
     font-size: 0.88rem;
   }
+}
 }
