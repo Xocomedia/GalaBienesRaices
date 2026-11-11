@@ -13,19 +13,17 @@
 }
 
 /* ===================================================
-   1. ENCABEZADO HORIZONTAL Y RESETS DE CAYMAN
+   1. ENCABEZADO HORIZONTAL (LOGO CENTRO - BURGER DERECHA)
    =================================================== */
 
-/* Desactivar el logo gigante ::before inyectado por Cayman */
 .page-header::before {
   display: none !important;
 }
 
-/* Franja negra del header ultradelgada */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 8px 24px !important;
+  padding: 10px 24px !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
@@ -35,7 +33,6 @@
   display: block !important;
 }
 
-/* Distribución Flexbox: Logo Izquierda | Burger Centro | Spacer Derecha */
 .header-container {
   display: flex !important;
   align-items: center !important;
@@ -45,7 +42,6 @@
   margin: 0 auto;
 }
 
-/* Ocultar títulos y botones automáticos del tema */
 .page-header .project-name,
 .page-header .project-tagline,
 .project-name,
@@ -54,33 +50,38 @@
   display: none !important;
 }
 
-.header-logo-link {
-  display: block !important;
-  text-decoration: none !important;
-  flex: 1;
-}
-
-/* Logo visible y amplio a la izquierda (55px de alto) */
-.gala-header-logo {
-  max-height: 75px !important; /* Subimos de 55px a 75px */
-  width: auto !important;
-  display: block !important;
-  margin: 0 !important;
-}
-
-/* Elemento equilibrador invisible */
+/* Espacio fantasma a la izquierda (orden 1) */
 .header-spacer {
   flex: 1;
+  order: 1;
 }
 
-/* Burger alineado exactamente al centro horizontal */
+/* Logo al centro exacto (orden 2) */
+.header-logo-link {
+  display: flex !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  flex: 1;
+  order: 2;
+}
+
+.gala-header-logo {
+  max-height: 75px !important; /* Presencia amplia */
+  width: auto !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+/* Burger a la derecha (orden 3) */
 .burger-wrapper {
   position: relative !important;
   margin: 0 !important;
   z-index: 1100;
   display: flex !important;
-  justify-content: center !important;
+  justify-content: flex-end !important;
   align-items: center !important;
+  flex: 1;
+  order: 3;
 }
 
 #burger-toggle {
@@ -94,7 +95,7 @@
   width: 26px;
   height: 17px;
   cursor: pointer;
-  margin: 0 !important;
+  margin: 0 0 0 auto !important;
 }
 
 .burger-icon span {
@@ -106,7 +107,7 @@
   transition: all 0.3s ease;
 }
 
-/* Desplegable centrado */
+/* Desplegable que abre desde la derecha */
 .burger-nav {
   display: none;
   flex-direction: column;
@@ -115,9 +116,10 @@
   border-radius: 8px;
   padding: 0.8rem 1rem;
   position: absolute !important;
-  top: 34px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
+  top: 36px !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: none !important;
   width: 220px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
@@ -128,7 +130,7 @@
   padding: 0.4rem 0;
   font-size: 0.95rem;
   transition: color 0.2s;
-  text-align: center;
+  text-align: right;
 }
 
 .burger-nav a:hover {
