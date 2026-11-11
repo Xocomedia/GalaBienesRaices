@@ -22,44 +22,59 @@ layout: default
     font-size: 15pt !important;
   }
 
-  /* GALERÍA EN FORMATO 3:4 VERTICAL (IZQUIERDA) + MINIATURAS (DERECHA) */
+  /* GALERÍA LADO A LADO */
   .gallery-wrapper-side {
     display: grid;
-    grid-template-columns: minmax(0, 500px) 280px;
-    gap: 20px;
-    align-items: start;
+    grid-template-columns: 1fr 280px;
+    gap: 16px;
+    height: 480px;
     margin-bottom: 35px;
   }
 
-  /* VISTA PRINCIPAL CON ASPECT RATIO 3:4 RIGUROSO */
   .gallery-main-display {
+    position: relative;
     width: 100%;
-    aspect-ratio: 3 / 4;
+    height: 100%;
     border-radius: 16px;
     overflow: hidden;
     background: #111827;
     box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+    cursor: pointer;
   }
 
   .gallery-main-display img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: opacity 0.2s ease;
+    transition: opacity 0.2s ease, transform 0.3s ease;
   }
 
-  /* BARRA LATERAL DE MINIATURAS ADAPTADA A LA ALTURA DEL 3:4 */
+  .gallery-main-display:hover img {
+    transform: scale(1.02);
+  }
+
+  .click-to-enlarge-badge {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
+    pointer-events: none;
+    font-weight: 600;
+  }
+
   .gallery-thumbs-sidebar {
     display: flex;
     flex-direction: column;
     gap: 12px;
     height: 100%;
-    max-height: 666px; /* Ajustado a la altura del 3:4 */
     overflow-y: auto;
     padding-right: 6px;
   }
 
-  /* Scrollbar estético */
   .gallery-thumbs-sidebar::-webkit-scrollbar {
     width: 6px;
   }
@@ -70,7 +85,7 @@ layout: default
 
   .thumb-container {
     width: 100%;
-    height: 115px;
+    height: 110px;
     flex-shrink: 0;
     border-radius: 10px;
     overflow: hidden;
@@ -92,7 +107,7 @@ layout: default
     border-color: #BC2424;
   }
 
-  /* ESTRUCTURA DE 2 COLUMNAS DE INFORMACIÓN */
+  /* ESTRUCTURA DE INFORMACIÓN Y FORMULARIO */
   .prop-layout-grid {
     display: grid;
     grid-template-columns: 1fr 380px;
@@ -312,6 +327,85 @@ layout: default
     text-overflow: ellipsis;
   }
 
+  /* MODAL ESTILO REALTOR (TAMAÑO NATURAL / SCROLL VERTICAL) */
+  .photo-modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 99999;
+    overflow-y: auto;
+  }
+
+  .photo-modal-overlay.active {
+    display: block;
+  }
+
+  .modal-top-bar {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  .modal-title {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #111827;
+  }
+
+  .modal-close-btn {
+    background: #f3f4f6;
+    border: none;
+    font-size: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    transition: background 0.2s ease;
+  }
+
+  .modal-close-btn:hover {
+    background: #e5e7eb;
+  }
+
+  .modal-photos-feed {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .modal-photo-item {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f9fafb;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  }
+
+  .modal-photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
   /* RESPONSIVE MÓVIL */
   @media (max-width: 900px) {
     .prop-detail-wrapper {
@@ -319,9 +413,10 @@ layout: default
     }
     .gallery-wrapper-side {
       grid-template-columns: 1fr;
+      height: auto;
     }
     .gallery-main-display {
-      aspect-ratio: 4 / 3; /* Más cómodo en celular */
+      height: 320px;
     }
     .gallery-thumbs-sidebar {
       flex-direction: row;
@@ -345,17 +440,18 @@ layout: default
 
 <div class="prop-detail-wrapper">
 
-  <!-- GALERÍA COMPLETA FORMATO 3:4 -->
+  <!-- GALERÍA LADO A LADO -->
   <div class="gallery-wrapper-side">
-    <div class="gallery-main-display">
+    <div class="gallery-main-display" onclick="openPhotoModal(0)">
       <img id="mainGalleryImg" src="{{ page.fotos[0] | relative_url }}" alt="{{ page.titulo }}">
+      <span class="click-to-enlarge-badge">🔍 Ver todas las fotos</span>
     </div>
     
     {% if page.fotos.size > 1 %}
     <div class="gallery-thumbs-sidebar">
       {% for foto in page.fotos %}
         <div class="thumb-container">
-          <img src="{{ foto | relative_url }}" alt="Foto {{ forloop.index }}" class="thumb-item {% if forloop.first %}active-thumb{% endif %}" onclick="changeGalleryImage(this.src, this)">
+          <img src="{{ foto | relative_url }}" alt="Foto {{ forloop.index }}" class="thumb-item {% if forloop.first %}active-thumb{% endif %}" onclick="changeGalleryImage(this.src, this, {{ forloop.index0 }})">
         </div>
       {% endfor %}
     </div>
@@ -451,8 +547,27 @@ layout: default
 
 </div>
 
+<!-- MODAL EN PANTALLA COMPLETA CON scroll PARA TODAS LAS FOTOS -->
+<div id="photoModal" class="photo-modal-overlay">
+  <div class="modal-top-bar">
+    <div class="modal-title">‹ {{ page.titulo }}</div>
+    <button class="modal-close-btn" onclick="closePhotoModal()">✕</button>
+  </div>
+  
+  <div class="modal-photos-feed">
+    {% for foto in page.fotos %}
+      <div class="modal-photo-item" id="modal-photo-{{ forloop.index0 }}">
+        <img src="{{ foto | relative_url }}" alt="Foto {{ forloop.index }} - {{ page.titulo }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 <script>
-  function changeGalleryImage(src, element) {
+  let activePhotoIndex = 0;
+
+  function changeGalleryImage(src, element, index) {
+    activePhotoIndex = index;
     const mainImg = document.getElementById('mainGalleryImg');
     mainImg.style.opacity = '0.3';
     setTimeout(() => {
@@ -462,6 +577,31 @@ layout: default
     document.querySelectorAll('.thumb-item').forEach(el => el.classList.remove('active-thumb'));
     element.classList.add('active-thumb');
   }
+
+  function openPhotoModal(targetIndex) {
+    const modal = document.getElementById('photoModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    const indexToScroll = (targetIndex !== undefined) ? targetIndex : activePhotoIndex;
+    const targetElement = document.getElementById('modal-photo-' + indexToScroll);
+    if (targetElement) {
+      setTimeout(() => {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 50);
+    }
+  }
+
+  function closePhotoModal() {
+    const modal = document.getElementById('photoModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Cerrar modal al presionar la tecla Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePhotoModal();
+  });
 
   const propForm = document.getElementById('propPageForm');
   const sidebarSubmitBtn = document.getElementById('sidebarSubmitBtn');
