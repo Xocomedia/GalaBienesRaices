@@ -226,7 +226,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     <h2>Aquí comienza tu hogar</h2>
     <div class="hero-buttons">
       <!-- Directo al WhatsApp configurado -->
-      <a href="https://wa.me/525515761740?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
+      <a href="https://wa.me/5533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
       
       <!-- Botones adicionales -->
       <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
