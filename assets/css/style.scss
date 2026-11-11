@@ -12,29 +12,46 @@
   --link-color: #BC2424;               /* Enlaces */
 }
 
-/* 1. Logotipo en el encabezado */
+/* ===================================================
+   1. ENCABEZADO COMPACTO Y RESETS DE CAYMAN
+   =================================================== */
+
+/* Desactivar el logo gigante inyectado por CSS ::before */
 .page-header::before {
-  content: "";
-  display: block;
-  width: 280px;
-  height: 280px;
-  margin: 0 auto !important;
-  position: relative;
-  top: -30px;
-  background-image: url('/assets/images/gala-bienes-raices-logo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  display: none !important;
 }
 
+/* Reducción y encogimiento de la franja negra del header */
 .page-header {
   background-color: #1E1E1E !important;
   background-image: linear-gradient(135deg, #1E1E1E 0%, #333333 100%) !important;
-  padding: 0.5rem 1rem 1.2rem 1rem !important; /* Más espacio abajo para envolver todo */
+  padding: 10px 15px 12px 15px !important;
   position: sticky !important;
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  min-height: 0 !important;
+  height: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Ocultar el título/subtítulo automático del tema Cayman */
+.page-header .project-name,
+.page-header .project-tagline,
+.project-name,
+.project-tagline {
+  display: none !important;
+}
+
+/* Tamaño del logo insertado en HTML */
+.gala-header-logo {
+  max-height: 45px !important;
+  width: auto !important;
+  display: block !important;
+  margin: 0 auto 4px auto !important;
 }
 
 /* 2. Ocultar el botón original de GitHub */
@@ -42,12 +59,15 @@
   display: none !important;
 }
 
-/* 3. Menú Hamburguesa posicionado abajo del logo */
+/* 3. Menú Hamburguesa posicionado justo debajo del logo */
 .burger-wrapper {
-  position: relative;
-  margin-top: -60px !important;       /* Posición exacta justo debajo de "BIENES RAÍCES" */
-  margin-bottom: 0.1rem !important;
+  position: relative !important;
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
   z-index: 1100;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 #burger-toggle {
@@ -58,15 +78,15 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 20px;
+  width: 24px;
+  height: 16px;
   margin: 0 auto !important;
   cursor: pointer;
 }
 
 .burger-icon span {
   display: block;
-  height: 3px;
+  height: 2px;
   width: 100%;
   background-color: #ffffff;
   border-radius: 2px;
@@ -102,7 +122,7 @@
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(2) {
@@ -110,10 +130,12 @@
 }
 
 #burger-toggle:checked ~ .burger-icon span:nth-child(3) {
-  transform: translateY(-9px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
-/* 4. Estilos para el contenido principal */
+/* ===================================================
+   4. ESTILOS PARA EL CONTENIDO PRINCIPAL
+   =================================================== */
 .main-content h1, 
 .main-content h2, 
 .main-content h3, 
@@ -123,26 +145,21 @@
 
 .main-content {
   color: #1E1E1E !important;
+  padding-top: 0 !important;
 }
 
 .main-content a {
   color: #BC2424 !important;
 }
 
-/* --- Section Hero con Video de Fondo --- */
-
-/* --- Evitar scroll horizontal por el ancho completo --- */
+/* Evitar scroll horizontal */
 body {
   overflow-x: hidden;
 }
 
-/* --- Eliminar separación superior del contenedor de texto --- */
-.main-content {
-  padding-top: 0 !important;
-  color: #1E1E1E !important;
-}
-
-/* --- Hero de Pantalla Completa y Botones Verticales --- */
+/* ===================================================
+   5. HERO CON VIDEO DE FONDO Y BOTONES
+   =================================================== */
 .hero-container {
   position: relative;
   width: 100vw;
@@ -195,39 +212,36 @@ body {
 
 .hero-content h2 {
   color: #ffffff !important;
-  font-size: 2.3rem !important;          /* Aumento ligero de 2.1rem a 2.3rem */
+  font-size: 2.3rem !important;
   font-weight: 700;
-  margin: 0 0 1.4rem 0 !important;       /* Margen inferior para separar y elevar el texto */
+  margin: 0 0 1.4rem 0 !important;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
   letter-spacing: -0.5px;
 }
 
-/* --- Contenedor vertical de botones --- */
 .hero-buttons {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;                          /* Mayor separación vertical entre ambos */
+  gap: 1.2rem;
   width: 100%;
-  max-width: 200px;                      /* Más compacto en lo horizontal (reducido de 240px) */
+  max-width: 200px;
 }
 
-/* --- Estilo base de los botones y forzado de texto blanco --- */
 .hero-buttons a.hero-btn,
 .hero-btn {
   display: block;
   width: 100%;
   text-align: center;
-  padding: 0.85rem 1rem;                /* Más alto en lo vertical (aumentado de 0.65rem) */
+  padding: 0.85rem 1rem;
   font-size: 0.95rem;
   font-weight: 600;
-  color: #ffffff !important;            /* Fuerza tipografía blanca en ambos botones */
+  color: #ffffff !important;
   text-decoration: none !important;
   border-radius: 4px;
   transition: all 0.25s ease;
   box-sizing: border-box;
 }
 
-/* --- Botón 1: Primario en Rojo Gala --- */
 .hero-btn-primary {
   background-color: #BC2424 !important;
   color: #ffffff !important;
@@ -241,7 +255,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* --- Botón 2: Secundario translúcido con borde blanco --- */
 .hero-btn-secondary {
   background-color: rgba(30, 30, 30, 0.55) !important;
   color: #ffffff !important;
@@ -251,15 +264,14 @@ body {
 
 .hero-btn-secondary:hover {
   background-color: #ffffff !important;
-  color: #1E1E1E !important;            /* Cambia a gris oscuro únicamente al pasar el cursor */
+  color: #1E1E1E !important;
   border-color: #ffffff;
   transform: translateY(-2px);
 }
 
-/* --- Adaptación para celulares --- */
 @media (max-width: 768px) {
   .hero-buttons {
-    max-width: 180px;                    /* Proporción más compacta en pantalla pequeña */
+    max-width: 180px;
     gap: 1rem;
   }
   .hero-buttons a.hero-btn,
