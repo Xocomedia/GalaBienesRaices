@@ -21,7 +21,6 @@ fotos:
   - "/assets/images/venta/hotel-real-azteca/4.jpg"
   - "/assets/images/venta/hotel-real-azteca/5.jpg"
   - "/assets/images/venta/hotel-real-azteca/6.jpg"
-  - "/assets/images/venta/hotel-real-azteca/7.jpg"
   - "/assets/images/venta/hotel-real-azteca/8.jpg"
 ---
 
