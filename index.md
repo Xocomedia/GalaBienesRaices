@@ -229,7 +229,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       <a href="https://wa.me/525515761740?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
       
       <!-- Botones adicionales -->
-      <a href="/catalogo-habitacional/" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
+      <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
       <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
       
       <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
