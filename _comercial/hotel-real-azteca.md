@@ -12,17 +12,17 @@ estacionamientos: 8
 mantenimiento: "Predial $30,885 MXN bimestral"
 piso: "Edificio completo"
 
-foto_principal: "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/1.png"
+foto_principal: "/assets/images/venta/hotel-real-azteca/1.jpg"
 
 fotos:
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/1.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/2.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/3.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/4.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/5.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/6.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/7.png"
-  - "/assets/images/propiedades/venta/C1-VRC1-26%20HOTEL%20REAL%20AZTECA/8.png"
+  - "/assets/images/venta/hotel-real-azteca/1.jpg"
+  - "/assets/images/venta/hotel-real-azteca/2.jpg"
+  - "/assets/images/venta/hotel-real-azteca/3.jpg"
+  - "/assets/images/venta/hotel-real-azteca/4.jpg"
+  - "/assets/images/venta/hotel-real-azteca/5.jpg"
+  - "/assets/images/venta/hotel-real-azteca/6.jpg"
+  - "/assets/images/venta/hotel-real-azteca/7.jpg"
+  - "/assets/images/venta/hotel-real-azteca/8.jpg"
 ---
 
 Excelente oportunidad de inversión con el **Hotel "Villas y Suites Real Azteca"**, inmueble en pleno funcionamiento y operando actualmente. Ubicado estratégicamente sobre Calzada de Tlalpan, a un costado del **Estadio Azteca**, en una zona de altísima demanda turística, comercial y deportiva.
