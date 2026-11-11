@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -11,66 +12,44 @@
   <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
 
   <style>
-    /* 1. ANULAR COMPLETAMENTE EL ALTO Y RELLENO DEL HEADER DE CAYMAN */
-    html body header.page-header,
-    html body .page-header {
-      background-image: none !important;
+    /* 1. MATAR EL ENCABEZADO Y ESPACIOS DEL TEMA CAYMAN DE RAÍZ */
+    header.page-header,
+    .page-header {
       background: #1a1a1a !important;
-      padding: 10px 0 !important;
-      margin: 0 !important;
+      padding: 10px 15px !important;
       min-height: 0 !important;
       height: auto !important;
-      max-height: none !important;
+      margin: 0 !important;
       display: flex !important;
       flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
     }
 
-    /* 2. OCULTAR CUALQUIER ELEMENTO AUTOMÁTICO DE CAYMAN (TITULOS, BOTONES, SUBTITULOS) */
-    html body .page-header *,
-    html body .page-header h1,
-    html body .page-header h2,
-    html body .page-header a.btn,
-    html body .project-name,
-    html body .project-tagline {
-      display: none;
+    /* Ocultar el título H1, subtítulos o links inyectados por Cayman */
+    .page-header h1,
+    .page-header h2,
+    .page-header .project-name,
+    .page-header .project-tagline,
+    .page-header .btn {
+      display: none !important;
     }
 
-    /* EXCEPCIÓN: MOSTRAR SOLO NUESTRO LOGO Y NUESTRO BURGER */
-    html body .page-header .header-content-wrapper,
-    html body .page-header .header-content-wrapper * {
-      display: flex;
-    }
-
-    /* 3. ESTRUCTURA INTERNA COMPACTA */
-    .header-content-wrapper {
-      display: flex !important;
-      flex-direction: column !important;
-      align-items: center !important;
-      justify-content: center !important;
-      width: 100% !important;
-    }
-
-    .header-logo-link {
-      display: block !important;
-      text-decoration: none !important;
-      margin-bottom: 2px !important;
-    }
-
+    /* 2. UN SOLO LOGO COMPACTO (42px) */
     .gala-header-logo {
-      max-height: 45px !important; /* Fuerza el logo a 45px de alto */
+      max-height: 42px !important;
       width: auto !important;
       display: block !important;
+      margin: 0 auto !important;
     }
 
-    /* 4. MENÚ BURGER PEGADO */
+    /* 3. MENÚ BURGER EN SU LUGAR */
     .burger-wrapper {
       position: relative !important;
       display: flex !important;
       justify-content: center !important;
       align-items: center !important;
-      margin-top: 2px !important;
+      margin-top: 4px !important;
     }
 
     #burger-toggle {
@@ -151,25 +130,24 @@
 <body>
   <header class="page-header" role="banner">
     
-    <!-- ENVOLTORIO PROTEGIDO DE ESTILOS EXTERNOS -->
-    <div class="header-content-wrapper">
-      <a href="{{ '/' | relative_url }}" class="header-logo-link">
-        <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
-      </a>
+    <!-- LOGO ÚNICO EN EL HEADER -->
+    <a href="{{ '/' | relative_url }}" style="text-decoration: none; display: block;">
+      <img src="{{ '/assets/images/gala-bienes-raices-logo.png' | relative_url }}" alt="Gala Bienes Raíces" class="gala-header-logo">
+    </a>
 
-      <div class="burger-wrapper">
-        <input type="checkbox" id="burger-toggle">
-        <label for="burger-toggle" class="burger-icon" aria-label="Menú">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <nav class="burger-nav">
-          <a href="/quienes-somos/">¿Quiénes Somos?</a>
-          <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
-          <a href="/catalogo-comercial/">Propiedades Comerciales</a>
-        </nav>
-      </div>
+    <!-- MENÚ BURGER -->
+    <div class="burger-wrapper">
+      <input type="checkbox" id="burger-toggle">
+      <label for="burger-toggle" class="burger-icon" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="burger-nav">
+        <a href="/quienes-somos/">¿Quiénes Somos?</a>
+        <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
+        <a href="/catalogo-comercial/">Propiedades Comerciales</a>
+      </nav>
     </div>
 
   </header>
