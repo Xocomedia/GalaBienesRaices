@@ -22,21 +22,22 @@ layout: default
     font-size: 15pt !important;
   }
 
-  /* GALERÍA DINÁMICA DE FOTOS */
-  .gallery-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
+  /* GALERÍA LADO A LADO (IZQUIERDA PRINCIPAL, DERECHA MINIATURAS) */
+  .gallery-wrapper-side {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 16px;
+    height: 500px;
     margin-bottom: 35px;
   }
 
   .gallery-main-display {
     width: 100%;
-    height: 520px;
+    height: 100%;
     border-radius: 16px;
     overflow: hidden;
     background: #111827;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.12);
   }
 
   .gallery-main-display img {
@@ -46,21 +47,41 @@ layout: default
     transition: opacity 0.2s ease;
   }
 
-  .gallery-thumbnails-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  .gallery-thumbs-sidebar {
+    display: flex;
+    flex-direction: column;
     gap: 12px;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 6px;
+  }
+
+  /* Personalización del Scrollbar */
+  .gallery-thumbs-sidebar::-webkit-scrollbar {
+    width: 6px;
+  }
+  .gallery-thumbs-sidebar::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+  }
+
+  .thumb-container {
+    width: 100%;
+    height: 110px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   .thumb-item {
     width: 100%;
-    height: 85px;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
     cursor: pointer;
-    opacity: 0.6;
+    opacity: 0.65;
     transition: all 0.2s ease;
     border: 2px solid transparent;
+    border-radius: 10px;
   }
 
   .thumb-item:hover, .thumb-item.active-thumb {
@@ -293,8 +314,22 @@ layout: default
     .prop-detail-wrapper {
       width: 92vw;
     }
+    .gallery-wrapper-side {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
     .gallery-main-display {
       height: 320px;
+    }
+    .gallery-thumbs-sidebar {
+      flex-direction: row;
+      height: 95px;
+      overflow-x: auto;
+      overflow-y: hidden;
+    }
+    .thumb-container {
+      width: 110px;
+      height: 100%;
     }
     .prop-layout-grid {
       grid-template-columns: 1fr;
@@ -308,16 +343,18 @@ layout: default
 
 <div class="prop-detail-wrapper">
 
-  <!-- GALERÍA COMPLETA -->
-  <div class="gallery-wrapper">
+  <!-- GALERÍA COMPLETA LADO A LADO -->
+  <div class="gallery-wrapper-side">
     <div class="gallery-main-display">
       <img id="mainGalleryImg" src="{{ page.fotos[0] | relative_url }}" alt="{{ page.titulo }}">
     </div>
     
     {% if page.fotos.size > 1 %}
-    <div class="gallery-thumbnails-grid">
+    <div class="gallery-thumbs-sidebar">
       {% for foto in page.fotos %}
-        <img src="{{ foto | relative_url }}" alt="Foto {{ forloop.index }}" class="thumb-item {% if forloop.first %}active-thumb{% endif %}" onclick="changeGalleryImage(this.src, this)">
+        <div class="thumb-container">
+          <img src="{{ foto | relative_url }}" alt="Foto {{ forloop.index }}" class="thumb-item {% if forloop.first %}active-thumb{% endif %}" onclick="changeGalleryImage(this.src, this)">
+        </div>
       {% endfor %}
     </div>
     {% endif %}
