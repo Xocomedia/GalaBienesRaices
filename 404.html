@@ -1,0 +1,103 @@
+---
+layout: default
+title: "404 | Gala Bienes Raíces"
+---
+
+<!-- Forzado de Favicon -->
+<link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
+<link rel="shortcut icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
+
+<!-- Importación de Josefin Sans -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+<style>
+  body, p, li, blockquote {
+    font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 14pt !important;
+  }
+
+  h1, h2, h3, h4, h5, h6, .hero-btn {
+    font-family: 'Josefin Sans', sans-serif !important;
+  }
+
+  .construction-container {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .construction-title {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    color: #BC2424 !important;
+    margin-bottom: 1.5rem !important;
+    line-height: 1.2;
+  }
+
+  .cat-image-wrapper {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .gala-cat-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: 24px !important;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin: 0 auto;
+    border: 3px solid rgba(188, 36, 36, 0.15);
+  }
+
+  .btn-regresar {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 13pt !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    background-color: #7f1d1d !important;
+    border: 1px solid #7f1d1d !important;
+    text-decoration: none !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 12px 28px !important;
+    border-radius: 4px !important;
+    transition: background-color 0.2s ease, transform 0.2s ease !important;
+    margin-top: 1rem;
+  }
+
+  .btn-regresar:hover {
+    background-color: #581313 !important;
+    border-color: #581313 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    .construction-title {
+      font-size: 1.7rem !important;
+    }
+    .gala-cat-img {
+      max-width: 300px;
+      border-radius: 18px !important;
+    }
+  }
+</style>
+
+<div class="construction-container">
+  <h1 class="construction-title">Esta parte del sitio está en construcción, ¡regresa próximamente! :)</h1>
+  
+  <div class="cat-image-wrapper">
+    <img src="/assets/images/404/gala-gato-404.jpg" alt="Gala Bienes Raíces - En construcción" class="gala-cat-img">
+  </div>
+
+  <a href="{{ '/' | relative_url }}" class="btn-regresar">Volver al Inicio</a>
+</div>
