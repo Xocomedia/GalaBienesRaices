@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Hotel Villas y Suites Tlalpan | Gala Bienes Raíces"
+titulo: "Hotel Villas y Suites Tlalpan"
 precio: "$65,500,000 MXN (Venta) / $340,000 MXN (Renta)"
 ubicacion: "Santa Úrsula Coapa, Coyoacán, CDMX"
 estado: "Venta o Renta"
