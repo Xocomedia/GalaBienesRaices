@@ -1,103 +1,233 @@
 ---
 layout: default
-title: "Catálogo Habitacional | Gala Bienes Raíces"
+title: "Propiedades Habitacionales | Gala Bienes Raíces"
+permalink: /catalogo-habitacional.html
 ---
 
-<!-- Forzado de Favicon -->
-<link rel="icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
-<link rel="shortcut icon" type="image/png" href="/assets/images/gala-bienes-raices-icono.png">
-
-<!-- Importación de Josefin Sans -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 
 <style>
-  body, p, li, blockquote {
-    font-family: 'Bahnschrift', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    font-size: 14pt !important;
+  .catalog-wrapper {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Bahnschrift', 'Segoe UI', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6, .hero-btn {
+  .catalog-header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .catalog-header h1 {
     font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 800;
+    color: #BC2424 !important;
+    font-size: 2.2rem;
   }
 
-  .construction-container {
-    min-height: 70vh;
+  /* GRID EN 2 COLUMNAS */
+  .property-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    width: 100%;
+  }
+
+  /* ENLACE QUE ENVOLVERÁ TODA LA TARJETA */
+  .property-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 3rem 1.5rem;
-    max-width: 800px;
-    margin: 0 auto;
+    height: 100%;
   }
 
-  .construction-title {
-    font-size: 2.2rem !important;
-    font-weight: 800 !important;
-    color: #BC2424 !important;
-    margin-bottom: 1.5rem !important;
-    line-height: 1.2;
+  /* TARJETA VERTICAL */
+  .property-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
-  .cat-image-wrapper {
-    margin: 1.5rem 0 2rem 0;
+  .property-card-link:hover .property-card {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.14);
   }
 
-  .gala-cat-img {
+  /* IMAGEN ARRIBA */
+  .card-image-wrap {
+    position: relative;
     width: 100%;
-    max-width: 420px;
-    height: auto;
-    border-radius: 24px !important;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    height: 230px;
+    background: #f3f4f6;
+  }
+
+  .card-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
-    border: 3px solid rgba(188, 36, 36, 0.15);
   }
 
-  .btn-regresar {
+  .badge-nueva {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: #BC2424;
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  }
+
+  /* CONTENIDO ABAJO */
+  .card-content {
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .price-mxn {
     font-family: 'Josefin Sans', sans-serif !important;
-    font-size: 13pt !important;
-    font-weight: 800 !important;
-    color: #ffffff !important;
-    background-color: #7f1d1d !important;
-    border: 1px solid #7f1d1d !important;
-    text-decoration: none !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    padding: 12px 28px !important;
-    border-radius: 4px !important;
-    transition: background-color 0.2s ease, transform 0.2s ease !important;
-    margin-top: 1rem;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
   }
 
-  .btn-regresar:hover {
-    background-color: #581313 !important;
-    border-color: #581313 !important;
-    color: #ffffff !important;
-    transform: translateY(-2px);
+  .location-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 4px;
+    line-height: 1.35;
   }
 
+  .state-subtitle {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #BC2424;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 14px;
+  }
+
+  .features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: #6b7280;
+    margin-bottom: 18px;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #f3f4f6;
+    padding-top: 14px;
+    margin-top: auto;
+  }
+
+  .property-type-tag {
+    font-size: 0.85rem;
+    color: #4b5563;
+    font-weight: 600;
+  }
+
+  .btn-details {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #BC2424 !important;
+    background: transparent;
+    border: 1.5px solid #BC2424;
+    padding: 8px 18px;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+
+  .property-card-link:hover .btn-details {
+    background: #BC2424;
+    color: #ffffff !important;
+  }
+
+  /* RESPONSIVE PARA MÓVILES (1 COLUMNA) */
   @media (max-width: 768px) {
-    .construction-title {
-      font-size: 1.7rem !important;
+    .property-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
     }
-    .gala-cat-img {
-      max-width: 300px;
-      border-radius: 18px !important;
+    .card-image-wrap {
+      height: 200px;
     }
   }
 </style>
 
-<div class="construction-container">
-  <h1 class="construction-title">Esta parte del sitio está en construcción, ¡regresa próximamente! :)</h1>
-  
-  <div class="cat-image-wrapper">
-    <img src="/assets/images/404/gala-gato-404.jpg" alt="Gala Bienes Raíces - En construcción" class="gala-cat-img">
+<div class="catalog-wrapper">
+  <div class="catalog-header">
+    <h1>Catálogo de Propiedades Habitacionales</h1>
+    <p>Casas y departamentos con certeza jurídica y acompañamiento cercano en la CDMX.</p>
   </div>
 
-  <a href="{{ '/' | relative_url }}" class="btn-regresar">Volver al Inicio</a>
+  <div class="property-grid">
+    {% assign now_sec = 'now' | date: '%s' %}
+    {% for prop in site.habitacional %}
+      {% assign prop_sec = prop.date | date: '%s' %}
+      {% assign diff_sec = now_sec | minus: prop_sec %}
+      
+      <a href="{{ prop.url | relative_url }}" class="property-card-link">
+        <article class="property-card">
+          <div class="card-image-wrap">
+            <img src="{{ prop.foto_principal | relative_url }}" alt="{{ prop.titulo }}">
+            
+            {% if diff_sec <= 2592000 and diff_sec >= 0 %}
+              <span class="badge-nueva">● ¡Nueva!</span>
+            {% endif %}
+          </div>
+
+          <div class="card-content">
+            <div>
+              <div class="price-mxn">{{ prop.precio }}</div>
+              <div class="location-title">{{ prop.titulo }} — {{ prop.ubicacion }}</div>
+              <div class="state-subtitle">📍 {{ prop.estado }}</div>
+
+              <div class="features-grid">
+                {% if prop.superficie %}<span>📐 {{ prop.superficie }}</span>{% endif %}
+                {% if prop.recamaras > 0 %}<span>🛏️ {{ prop.recamaras }} rec.</span>{% endif %}
+                {% if prop.banos > 0 %}<span>🚽 {{ prop.banos }} baños</span>{% endif %}
+                {% if prop.estacionamientos > 0 %}<span>🚗 {{ prop.estacionamientos }} estac.</span>{% endif %}
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <span class="property-type-tag">{{ prop.tipo }}</span>
+              <span class="btn-details">Ver detalles</span>
+            </div>
+          </div>
+        </article>
+      </a>
+    {% endfor %}
+  </div>
 </div>
