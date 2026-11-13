@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Inmueble Comercial cerca de Estadio Azteca, Tlalpan"
+titulo: "CDMX: Inmueble Comercial cerca de Estadio Azteca, Tlalpan"
 precio: "$21,000,000 MXN (Venta) | $217,000 (Renta)"
 ubicacion: "El Caracol, Coyoacán, CDMX"
 estado: "Venta o Renta"
