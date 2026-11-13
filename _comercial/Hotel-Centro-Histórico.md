@@ -1,13 +1,13 @@
 ---
 layout: propiedad
 titulo: "Hotel Centro Histórico"
-precio: "$48,000,000 MXN"
-ubicación: "Centro Histórico, Cuauhtémoc, CDMX"
+precio: "$48,000,000 MXN (Venta)"
+ubicacion: "Centro Histórico, Cuauhtémoc, CDMX"
 estado: "Venta"
 tipo: "Hotelero / Comercial"
 superficie: "227 m² terreno / 1,470 m² const."
-recámaras: 50
-baños: 50
+recamaras: 50
+banos: 50
 estacionamientos: 0
 mantenimiento: "Documentación en regla"
 piso: "Edificio completo (5 niveles + terraza)"
