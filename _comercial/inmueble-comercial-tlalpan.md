@@ -12,7 +12,7 @@ estacionamientos: 0
 mantenimiento: "Uso de suelo HC 3/30/Z"
 piso: "3 niveles"
 
-foto_principal: "/assets/images/venta/inmueble-comercial-tlalpan/1.jpg"
+foto_principal: "/assets/images/venta/lote-tlalpan/1.jpg"
 
 fotos:
   - "/assets/images/venta/lote-tlalpan/1.jpg"
