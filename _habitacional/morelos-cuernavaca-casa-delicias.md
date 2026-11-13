@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Morelos, Cuernavaca: Residencia en Delicias"
+titulo: "Cuernavaca, Morelos: Residencia en Delicias"
 precio: "$14,135,000 MXN (Venta)"
 ubicacion: "Delicias, Cuernavaca, Morelos"
 estado: "Venta"
