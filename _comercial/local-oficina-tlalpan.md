@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Local / Oficina Tlalpan"
+titulo: "Local u Oficina Tlalpan"
 precio: "$3,500,000 MXN (Venta)
 ubicacion: "Alcaldía Tlalpan, CDMX"
 estado: "Venta o Renta"
@@ -19,6 +19,7 @@ fotos:
   - "/assets/images/venta/local-oficina-tlalpan/6.jpeg"
   - "/assets/images/venta/local-oficina-tlalpan/7.jpeg"
   - "/assets/images/venta/local-oficina-tlalpan/8.jpeg"
+    
 ---
 
 Excelente oportunidad comercial sobre avenida principal en la Alcaldía Tlalpan, en una zona con alto flujo vehicular y peatonal. Su ubicación estratégica en primer piso ofrece gran visibilidad y fácil acceso para clientes y colaboradores.
