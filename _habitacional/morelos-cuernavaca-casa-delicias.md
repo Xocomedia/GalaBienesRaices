@@ -22,8 +22,7 @@ fotos:
   - "/assets/images/venta/morelos-cuernavaca-casa-diana/5.png"
   - "/assets/images/venta/morelos-cuernavaca-casa-diana/6.png"
   - "/assets/images/venta/morelos-cuernavaca-casa-diana/7.png"
-  - "/assets/images/venta/morelos-cuernavaca-casa-diana/8.png"
-  - "/assets/images/venta/morelos-cuernavaca-casa-diana/9.png"
+
 ---
 *NOTA: Las imágenes son renders de referencias :)
 
