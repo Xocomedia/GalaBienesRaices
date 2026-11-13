@@ -12,17 +12,16 @@ estacionamientos: 0
 mantenimiento: "Documentación en regla"
 piso: "Edificio completo (5 niveles + terraza)"
 
-foto_principal: "/assets/images/venta/hotel-centro-histórico/1.jpg"
+foto_principal: "/assets/images/venta/hotel-centro-histórico/1.jpeg"
 
 fotos:
-  - "/assets/images/venta/hotel-centro-histórico/1.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/2.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/3.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/4.jpg"
+  - "/assets/images/venta/hotel-centro-histórico/1.jpeg"
+  - "/assets/images/venta/hotel-centro-histórico/2.jpeg"
+  - "/assets/images/venta/hotel-centro-histórico/3.jpeg"
+  - "/assets/images/venta/hotel-centro-histórico/4.jpeg"
   - "/assets/images/venta/hotel-centro-histórico/5.png"
   - "/assets/images/venta/hotel-centro-histórico/6.png"
   - "/assets/images/venta/hotel-centro-histórico/7.png"
-  - 
 ---
 
 Excelente oportunidad de inversión en el corazón de la Ciudad de México. Inmueble comercial versátil ubicado estratégicamente cerca de Palacio Nacional, la Catedral Metropolitana y el Metro Zócalo, en una zona de altísimo flujo turístico y comercial.
