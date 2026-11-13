@@ -6,8 +6,8 @@ ubicacion: "Santa Úrsula Coapa, Coyoacán, CDMX"
 estado: "Venta o Renta"
 tipo: "Hotelero / Comercial"
 superficie: "668 m² terreno / 1,876 m² const."
-recamaras: 20
-banos: 20
+recamaras: 21
+banos: 21
 estacionamientos: 8
 mantenimiento: "Predial $30,885 MXN bimestral"
 piso: "Edificio completo"
