@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Local u Oficina Tlalpan"
+titulo: "Local / Oficina Tlalpan"
 precio: "$3,500,000 MXN (Venta)"
 ubicacion: "Alcaldía Tlalpan, CDMX"
 estado: "Venta o Renta"
