@@ -378,7 +378,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
       <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
       
-      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
+      <a href="/404.html/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
     </div>
   </div>
 </div>
