@@ -2,12 +2,12 @@
 layout: propiedad
 titulo: "Hotel Centro Histórico"
 precio: "$48,000,000 MXN"
-ubicacion: "Centro Histórico, Cuauhtémoc, CDMX"
+ubicación: "Centro Histórico, Cuauhtémoc, CDMX"
 estado: "Venta"
 tipo: "Hotelero / Comercial"
 superficie: "227 m² terreno / 1,470 m² const."
-recamaras: 50
-banos: 50
+recámaras: 50
+baños: 50
 estacionamientos: 0
 mantenimiento: "Documentación en regla"
 piso: "Edificio completo (5 niveles + terraza)"
@@ -19,14 +19,13 @@ fotos:
   - "/assets/images/venta/hotel-centro-histórico/2.jpg"
   - "/assets/images/venta/hotel-centro-histórico/3.jpg"
   - "/assets/images/venta/hotel-centro-histórico/4.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/5.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/6.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/7.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/8.jpg"
-  - "/assets/images/venta/hotel-centro-histórico/9.jpg"
+  - "/assets/images/venta/hotel-centro-histórico/5.png"
+  - "/assets/images/venta/hotel-centro-histórico/6.png"
+  - "/assets/images/venta/hotel-centro-histórico/7.png"
+  - 
 ---
 
-Excelente oportunidad de inversión en el corazón de la Ciudad de México. Inmueble comercial versátil ubicado estratégicamente a un costado de Palacio Nacional, a una cuadra de la Catedral Metropolitana y a unos pasos del Metro Zócalo, en una zona de altísimo flujo turístico y comercial.
+Excelente oportunidad de inversión en el corazón de la Ciudad de México. Inmueble comercial versátil ubicado estratégicamente cerca de Palacio Nacional, la Catedral Metropolitana y el Metro Zócalo, en una zona de altísimo flujo turístico y comercial.
 
 Cuenta con flexibilidad operativa gracias a su uso de suelo comercial, lo que permite reconvertirlo en plaza comercial, oficinas corporativas, hostal boutique o espacio de cowork. Además, incluye proyecto arquitectónico de remodelación para optimizar la distribución a 20 suites y 40 habitaciones.
 
