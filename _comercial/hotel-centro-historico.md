@@ -8,8 +8,6 @@ tipo: "Hotelero / Comercial"
 superficie: "227 m² terreno / 1,470 m² const."
 recamaras: 50
 banos: 50
-estacionamientos: 0
-mantenimiento: "Documentación en regla"
 piso: "Edificio completo (5 niveles + terraza)"
 
 foto_principal: "/assets/images/venta/hotel-centro-histórico/1.jpeg"
