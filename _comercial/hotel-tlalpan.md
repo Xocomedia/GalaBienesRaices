@@ -46,4 +46,4 @@ Cuenta con excelente conectividad y acceso directo a transporte público (Metro 
 * **Suite Especial:** Incluye 1 suite de lujo equipada con jacuzzi.
 * **Equipamiento:** Aire acondicionado, Wi-Fi de alta velocidad, pantallas y mobiliario completo en todas las unidades.
 * **Áreas Comunes:** Recepción, sala de estar / vestíbulo, pasillos amplios de circulación, cocina equipada y área de comedor.
-* **Estacionamiento:** Cochera integrada con capacidad para varios vehículos y acceso directo sobre Calzada de Tlalpan.
+* **Estacionamiento:** Cochera con capacidad para varios vehículos y acceso directo sobre Calzada de Tlalpan.
