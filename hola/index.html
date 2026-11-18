@@ -131,6 +131,16 @@ permalink: /hola/
       margin-top: 0;
     }
 
+   .logo-container {
+      display: inline-block;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .logo-container:hover {
+      transform: scale(1.04);
+      opacity: 0.95;
+    }
+
     .logo-container img {
       max-width: 145px;
       height: auto;
@@ -387,10 +397,10 @@ permalink: /hola/
       </a>
     </div>
 
-    <div class="brand-block">
-      <div class="logo-container">
+<div class="brand-block">
+      <a href="https://galabienesraices.com" class="logo-container" aria-label="Ir a Gala Bienes Raíces">
         <img src="/assets/images/gala-bienes-raices-logo.png" alt="Gala Bienes Raíces" onerror="this.style.display='none'">
-      </div>
+      </a>
       <a href="https://galabienesraices.com" class="site-domain-bubble">
         galabienesraices.com
       </a>
