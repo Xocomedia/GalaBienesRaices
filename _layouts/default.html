@@ -17,9 +17,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
   
   <!-- FAVICON GALA BIENES RAÍCES -->
-  <link rel="icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
-  <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
-  <link rel="apple-touch-icon" href="{{ '/assets/images/gala-bienes-raices-icono.png' | relative_url }}">
+  <link rel="icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-ícono.png' | relative_url }}">
+  <link rel="shortcut icon" type="image/png" href="{{ '/assets/images/gala-bienes-raices-ícono.png' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/assets/images/gala-bienes-raices-ícono.png' | relative_url }}">
 
   <style>
     /* Asegura que el footer quede al final sin flotar ni dejar huecos */
@@ -110,6 +110,10 @@
       fill: currentColor;
     }
 
+    .footer-links-col {
+      padding-top: 14px;
+    }
+
     .footer-col-title {
       font-family: 'Josefin Sans', sans-serif !important;
       font-size: 1.15rem;
@@ -173,6 +177,10 @@
 
       .footer-brand-col {
         align-items: center;
+      }
+
+      .footer-links-col {
+        padding-top: 0;
       }
 
       .footer-bottom-bar {
@@ -250,7 +258,7 @@
       </div>
 
       <!-- COLUMNA 2: PROPIEDADES -->
-      <div>
+      <div class="footer-links-col">
         <h3 class="footer-col-title">Propiedades</h3>
         <ul class="footer-links-list">
           <li><a href="/catalogo-habitacional/">Propiedades Habitacionales</a></li>
@@ -259,7 +267,7 @@
       </div>
 
       <!-- COLUMNA 3: EMPRESA Y CONTACTO -->
-      <div>
+      <div class="footer-links-col">
         <h3 class="footer-col-title">Gala Bienes Raíces</h3>
         <ul class="footer-links-list">
           <li><a href="/quienes-somos/">¿Quiénes Somos?</a></li>
