@@ -522,13 +522,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     gap: 24px;
   }
 
-  .binomio-photo-wrap {
+ .binomio-photo-wrap {
     position: relative;
     width: 100%;
-    height: 440px;
+    height: 500px;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
-    background: url('/assets/images/index/gala-bienes-raices-servicios-jurídicos-inmobiliarios.jpg') center 35% / cover no-repeat;
+    background: url('/assets/images/index/gala-bienes-raices-servicios-jurídicos-inmobiliarios.jpg') center 82% / cover no-repeat;
   }
 
   .binomio-photo-wrap::after {
@@ -537,8 +537,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 68%,
-      rgba(255, 255, 255, 0.85) 90%,
+      rgba(255, 255, 255, 0) 86%,
+      rgba(255, 255, 255, 0.85) 95%,
       #ffffff 100%
     );
     pointer-events: none;
