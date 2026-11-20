@@ -621,6 +621,73 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 24px 22px;
     }
   }
+  /* --- SECCIÓN ZONAS DE ENFOQUE BOUTIQUE --- */
+  .zonas-showcase {
+    margin: 55px 0 65px 0;
+  }
+
+  .zonas-hero-banner {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background: url('/assets/images/index/gala-bienes-raices-centro-roma-condesa.jpg') center center / cover no-repeat;
+  }
+
+  .zonas-hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 72%,
+      rgba(255, 255, 255, 0.85) 90%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  .zonas-hero-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 780px;
+    margin: -24px auto 14px auto !important;
+    color: #BC2424 !important;
+    font-weight: 800 !important;
+    font-size: 1.85rem !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    padding: 0 24px !important;
+  }
+
+  .zonas-text {
+    max-width: 740px;
+    margin: 0 auto !important;
+    text-align: center !important;
+    color: #1f2937 !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    padding: 0 20px;
+  }
+
+  .zonas-text strong {
+    font-weight: 700 !important;
+    color: #111827 !important;
+  }
+
+  @media (max-width: 768px) {
+    .zonas-hero-banner {
+      height: 320px;
+    }
+
+    .zonas-hero-title {
+      margin-top: -18px !important;
+      font-size: 1.55rem !important;
+      padding: 0 16px !important;
+    }
+  }
 </style>
 
 <div class="hero-container">
@@ -755,11 +822,14 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 ---
 
-## Zonas de Enfoque Boutique
-
-**Especialistas en la zona centro de la Ciudad de México.**  
-Conocimiento profundo del mercado inmobiliario en **Roma · Condesa · Nápoles · Del Valle**.
-
+<section class="zonas-showcase">
+  <div class="zonas-hero-banner" role="img" aria-label="Zonas de Enfoque Boutique - Roma, Condesa, Nápoles y Del Valle"></div>
+  <h2 class="zonas-hero-title">Zonas de Enfoque Boutique</h2>
+  <p class="zonas-text">
+    <strong>Especialistas en la zona centro de la Ciudad de México.</strong><br>
+    Conocimiento profundo del mercado inmobiliario en <strong>Roma · Condesa · Nápoles · Del Valle</strong>.
+  </p>
+</section>
 ---
 
 ## Servicios
