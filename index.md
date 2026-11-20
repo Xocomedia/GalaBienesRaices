@@ -391,7 +391,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     margin-top: 10px;
   }
   
-  /* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
+/* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
   .story-showcase {
     margin: 50px 0 65px 0;
   }
@@ -399,14 +399,10 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .story-hero-banner {
     position: relative;
     width: 100%;
-    height: 520px;
+    height: 540px;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
-    background: url('/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg') center 30% / cover no-repeat;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 28px 0 28px;
+    background: url('/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg') center 45% / cover no-repeat;
   }
 
   .story-hero-banner::after {
@@ -415,8 +411,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 68%,
-      rgba(255, 255, 255, 0.88) 88%,
+      rgba(255, 255, 255, 0) 76%,
+      rgba(255, 255, 255, 0.85) 92%,
       #ffffff 100%
     );
     pointer-events: none;
@@ -427,19 +423,19 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     z-index: 2;
     text-align: center;
     max-width: 780px;
-    margin: 0 !important;
+    margin: -34px auto 0 auto !important;
     color: #BC2424 !important;
     font-weight: 800 !important;
     line-height: 1.2 !important;
     border: none !important;
-    padding: 0 !important;
+    padding: 0 24px !important;
   }
 
   .story-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
-    margin-top: 28px;
+    margin-top: 30px;
   }
 
   .story-box {
@@ -451,7 +447,6 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
   }
 
   .story-icon-circle {
@@ -479,6 +474,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   }
 
   .story-box p {
+    width: 100%;
     margin: 0 !important;
     color: #1f2937 !important;
     font-weight: 400 !important;
@@ -489,13 +485,18 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   @media (max-width: 768px) {
     .story-hero-banner {
       height: 360px;
-      padding: 0 18px 16px 18px;
+      background-position: center 40%;
+    }
+
+    .story-hero-title {
+      margin-top: -22px !important;
+      padding: 0 16px !important;
     }
 
     .story-cards-grid {
       grid-template-columns: 1fr;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 22px;
     }
 
     .story-box {
@@ -561,9 +562,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 {% endif %}
 
 <section class="story-showcase">
-  <div class="story-hero-banner">
-    <h1 class="story-hero-title">Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
-  </div>
+  <div class="story-hero-banner"></div>
+  <h1 class="story-hero-title">Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
 
   <div class="story-cards-grid">
     <div class="story-box">
