@@ -503,7 +503,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 26px 22px;
     }
   }
-  /* --- SECCIÓN BINOMIO GALA (FOTO IZQUIERDA + 2 CAJAS DERECHA) --- */
+  /* --- SECCIÓN BINOMIO GALA (FOTO ANCHA + 2 CAJAS ABAJO) --- */
   .binomio-showcase {
     margin: 55px 0 65px 0;
   }
@@ -512,24 +512,24 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     color: #BC2424 !important;
     font-weight: 800 !important;
     font-size: 1.8rem !important;
-    margin: 0 0 28px 0 !important;
+    margin: 0 0 24px 0 !important;
     border: none !important;
     padding: 0 !important;
   }
 
   .binomio-split-grid {
-    display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 28px;
-    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
   }
 
   .binomio-photo-wrap {
     position: relative;
-    min-height: 460px;
-    border-radius: 20px 0 0 20px;
+    width: 100%;
+    height: 440px;
+    border-radius: 20px 20px 0 0;
     overflow: hidden;
-    background: url('/assets/images/index/gala-bienes-raices-servicios-jurídicos-inmobiliarios.jpg') center center / cover no-repeat;
+    background: url('/assets/images/index/gala-bienes-raices-servicios-jurídicos-inmobiliarios.jpg') center 35% / cover no-repeat;
   }
 
   .binomio-photo-wrap::after {
@@ -537,26 +537,25 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     position: absolute;
     inset: 0;
     background: linear-gradient(
-      to right,
-      rgba(255, 255, 255, 0) 58%,
-      rgba(255, 255, 255, 0.78) 88%,
+      to bottom,
+      rgba(255, 255, 255, 0) 68%,
+      rgba(255, 255, 255, 0.85) 90%,
       #ffffff 100%
     );
     pointer-events: none;
   }
 
   .binomio-cards-col {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
   }
 
   .binomio-box {
     background: #ffffff;
     border: 1px solid #e5e7eb;
     border-radius: 18px;
-    padding: 26px 26px;
+    padding: 28px 26px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   }
 
@@ -609,48 +608,20 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     text-align: justify !important;
   }
 
-  @media (max-width: 860px) {
-    .binomio-split-grid {
-      grid-template-columns: 1fr;
-      gap: 22px;
-    }
-
+  @media (max-width: 768px) {
     .binomio-photo-wrap {
-      min-height: 320px;
-      border-radius: 20px 20px 0 0;
+      height: 300px;
     }
 
-    .binomio-photo-wrap::after {
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 255, 0) 65%,
-        rgba(255, 255, 255, 0.85) 90%,
-        #ffffff 100%
-      );
+    .binomio-cards-col {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .binomio-box {
+      padding: 24px 22px;
     }
   }
-</style>
-
-<div class="hero-container">
-  <video autoplay loop muted playsinline class="hero-video">
-    <source src="/assets/videos/cdmx-loop.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>Aquí comienza tu hogar</h2>
-    <div class="hero-buttons">
-      <!-- Directo al WhatsApp configurado -->
-      <a href="https://wa.me/525533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
-      
-      <!-- Botones adicionales -->
-      <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
-      <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
-      
-      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
-    </div>
-  </div>
-</div>
-
 <!-- SECCIÓN DINÁMICA DE PROPIEDADES RECIENTES (MÁXIMO 6 EN 2x3) -->
 {% assign todas_propiedades = site.documents | where: "layout", "propiedad" | reverse %}
 {% if todas_propiedades.size > 0 %}
