@@ -748,7 +748,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
           </div>
           <h3>Acompañamiento De Persona a Persona</h3>
         </div>
-        <p>Sin contestadoras automáticas ni filtros deshumanizados. Escuchamos activamente tus necesidades reales para encontrar el espacio o al habitante ideal para tu propiedad.</p>
+        <p>Sin contestadoras automáticas ni filtros deshumanizados. Escuchamos con atención tus necesidades reales para encontrar el espacio o al habitante ideal para tu propiedad.</p>
       </div>
     </div>
   </div>
