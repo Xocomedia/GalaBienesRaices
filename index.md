@@ -274,7 +274,6 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     opacity: 1;
   }
 
-  /* FORZADO BLANCO PARA EL TÍTULO DEL MODAL (Evita sobreescritura de h2 del layout) */
   .modal-card h2.modal-title,
   .modal-title {
     font-size: 1.5rem !important;
@@ -349,7 +348,6 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     background-color: #f3f4f6 !important;
   }
 
-  /* LEYENDA AVISO DE PRIVACIDAD EN EL MODAL */
   .modal-privacy-notice {
     margin-top: 16px;
     padding-top: 12px;
@@ -390,8 +388,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     font-weight: 600;
     margin-top: 10px;
   }
-  
-/* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
+
+  /* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
   .story-showcase {
     margin: 50px 0 65px 0;
   }
@@ -503,6 +501,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 26px 22px;
     }
   }
+
   /* --- SECCIÓN BINOMIO GALA (FOTO ANCHA + 2 CAJAS ABAJO) --- */
   .binomio-showcase {
     margin: 55px 0 65px 0;
@@ -622,6 +621,28 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 24px 22px;
     }
   }
+</style>
+
+<div class="hero-container">
+  <video autoplay loop muted playsinline class="hero-video">
+    <source src="/assets/videos/cdmx-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h2>Aquí comienza tu hogar</h2>
+    <div class="hero-buttons">
+      <!-- Directo al WhatsApp configurado -->
+      <a href="https://wa.me/525533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
+      
+      <!-- Botones adicionales -->
+      <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
+      <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
+      
+      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
+    </div>
+  </div>
+</div>
+
 <!-- SECCIÓN DINÁMICA DE PROPIEDADES RECIENTES (MÁXIMO 6 EN 2x3) -->
 {% assign todas_propiedades = site.documents | where: "layout", "propiedad" | reverse %}
 {% if todas_propiedades.size > 0 %}
