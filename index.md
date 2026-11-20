@@ -406,7 +406,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 0 28px 24px 28px;
+    padding: 0 28px 0 28px;
   }
 
   .story-hero-banner::after {
@@ -415,8 +415,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 42%,
-      rgba(255, 255, 255, 0.72) 78%,
+      rgba(255, 255, 255, 0) 68%,
+      rgba(255, 255, 255, 0.88) 88%,
       #ffffff 100%
     );
     pointer-events: none;
@@ -483,6 +483,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     color: #1f2937 !important;
     font-weight: 400 !important;
     line-height: 1.6 !important;
+    text-align: justify !important;
   }
 
   @media (max-width: 768px) {
