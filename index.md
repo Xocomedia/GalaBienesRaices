@@ -390,6 +390,39 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     font-weight: 600;
     margin-top: 10px;
   }
+  
+  /* --- BLOQUE EDITORIAL CON IMAGEN --- */
+  .editorial-split-block {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: center;
+    margin: 32px 0;
+  }
+
+  .editorial-split-text h1 {
+    margin-top: 0 !important;
+  }
+
+  .editorial-split-text blockquote {
+    margin-bottom: 0 !important;
+  }
+
+  .editorial-split-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
+    display: block;
+  }
+
+  @media (max-width: 820px) {
+    .editorial-split-block {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
 </style>
 
 <div class="hero-container">
@@ -448,13 +481,18 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 {% endif %}
 
-# Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.
-
-Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.
-
----
-
-> **Creemos que un hogar no es una métrica ni un código postal: es donde puedes respirar, donde puedas construir tus sueños.**
+<div class="editorial-split-block">
+  <div class="editorial-split-text">
+    <h1>Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
+    <p>Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.</p>
+    <blockquote>
+      <strong>Creemos que un hogar no es una métrica ni un código postal: es donde puedes respirar, donde puedas construir tus sueños.</strong>
+    </blockquote>
+  </div>
+  <div class="editorial-split-img">
+    <img src="/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg" alt="Detrás de cada espacio hay una historia - Gala Bienes Raíces">
+  </div>
+</div>
 
 ---
 
