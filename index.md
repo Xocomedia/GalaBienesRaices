@@ -349,6 +349,35 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     background-color: #f3f4f6 !important;
   }
 
+  /* LEYENDA AVISO DE PRIVACIDAD EN EL MODAL */
+  .modal-privacy-notice {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .modal-privacy-notice p {
+    font-size: 0.74rem !important;
+    line-height: 1.45 !important;
+    color: rgba(255, 255, 255, 0.82) !important;
+    text-align: left !important;
+    margin: 0 0 6px 0 !important;
+  }
+
+  .modal-privacy-notice p:last-child {
+    margin-bottom: 0 !important;
+  }
+
+  .modal-privacy-notice strong {
+    color: #ffffff !important;
+  }
+
+  .modal-privacy-notice a {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+    font-weight: 600;
+  }
+
   .success-message {
     display: none;
     background: rgba(34, 197, 94, 0.2);
@@ -372,13 +401,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     <h2>Aquí comienza tu hogar</h2>
     <div class="hero-buttons">
       <!-- Directo al WhatsApp configurado -->
-      <a href="https://wa.me/5533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
+      <a href="https://wa.me/525533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Hablar con un asesor</a>
       
       <!-- Botones adicionales -->
       <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
       <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
       
-      <a href="/404.html/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
+      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
     </div>
   </div>
 </div>
@@ -500,6 +529,15 @@ Cuéntanos tus planes y encontremos tu espacio ideal.
       </div>
 
       <button type="submit" class="btn-gbr" id="submitBtn">Solicitar Informes</button>
+
+      <div class="modal-privacy-notice">
+        <p>
+          <strong>Gala Bienes Raíces</strong>, responsable del tratamiento de sus datos personales, utilizará la información proporcionada para atender su solicitud y ofrecer servicios inmobiliarios. También podrá utilizarla para enviarle información sobre propiedades y oportunidades inmobiliarias; usted puede oponerse a esta finalidad escribiendo a <strong>contacto@galabienesraices.com</strong>.
+        </p>
+        <p>
+          Consulte nuestro <a href="https://galabienesraices.com/aviso-de-privacidad/" target="_blank" rel="noopener">Aviso de Privacidad Integral</a>.
+        </p>
+      </div>
     </form>
 
     <div class="success-message" id="successMsg">
