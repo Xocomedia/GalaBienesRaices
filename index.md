@@ -508,13 +508,15 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   }
 
   .binomio-main-title {
+    text-align: center !important;
+    max-width: 780px;
     color: #BC2424 !important;
     font-weight: 800 !important;
     font-size: 2rem !important;
     line-height: 1.2 !important;
-    margin: 0 0 24px 0 !important;
+    margin: 0 auto 28px auto !important;
     border: none !important;
-    padding: 0 !important;
+    ppadding: 0 24px !important;
   }
 
   .binomio-split-grid {
@@ -649,12 +651,12 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     pointer-events: none;
   }
 
-  .zonas-hero-title {
+.zonas-hero-title {
     position: relative;
     z-index: 2;
-    text-align: center;
+    text-align: center !important;
     max-width: 780px;
-    margin: -24px auto 14px auto !important;
+    margin: -30px auto 16px auto !important;
     color: #BC2424 !important;
     font-weight: 800 !important;
     font-size: 2rem !important;
@@ -777,7 +779,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 ---
 
 <section class="binomio-showcase">
-  <h2 class="binomio-main-title">El Binomio Gala: Certeza Legal + Sensibilidad Humana</h2>
+  <h2 class="binomio-main-title">El Binomio Gala: 
+    Certeza Legal + Sensibilidad Humana</h2>
 
   <div class="binomio-split-grid">
     <div class="binomio-photo-wrap" role="img" aria-label="Servicios Jurídicos Inmobiliarios - Gala Bienes Raíces"></div>
