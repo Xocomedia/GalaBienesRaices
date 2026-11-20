@@ -503,6 +503,132 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 26px 22px;
     }
   }
+  /* --- SECCIÓN BINOMIO GALA (FOTO IZQUIERDA + 2 CAJAS DERECHA) --- */
+  .binomio-showcase {
+    margin: 55px 0 65px 0;
+  }
+
+  .binomio-main-title {
+    color: #BC2424 !important;
+    font-weight: 800 !important;
+    font-size: 1.8rem !important;
+    margin: 0 0 28px 0 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .binomio-split-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 28px;
+    align-items: stretch;
+  }
+
+  .binomio-photo-wrap {
+    position: relative;
+    min-height: 460px;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    background: url('/assets/images/index/gala-bienes-raices-servicios-jurídicos-inmobiliarios.jpg') center center / cover no-repeat;
+  }
+
+  .binomio-photo-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 58%,
+      rgba(255, 255, 255, 0.78) 88%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  .binomio-cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    justify-content: center;
+  }
+
+  .binomio-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 26px 26px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .binomio-box-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+  }
+
+  .binomio-icon-circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: #BC2424;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 14px rgba(188, 36, 36, 0.25);
+    flex-shrink: 0;
+  }
+
+  .binomio-icon-circle svg {
+    width: 26px;
+    height: 26px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .binomio-box-header h3 {
+    margin: 0 !important;
+    color: #BC2424 !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .binomio-box p {
+    width: 100%;
+    margin: 0 !important;
+    color: #1f2937 !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+  }
+
+  @media (max-width: 860px) {
+    .binomio-split-grid {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .binomio-photo-wrap {
+      min-height: 320px;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .binomio-photo-wrap::after {
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 65%,
+        rgba(255, 255, 255, 0.85) 90%,
+        #ffffff 100%
+      );
+    }
+  }
 </style>
 
 <div class="hero-container">
@@ -590,14 +716,51 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 
 ---
 
-## El Binomio Gala: Certeza Legal + Sensibilidad Humana
+<section class="binomio-showcase">
+  <h2 class="binomio-main-title">El Binomio Gala: Certeza Legal + Sensibilidad Humana</h2>
 
-### ⚖️ Respaldo Jurídico Especializado
-Blindamos tu patrimonio con contratos rigurosos y acompañamiento notarial completo para que inviertas o vendas con absoluta tranquilidad.
+  <div class="binomio-split-grid">
+    <div class="binomio-photo-wrap" role="img" aria-label="Servicios Jurídicos Inmobiliarios - Gala Bienes Raíces"></div>
 
-### 🤝 Acompañamiento De Persona a Persona
-Sin contestadoras automáticas ni filtros deshumanizados. Escuchamos activamente tus necesidades reales para encontrar el espacio o al habitante ideal para tu propiedad.
+    <div class="binomio-cards-col">
+      <div class="binomio-box">
+        <div class="binomio-box-header">
+          <div class="binomio-icon-circle" aria-hidden="true">
+            <!-- Ícono de Balanza -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3v18"></path>
+              <path d="M8 21h8"></path>
+              <path d="M4 7h16"></path>
+              <path d="M4 7l-2.5 6h5L4 7z"></path>
+              <path d="M20 7l-2.5 6h5L20 7z"></path>
+              <path d="M1.5 13a2.5 2.5 0 0 0 5 0"></path>
+              <path d="M17.5 13a2.5 2.5 0 0 0 5 0"></path>
+            </svg>
+          </div>
+          <h3>Respaldo Jurídico Especializado</h3>
+        </div>
+        <p>Blindamos tu patrimonio con contratos rigurosos y acompañamiento notarial completo para que inviertas o vendas con absoluta tranquilidad.</p>
+      </div>
 
+      <div class="binomio-box">
+        <div class="binomio-box-header">
+          <div class="binomio-icon-circle" aria-hidden="true">
+            <!-- Ícono de Apretón de Manos -->
+            <svg viewBox="0 0 24 24">
+              <path d="m11 17 2 2a1 1 0 1 0 3-3"></path>
+              <path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"></path>
+              <path d="m21 3 1 11h-2"></path>
+              <path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"></path>
+              <path d="M3 4h8"></path>
+            </svg>
+          </div>
+          <h3>Acompañamiento De Persona a Persona</h3>
+        </div>
+        <p>Sin contestadoras automáticas ni filtros deshumanizados. Escuchamos activamente tus necesidades reales para encontrar el espacio o al habitante ideal para tu propiedad.</p>
+      </div>
+    </div>
+  </div>
+</section>
 ---
 
 ## Zonas de Enfoque Boutique
