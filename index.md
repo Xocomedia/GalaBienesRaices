@@ -391,36 +391,114 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     margin-top: 10px;
   }
   
-  /* --- BLOQUE EDITORIAL CON IMAGEN --- */
-  .editorial-split-block {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 32px;
-    align-items: center;
-    margin: 32px 0;
+  /* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
+  .story-showcase {
+    margin: 50px 0 65px 0;
   }
 
-  .editorial-split-text h1 {
-    margin-top: 0 !important;
-  }
-
-  .editorial-split-text blockquote {
-    margin-bottom: 0 !important;
-  }
-
-  .editorial-split-img img {
+  .story-hero-banner {
+    position: relative;
     width: 100%;
-    height: auto;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.1);
-    display: block;
+    height: 520px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background: url('/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg') center 30% / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 28px 24px 28px;
   }
 
-  @media (max-width: 820px) {
-    .editorial-split-block {
+  .story-hero-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 42%,
+      rgba(255, 255, 255, 0.72) 78%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  .story-hero-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 780px;
+    margin: 0 !important;
+    color: #BC2424 !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .story-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .story-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 32px 28px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .story-icon-circle {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #BC2424;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    box-shadow: 0 6px 14px rgba(188, 36, 36, 0.25);
+    flex-shrink: 0;
+  }
+
+  .story-icon-circle svg {
+    width: 28px;
+    height: 28px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .story-box p {
+    margin: 0 !important;
+    color: #1f2937 !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+  }
+
+  @media (max-width: 768px) {
+    .story-hero-banner {
+      height: 360px;
+      padding: 0 18px 16px 18px;
+    }
+
+    .story-cards-grid {
       grid-template-columns: 1fr;
       gap: 20px;
+      margin-top: 20px;
+    }
+
+    .story-box {
+      padding: 26px 22px;
     }
   }
 </style>
@@ -481,18 +559,33 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 {% endif %}
 
-<div class="editorial-split-block">
-  <div class="editorial-split-text">
-    <h1>Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
-    <p>Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.</p>
-    <blockquote>
-      <strong>Creemos que un hogar no es una métrica ni un código postal: es donde puedes respirar, donde puedas construir tus sueños.</strong>
-    </blockquote>
+<section class="story-showcase">
+  <div class="story-hero-banner">
+    <h1 class="story-hero-title">Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
   </div>
-  <div class="editorial-split-img">
-    <img src="/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg" alt="Detrás de cada espacio hay una historia - Gala Bienes Raíces">
+
+  <div class="story-cards-grid">
+    <div class="story-box">
+      <div class="story-icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M3 10.5L12 3l9 7.5"></path>
+          <path d="M5 9.5V20h14V9.5"></path>
+          <path d="M9.5 20v-6h5v6"></path>
+        </svg>
+      </div>
+      <p>Despacho jurídico-inmobiliario en la zona centro de la CDMX. Fusionamos la máxima certeza legal con un acompañamiento cercano, transparente y humano.</p>
+    </div>
+
+    <div class="story-box">
+      <div class="story-icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 20.5s-7-4.35-9.2-8.4C1.2 9.15 3.1 5.5 6.8 5.5c2.1 0 3.7 1.1 5.2 2.8 1.5-1.7 3.1-2.8 5.2-2.8 3.7 0 5.6 3.65 4 6.6-2.2 4.05-9.2 8.4-9.2 8.4z"></path>
+        </svg>
+      </div>
+      <p>Creemos que un hogar no es una métrica ni un código postal: es donde puedes respirar, donde puedas construir tus sueños.</p>
+    </div>
   </div>
-</div>
+</section>
 
 ---
 
