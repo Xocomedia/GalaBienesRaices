@@ -66,116 +66,149 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     color: #ffffff !important;
   }
 
-  /* --- SECCIÓN EDITORIAL PROTAGONISTA --- */
-  .story-showcase {
-    margin: 50px 0 65px 0;
+  /* --- SECCIÓN PROPIEDADES RECIENTES (2 HILERAS DE 3) --- */
+  .recent-properties-section {
+    margin: 45px 0 55px 0;
   }
 
-  .story-hero-banner {
-    position: relative;
-    width: 100%;
-    height: 620px;
-    border-radius: 20px 20px 0 0;
-    overflow: hidden;
-    background: url('/assets/images/index/gala-bienes-raices-tu-espacio-tu-historia.jpg') center 42% / cover no-repeat;
+  .recent-properties-header {
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    padding: 0 28px 6px 28px;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid rgba(188, 36, 36, 0.2);
+    padding-bottom: 10px;
   }
 
-  .story-hero-banner::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0) 72%,
-      rgba(255, 255, 255, 0.85) 89%,
-      #ffffff 100%
-    );
-    pointer-events: none;
-  }
-
-  .story-hero-title {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 780px;
+  .recent-properties-header h2 {
     margin: 0 !important;
-    color: #BC2424 !important;
+    font-size: 1.8rem !important;
     font-weight: 800 !important;
-    line-height: 1.2 !important;
+    color: #BC2424 !important;
     border: none !important;
     padding: 0 !important;
   }
 
-  .story-cards-grid {
+  .recent-grid-3x2 {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
-    margin-top: 26px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 
-  .story-box {
+  .recent-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+  }
+
+  .recent-card {
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 18px;
-    padding: 32px 28px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
-  .story-icon-circle {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background-color: #BC2424;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-    box-shadow: 0 6px 14px rgba(188, 36, 36, 0.25);
-    flex-shrink: 0;
+  .recent-card-link:hover .recent-card {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
   }
 
-  .story-icon-circle svg {
-    width: 28px;
-    height: 28px;
-    stroke: #ffffff;
-    fill: none;
-    stroke-width: 2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  }
-
-  .story-box p {
+  .recent-card-img-wrap {
+    position: relative;
     width: 100%;
-    margin: 0 !important;
-    color: #1f2937 !important;
-    font-weight: 400 !important;
-    line-height: 1.6 !important;
-    text-align: justify !important;
+    height: 200px;
+    background: #f3f4f6;
+    overflow: hidden;
   }
 
-  @media (max-width: 768px) {
-    .story-hero-banner {
-      height: 420px;
-      background-position: center 38%;
-      padding: 0 18px 8px 18px;
-    }
+  .recent-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+  }
 
-    .story-cards-grid {
+  .recent-card-link:hover .recent-card-img-wrap img {
+    transform: scale(1.04);
+  }
+
+  .recent-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(127, 29, 29, 0.92);
+    color: #ffffff;
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    padding: 5px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .recent-card-body {
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+  }
+
+  .recent-price {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .recent-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #374151;
+    margin-bottom: 4px;
+  }
+
+  .recent-location {
+    font-size: 0.92rem !important;
+    color: #6b7280;
+    margin-bottom: 14px;
+  }
+
+  .recent-footer {
+    border-top: 1px solid #f3f4f6;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem !important;
+    color: #4b5563;
+  }
+
+  .recent-cta {
+    font-family: 'Josefin Sans', sans-serif !important;
+    font-weight: 700;
+    color: #BC2424;
+  }
+
+  @media (max-width: 960px) {
+    .recent-grid-3x2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .recent-grid-3x2 {
       grid-template-columns: 1fr;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .story-box {
-      padding: 26px 22px;
     }
   }
 
