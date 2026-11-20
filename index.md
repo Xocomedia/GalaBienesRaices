@@ -691,6 +691,117 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 0 16px !important;
     }
   }
+  /* --- SECCIÓN SERVICIOS (TÍTULO ARRIBA + FOTO + 3 CAJAS) --- */
+  .servicios-showcase {
+    margin: 55px 0 65px 0;
+  }
+
+  .servicios-main-title {
+    text-align: center !important;
+    max-width: 780px;
+    color: #BC2424 !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    margin: 0 auto 28px auto !important;
+    border: none !important;
+    padding: 0 24px !important;
+  }
+
+  .servicios-photo-wrap {
+    position: relative;
+    width: 100%;
+    height: 460px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background: url('/assets/images/index/gala-bienes-raices-venta-renta-consultoria.jpg') center center / cover no-repeat;
+  }
+
+  .servicios-photo-wrap::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 76%,
+      rgba(255, 255, 255, 0.85) 92%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  .servicios-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-top: 24px;
+  }
+
+  .servicios-box {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    padding: 28px 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .servicios-icon-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #BC2424;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    box-shadow: 0 6px 14px rgba(188, 36, 36, 0.25);
+    flex-shrink: 0;
+  }
+
+  .servicios-icon-circle svg {
+    width: 28px;
+    height: 28px;
+    stroke: #ffffff;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .servicios-box h3 {
+    margin: 0 0 12px 0 !important;
+    text-align: center !important;
+    color: #BC2424 !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+    line-height: 1.25 !important;
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .servicios-box p {
+    width: 100%;
+    margin: 0 !important;
+    color: #1f2937 !important;
+    font-weight: 400 !important;
+    line-height: 1.6 !important;
+    text-align: justify !important;
+  }
+
+  @media (max-width: 960px) {
+    .servicios-cards-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .servicios-photo-wrap {
+      height: 320px;
+    }
+  }
 </style>
 
 <div class="hero-container">
@@ -779,9 +890,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 ---
 
 <section class="binomio-showcase">
-  <h2 class="binomio-main-title">El Binomio Gala: 
-    Certeza Legal + Sensibilidad Humana</h2>
-
+  <h2 class="binomio-main-title">El Binomio Gala:<br>Certeza Legal + Sensibilidad Humana</h2>
   <div class="binomio-split-grid">
     <div class="binomio-photo-wrap" role="img" aria-label="Servicios Jurídicos Inmobiliarios - Gala Bienes Raíces"></div>
 
@@ -836,19 +945,59 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 ---
 
-## Servicios
+<section class="servicios-showcase">
+  <h2 class="servicios-main-title">Servicios</h2>
 
-- **Venta de Inmuebles**  
+  <div class="servicios-photo-wrap" role="img" aria-label="Servicios de Venta, Renta y Consultoría Jurídico-Inmobiliaria"></div>
 
-  Auditoría legal previa, comercialización estratégica y acompañamiento integral hasta la firma de escrituras ante notario.
+  <div class="servicios-cards-grid">
+    <!-- Caja 1: Venta de Inmuebles (Ícono Moneda) -->
+    <div class="servicios-box">
+      <div class="servicios-icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M14.5 9.5a2.5 2.5 0 0 0-5 0c0 2.5 5 2 5 4.5a2.5 2.5 0 0 1-5 0"></path>
+          <path d="M12 6.5v11"></path>
+        </svg>
+      </div>
+      <h3>Venta de Inmuebles</h3>
+      <p>Auditoría legal previa, comercialización estratégica y acompañamiento integral hasta la firma de escrituras ante notario.</p>
+    </div>
 
-- **Renta de Inmuebles**  
+    <!-- Caja 2: Renta de Inmuebles (Ícono Edificio) -->
+    <div class="servicios-box">
+      <div class="servicios-icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"></path>
+          <path d="M16 11h3a2 2 0 0 1 2 2v8"></path>
+          <path d="M2 21h20"></path>
+          <path d="M8 7h1"></path>
+          <path d="M12 7h1"></path>
+          <path d="M8 11h1"></path>
+          <path d="M12 11h1"></path>
+          <path d="M8 15h1"></path>
+          <path d="M12 15h1"></path>
+        </svg>
+      </div>
+      <h3>Renta de Inmuebles</h3>
+      <p>Selección ética de arrendatarios mediante empatía activa, investigación exhaustiva y contratos blindados jurídicamente.</p>
+    </div>
 
-  Selección ética de arrendatarios mediante empatía activa, investigación exhaustiva y contratos blindados jurídicamente.
-
-- **Consultoría Jurídico-Inmobiliaria**  
-
-  Dictaminación de antecedentes, resolución de gravámenes y certezas para propietarios e inversionistas.
+    <!-- Caja 3: Consultoría Jurídico-Inmobiliaria (Ícono Rostro de Búho Minimalista) -->
+    <div class="servicios-box">
+      <div class="servicios-icon-circle" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M4.5 5.5 7.5 8a7 7 0 0 1 9 0l3-2.5-.8 5.2a7.5 7.5 0 0 1-13.4 0L4.5 5.5z"></path>
+          <circle cx="9.2" cy="12" r="2.2"></circle>
+          <circle cx="14.8" cy="12" r="2.2"></circle>
+          <path d="M11.2 14.8 12 16l.8-1.2"></path>
+        </svg>
+      </div>
+      <h3>Consultoría Jurídico-Inmobiliaria</h3>
+      <p>Dictaminación de antecedentes, resolución de gravámenes y certezas para propietarios e inversionistas.</p>
+    </div>
+  </div>
+</section>
 
 ---
 
