@@ -510,7 +510,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .binomio-main-title {
     color: #BC2424 !important;
     font-weight: 800 !important;
-    font-size: 1.8rem !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
     margin: 0 0 24px 0 !important;
     border: none !important;
     padding: 0 !important;
@@ -656,7 +657,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     margin: -24px auto 14px auto !important;
     color: #BC2424 !important;
     font-weight: 800 !important;
-    font-size: 1.85rem !important;
+    font-size: 2rem !important;
     line-height: 1.2 !important;
     border: none !important;
     padding: 0 24px !important;
