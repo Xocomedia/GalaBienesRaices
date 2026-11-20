@@ -314,22 +314,6 @@ permalink: /quienes-somos/
   }
 </style>
 
-<div class="hero-container">
-  <video autoplay loop muted playsinline class="hero-video">
-    <source src="/assets/videos/cdmx-loop.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <h2>ENCONTRAMOS tu hogar, TÚ CREAS la historia</h2>
-    <div class="hero-buttons">
-      <button type="button" class="hero-btn hero-btn-primary" id="openFormBtnHero">Agenda una Visita</button>
-      <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
-      <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
-      <a href="/" class="hero-btn hero-btn-secondary">Inicio</a>
-    </div>
-  </div>
-</div>
-
 # Quiénes Somos
 
 ## Despacho Jurídico-Inmobiliario
@@ -565,5 +549,3 @@ Permítenos estrechar tu mano y conocer tus necesidades de viva voz. **El primer
     });
   });
 </script>
-
-```
