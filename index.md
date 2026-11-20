@@ -629,7 +629,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .zonas-hero-banner {
     position: relative;
     width: 100%;
-    height: 460px;
+    height: 540px;
     border-radius: 20px 20px 0 0;
     overflow: hidden;
     background: url('/assets/images/index/gala-bienes-raices-centro-roma-condesa.jpg') center center / cover no-repeat;
@@ -641,8 +641,8 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     inset: 0;
     background: linear-gradient(
       to bottom,
-      rgba(255, 255, 255, 0) 72%,
-      rgba(255, 255, 255, 0.85) 90%,
+      rgba(255, 255, 255, 0) 80%,
+      rgba(255, 255, 255, 0.85) 93%,
       #ffffff 100%
     );
     pointer-events: none;
@@ -665,7 +665,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .zonas-text {
     max-width: 740px;
     margin: 0 auto !important;
-    text-align: center !important;
+    text-align: justify !important;
     color: #1f2937 !important;
     font-weight: 400 !important;
     line-height: 1.65 !important;
@@ -679,7 +679,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 
   @media (max-width: 768px) {
     .zonas-hero-banner {
-      height: 320px;
+      height: 360px;
     }
 
     .zonas-hero-title {
