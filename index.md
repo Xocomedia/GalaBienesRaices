@@ -806,7 +806,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   }
   /* --- SECCIÓN CIERRE: ABRAMOS LAS PUERTAS A TU PRÓXIMO HOGAR --- */
   .cta-final-showcase {
-    margin: 55px 0 10px 0;
+    margin: 55px 0 0px 0;
   }
 
   .cta-final-banner {
