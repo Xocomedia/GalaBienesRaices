@@ -806,7 +806,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   }
   /* --- SECCIÓN CIERRE: ABRAMOS LAS PUERTAS A TU PRÓXIMO HOGAR --- */
   .cta-final-showcase {
-    margin: 55px 0 65px 0;
+    margin: 55px 0 10px 0;
   }
 
   .cta-final-banner {
@@ -848,7 +848,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
   .cta-final-text {
     max-width: 740px;
     margin: 0 auto 28px auto !important;
-    text-align: justify !important;
+    text-align: center !important;
     color: #1f2937 !important;
     font-weight: 400 !important;
     line-height: 1.65 !important;
