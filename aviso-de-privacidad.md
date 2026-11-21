@@ -85,8 +85,8 @@ permalink: /aviso-de-privacidad/
 
   <h2>1. Identidad y domicilio del responsable</h2>
   <div class="privacy-highlight">
-    <p style="margin-bottom: 10px;"><strong>[NOMBRE COMPLETO DEL TITULAR]</strong>, persona física con actividad empresarial que opera comercialmente bajo el nombre de <strong>Gala Bienes Raíces</strong>, con domicilio para oír y recibir notificaciones en <strong>[CALLE, NÚMERO EXTERIOR E INTERIOR, COLONIA NÁPOLES, ALCALDÍA BENITO JUÁREZ, C.P. 03810, CIUDAD DE MÉXICO]</strong>, es responsable del tratamiento, uso y protección de los datos personales que recaba, de conformidad con la legislación mexicana aplicable.</p>
-    <p style="margin-bottom: 0;">Para cualquier asunto relacionado con el presente Aviso de Privacidad, puede comunicarse al correo electrónico: <strong>[contacto@galabienesraices.com]</strong></p>
+    <p style="margin-bottom: 10px;"><strong>Carlos Enrique Rodríguez de la Gala Villavicencio</strong>, persona física con actividad empresarial que opera comercialmente bajo el nombre de <strong>Gala Bienes Raíces</strong>, con domicilio para oír y recibir notificaciones en <strong>Georgia #146, interior 3, Nápoles, Alcaldía Benito Juarez, C.P. 03810, Ciudad de México</strong>, es responsable del tratamiento, uso y protección de los datos personales que recaba, de conformidad con la legislación mexicana aplicable.</p>
+    <p style="margin-bottom: 0;">Para cualquier asunto relacionado con el presente Aviso de Privacidad, puede comunicarse al correo electrónico: <strong>contacto@galabienesraices.com</strong></p>
   </div>
 
   <h2>2. Datos personales que recabamos</h2>
@@ -213,7 +213,7 @@ permalink: /aviso-de-privacidad/
     <li>Que se suspendan las comunicaciones no relacionadas con una solicitud o una operación inmobiliaria en curso.</li>
     <li>Que sus datos sean incorporados a una lista de exclusión interna para evitar futuros contactos con fines promocionales.</li>
   </ul>
-  <p>Estas solicitudes podrán realizarse mediante el correo electrónico <strong>[contacto@galabienesraices.com]</strong>.</p>
+  <p>Estas solicitudes podrán realizarse mediante el correo electrónico <strong>contacto@galabienesraices.com</strong>.</p>
 
   <h2>11. Cambios al Aviso de Privacidad</h2>
   <p>El presente Aviso de Privacidad podrá ser modificado o actualizado como consecuencia de cambios legislativos, nuevas necesidades operativas o modificaciones en los servicios y actividades de <strong>Gala Bienes Raíces</strong>.</p>
