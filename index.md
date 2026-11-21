@@ -804,6 +804,80 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       height: 320px;
     }
   }
+  /* --- SECCIÓN CIERRE: ABRAMOS LAS PUERTAS A TU PRÓXIMO HOGAR --- */
+  .cta-final-showcase {
+    margin: 55px 0 65px 0;
+  }
+
+  .cta-final-banner {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    background: url('/assets/images/index/gala-bienes-raices-tu-proximo-hogar.jpg') center center / cover no-repeat;
+  }
+
+  .cta-final-banner::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0) 78%,
+      rgba(255, 255, 255, 0.85) 92%,
+      #ffffff 100%
+    );
+    pointer-events: none;
+  }
+
+  .cta-final-title {
+    position: relative;
+    z-index: 2;
+    text-align: center !important;
+    max-width: 780px;
+    margin: -30px auto 16px auto !important;
+    color: #BC2424 !important;
+    font-weight: 800 !important;
+    font-size: 2rem !important;
+    line-height: 1.2 !important;
+    border: none !important;
+    padding: 0 24px !important;
+  }
+
+  .cta-final-text {
+    max-width: 740px;
+    margin: 0 auto 28px auto !important;
+    text-align: justify !important;
+    color: #1f2937 !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+    padding: 0 20px;
+  }
+
+  .cta-final-btn-wrap {
+    max-width: 740px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cta-final-btn-wrap .btn-agendar {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .cta-final-banner {
+      height: 340px;
+    }
+
+    .cta-final-title {
+      margin-top: -18px !important;
+      font-size: 1.55rem !important;
+      padding: 0 16px !important;
+    }
+  }
 </style>
 
 <div class="hero-container">
@@ -1003,13 +1077,15 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 
 ---
 
-## Abramos las puertas a tu próximo hogar
-
-Cuéntanos tus planes y encontremos tu espacio ideal.
-
-<!-- Botón que activa la ventana modal -->
-<button type="button" class="hero-btn hero-btn-primary btn-agendar" id="openFormBtn">Agendar una llamada</button>
-
+<section class="cta-final-showcase">
+  <div class="cta-final-banner" role="img" aria-label="Abramos las puertas a tu próximo hogar - Gala Bienes Raíces"></div>
+  <h2 class="cta-final-title">Abramos las puertas a tu próximo hogar</h2>
+  <p class="cta-final-text">Cuéntanos tus planes y encontremos tu espacio ideal.</p>
+  <div class="cta-final-btn-wrap">
+    <!-- Botón que activa la ventana modal -->
+    <button type="button" class="hero-btn hero-btn-primary btn-agendar" id="openFormBtn">Agendar una llamada</button>
+  </div>
+</section>
 <!-- VENTANA MODAL DEL FORMULARIO -->
 <div class="modal-overlay" id="formModal">
   <div class="modal-card">
