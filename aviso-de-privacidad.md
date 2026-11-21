@@ -85,7 +85,7 @@ permalink: /aviso-de-privacidad/
 
   <h2>1. Identidad y domicilio del responsable</h2>
   <div class="privacy-highlight">
-    <p style="margin-bottom: 10px;"><strong>Carlos Enrique Rodríguez de la Gala Villavicencio</strong>, persona física con actividad empresarial que opera comercialmente bajo el nombre de <strong>Gala Bienes Raíces</strong>, con domicilio para oír y recibir notificaciones en <strong>Georgia #146, interior 3, Nápoles, Alcaldía Benito Juarez, C.P. 03810, Ciudad de México</strong>, es responsable del tratamiento, uso y protección de los datos personales que recaba, de conformidad con la legislación mexicana aplicable.</p>
+    <p style="margin-bottom: 10px;"><strong>Carlos Enrique Rodríguez de la Gala Villavicencio</strong>, persona física con actividad empresarial que opera comercialmente bajo el nombre de <strong>Gala Bienes Raíces</strong>, con domicilio para oír y recibir notificaciones en <strong>Georgia #146, interior 5, Nápoles, Alcaldía Benito Juarez, C.P. 03810, Ciudad de México</strong>, es responsable del tratamiento, uso y protección de los datos personales que recaba, de conformidad con la legislación mexicana aplicable.</p>
     <p style="margin-bottom: 0;">Para cualquier asunto relacionado con el presente Aviso de Privacidad, puede comunicarse al correo electrónico: <strong>contacto@galabienesraices.com</strong></p>
   </div>
 
@@ -147,7 +147,7 @@ permalink: /aviso-de-privacidad/
     <li>Compartir catálogos digitales, fichas técnicas y propuestas de inmuebles que puedan coincidir con sus preferencias.</li>
     <li>Realizar encuestas de calidad y satisfacción sobre los servicios y la atención recibida.</li>
   </ol>
-  <p>La persona titular podrá manifestar su negativa al tratamiento de sus datos para estas finalidades secundarias en cualquier momento, enviando un correo electrónico a <strong>[contacto@galabienesraices.com]</strong>, con el asunto <em>"Negativa a finalidades secundarias"</em>.</p>
+  <p>La persona titular podrá manifestar su negativa al tratamiento de sus datos para estas finalidades secundarias en cualquier momento, enviando un correo electrónico a <strong>contacto@galabienesraices.com</strong>, con el asunto <em>"Negativa a finalidades secundarias"</em>.</p>
   <p>La negativa al tratamiento para estas finalidades no afectará la prestación de los servicios inmobiliarios solicitados.</p>
 
   <h2>4. Transferencia de datos personales</h2>
@@ -192,7 +192,7 @@ permalink: /aviso-de-privacidad/
     <li><strong>Oposición:</strong> Oponerse al tratamiento de sus datos personales en los supuestos previstos por la legislación aplicable.</li>
   </ul>
   <p>Asimismo, podrá revocar el consentimiento que haya otorgado para el tratamiento de sus datos personales, cuando legalmente proceda.</p>
-  <p>Para ejercer cualquiera de estos derechos, deberá enviar una solicitud al correo electrónico <strong>[contacto@galabienesraices.com]</strong>.</p>
+  <p>Para ejercer cualquiera de estos derechos, deberá enviar una solicitud al correo electrónico <strong>contacto@galabienesraices.com</strong>.</p>
   <p>La solicitud deberá contener:</p>
   <ol>
     <li>Nombre completo de la persona titular.</li>
