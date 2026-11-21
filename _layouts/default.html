@@ -214,7 +214,7 @@
           <span></span>
         </label>
         <nav class="burger-nav">
-          <a href="/quienes-somos/">¿Quiénes Somos?</a>
+          <a href="/#quienes-somos">¿Quiénes Somos?</a>
           <a href="/catalogo-habitacional/">Propiedades Habitacionales</a>
           <a href="/catalogo-comercial/">Propiedades Comerciales</a>
           <a href="https://wa.me/525533313132?text=Hola,%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20una%20propiedad" target="_blank" rel="noopener">Hablar con un asesor</a>
@@ -254,7 +254,7 @@
       <div class="footer-links-col">
         <h3 class="footer-col-title">Gala Bienes Raíces</h3>
         <ul class="footer-links-list">
-          <li><a href="/quienes-somos/">¿Quiénes Somos?</a></li>
+          <li><a href="/#quienes-somos">¿Quiénes Somos?</a></li>
           <li><a href="/contact/">Déjanos tu contacto</a></li>
         </ul>
       </div>
@@ -293,5 +293,15 @@
       <a href="/aviso-de-privacidad/">Aviso de Privacidad</a>
     </div>
   </footer>
+ </footer>
+
+  <script>
+    document.querySelectorAll('.burger-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        const toggle = document.getElementById('burger-toggle');
+        if (toggle) toggle.checked = false;
+      });
+    });
+  </script>
 </body>
-</html>
+</html> 
