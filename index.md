@@ -878,11 +878,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 0 16px !important;
     }
   }
-  /* --- BLINDAJE DE TAMAÑO (2rem) PARA ZONAS Y SERVICIOS --- */
+/* --- BLINDAJE DE TAMAÑO (2rem) PARA ZONAS, SERVICIOS Y CTA --- */
   .main-content h2.zonas-hero-title,
   .main-content h2.servicios-main-title,
+  .main-content h2.cta-final-title,
   h2.zonas-hero-title,
-  h2.servicios-main-title {
+  h2.servicios-main-title,
+  h2.cta-final-title {
     font-size: 2rem !important;
     font-weight: 800 !important;
     line-height: 1.2 !important;
