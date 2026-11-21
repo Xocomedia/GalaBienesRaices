@@ -897,6 +897,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       font-size: 1.85rem !important;
     }
   }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  #quienes-somos {
+    scroll-margin-top: 90px;
+  }
 </style>
 
 <div class="hero-container">
@@ -914,7 +921,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       <a href="/catalogo-habitacional.html" class="hero-btn hero-btn-secondary">Propiedades habitacionales</a>
       <a href="/catalogo-comercial/" class="hero-btn hero-btn-secondary">Propiedades comerciales</a>
       
-      <a href="/quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
+      <a href="/#quienes-somos/" class="hero-btn hero-btn-secondary">¿Quiénes Somos?</a>
     </div>
   </div>
 </div>
@@ -955,7 +962,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 {% endif %}
 
-<section class="story-showcase">
+<section id="quienes-somos" class="story-showcase">
   <div class="story-hero-banner"></div>
   <h1 class="story-hero-title">Detrás de cada espacio hay una historia, nosotros acompañamos la tuya.</h1>
 
