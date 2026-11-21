@@ -783,13 +783,15 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     padding: 0 !important;
   }
 
-  .servicios-box p {
+ .servicios-box p {
     width: 100%;
     margin: 0 !important;
     color: #1f2937 !important;
     font-weight: 400 !important;
     line-height: 1.6 !important;
     text-align: justify !important;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 
   @media (max-width: 960px) {
@@ -945,13 +947,13 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
 </section>
 ---
 
-<section class="servicios-showcase">
+<section class="servicios-showcase" lang="es">
   <h2 class="servicios-main-title">Servicios</h2>
 
   <div class="servicios-photo-wrap" role="img" aria-label="Servicios de Venta, Renta y Consultoría Jurídico-Inmobiliaria"></div>
 
   <div class="servicios-cards-grid">
-    <!-- Caja 1: Venta de Inmuebles (Ícono Moneda) -->
+    <!-- Caja 1: Venta de Inmuebles -->
     <div class="servicios-box">
       <div class="servicios-icon-circle" aria-hidden="true">
         <svg viewBox="0 0 24 24">
@@ -961,10 +963,10 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
         </svg>
       </div>
       <h3>Venta de Inmuebles</h3>
-      <p>Auditoría legal previa, comercialización estratégica y acompañamiento integral hasta la firma de escrituras ante notario.</p>
+      <p>Auditoría legal previa, venta estratégica y guía integral hasta la firma de escrituras ante notario.</p>
     </div>
 
-    <!-- Caja 2: Renta de Inmuebles (Ícono Edificio) -->
+    <!-- Caja 2: Renta de Inmuebles -->
     <div class="servicios-box">
       <div class="servicios-icon-circle" aria-hidden="true">
         <svg viewBox="0 0 24 24">
@@ -980,21 +982,21 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
         </svg>
       </div>
       <h3>Renta de Inmuebles</h3>
-      <p>Selección ética de arrendatarios mediante empatía activa, investigación exhaustiva y contratos blindados jurídicamente.</p>
+      <p>Selección ética de inquilinos con empatía activa, revisión exhaustiva y contratos blindados legalmente.</p>
     </div>
 
-    <!-- Caja 3: Consultoría Jurídico-Inmobiliaria (Ícono Rostro de Búho Minimalista) -->
+    <!-- Caja 3: Consultoría Jurídico-Inmobiliaria -->
     <div class="servicios-box">
       <div class="servicios-icon-circle" aria-hidden="true">
         <svg viewBox="0 0 24 24">
-          <path d="M4.5 5.5 7.5 8a7 7 0 0 1 9 0l3-2.5-.8 5.2a7.5 7.5 0 0 1-13.4 0L4.5 5.5z"></path>
-          <circle cx="9.2" cy="12" r="2.2"></circle>
-          <circle cx="14.8" cy="12" r="2.2"></circle>
-          <path d="M11.2 14.8 12 16l.8-1.2"></path>
+          <path d="M2.5 3.5 6.8 6.8a8.5 8.5 0 0 1 10.4 0l4.3-3.3-1.1 7.2a9 9 0 0 1-16.8 0L2.5 3.5z"></path>
+          <circle cx="8.5" cy="12.5" r="2.8"></circle>
+          <circle cx="15.5" cy="12.5" r="2.8"></circle>
+          <path d="M10.8 16 12 18l1.2-2"></path>
         </svg>
       </div>
       <h3>Consultoría Jurídico-Inmobiliaria</h3>
-      <p>Dictaminación de antecedentes, resolución de gravámenes y certezas para propietarios e inversionistas.</p>
+      <p>Revisión de antecedentes, solución de gravámenes y certeza legal para propietarios e inversionistas.</p>
     </div>
   </div>
 </section>
