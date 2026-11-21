@@ -878,6 +878,17 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
       padding: 0 16px !important;
     }
   }
+  /* --- BLINDAJE DE TAMAÑO (2rem) PARA ZONAS Y SERVICIOS --- */
+  .main-content h2.zonas-hero-title,
+  .main-content h2.servicios-main-title,
+  h2.zonas-hero-title,
+  h2.servicios-main-title {
+    font-size: 2rem !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    color: #BC2424 !important;
+    text-align: center !important;
+  }
 </style>
 
 <div class="hero-container">
@@ -1009,6 +1020,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     </div>
   </div>
 </section>
+
 ---
 
 <section class="zonas-showcase">
@@ -1019,6 +1031,7 @@ title: "Aquí comienza tu hogar | Gala Bienes Raíces"
     Conocimiento profundo del mercado inmobiliario en <strong>Roma · Condesa · Nápoles · Del Valle</strong>.
   </p>
 </section>
+
 ---
 
 <section class="servicios-showcase" lang="es">
