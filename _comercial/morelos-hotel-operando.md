@@ -1,6 +1,6 @@
 ---
 layout: propiedad
-titulo: "Cuernavaca, Morelos: Hotel en operanción"
+titulo: "Cuernavaca, Morelos: Hotel en operación"
 precio: "$97,971,000 MXN (Venta) / $500,000 MXN (Renta)"
 ubicacion: "Chipitlán, Cuernavaca, Morelos"
 estado: "Venta o Renta"
